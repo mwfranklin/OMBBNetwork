@@ -1,0 +1,12 @@
+#MSUB -N HHBlits
+#MSUB -M mwfranklin@ku.edu
+#MSUB -m e
+#MSUB -l nodes=1:ppn=4,mem=4GB,walltime=6:00:00
+#MSUB -j oe
+#MSUB -o /home/m971w978/Slusky/logs/
+#MSUB -d /home/m971w978/Slusky/Efflux
+#MSUB -q sixhour
+
+x=$(sed "${MOAB_JOBARRAYINDEX}q;d" WholeDB_v4.txt)
+
+hhblits -cpu 4 -i /panfs/pfs.local/work/compbio/m971w978/FASTA/${x}.fasta -d /panfs/pfs.local/work/compbio/m971w978/uniclust30_2017_10/uniclust30_2017_10 -oa3m a3mFiles_uniclust30_2017_10/${x}.a3m -ohhm a3mFiles_uniclust30_2017_10/${x}.hhm
