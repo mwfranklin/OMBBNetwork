@@ -35,7 +35,7 @@ for value in possible_dups:
 
 #Make incorrect fragment list from the printed statements above; also manually check entries in the rawdata file for sequence identities > 80%
 
-"""for pdb_id in all_pdb_ids:
+for pdb_id in all_pdb_ids:
     if os.path.isfile("PDBFiles/%s.pdb" %pdb_id) == True:
         print("File exists %s"%pdb_id)
     elif os.path.isfile("/Volumes/G_Drive/StructureAlign/NirBenTal/Joanna_and_Meghan/v4_July/pdb_files/%s.pdb"%pdb_id) == True:
@@ -46,5 +46,5 @@ for value in possible_dups:
         shutil.copy("/Volumes/G_Drive/StructureAlign/NirBenTal/pdb70_29Apr17.pdb/%s.pdb"%pdb_id, "PDBFiles/%s.pdb"%pdb_id)
     else:
         print("Downloading %s" %pdb_id)
-        os.system("curl https://files.rcsb.org/download/%s.pdb -o PDBFiles/%s.pdb" %(pdb_id[0:4], pdb_id))"""
+        os.system("curl https://files.rcsb.org/download/%s.pdb -o PDBFiles/%s.pdb" %(pdb_id[0:4], pdb_id))
             

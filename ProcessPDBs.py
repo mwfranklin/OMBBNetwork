@@ -19,6 +19,8 @@ for filename in glob.glob("PDBFiles/*.pdb"):
     pdb_id = filename.split("/")
     pdb_id = pdb_id[-1][:-4]
     print(pdb_id)
+    if pdb_id == "3jc8_Qd" or pdb_id == "4v6m_AZ":
+        continue
     
     with open(filename, "r") as pdb_file:
         pdb_lines = pdb_file.readlines()
