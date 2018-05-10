@@ -45,8 +45,8 @@ with open("rawData_E20_v6_2018.txt", "r") as edge_list, open("FiltData_E20_v6_20
             line = line.strip().split("\t")
             dom1 = line[0]
             dom2 = line[1]
-            seq1 = line[11]
-            seq2 = line[12]
+            seq1 = line[10]
+            seq2 = line[11]
         
             #remove gaps from sequences
             seq1 = seq1.replace("-", "")
@@ -63,4 +63,6 @@ with open("rawData_E20_v6_2018.txt", "r") as edge_list, open("FiltData_E20_v6_20
             #print("dom2")
             new_start2, new_end2 = renumber_edges(dom2, seq2)
         
-            new_edges.write("\t".join(line[0:7]) + "\t" + str(new_start1) + "\t" + str(new_end1) + "\t" + str(new_start2) + "\t" + str(new_end2) + "\t" + "\t".join(line[11:]) + "\n")
+            new_edges.write("\t".join(line[0:6]) + "\t" + str(new_start1) + "\t" + str(new_end1) + "\t" + str(new_start2) + "\t" + str(new_end2) + "\t" + "\t".join(line[10:]) + "\n")
+        else:
+            new_edges.write(line)
