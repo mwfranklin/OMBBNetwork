@@ -23,10 +23,10 @@ def renumber_edges(domain1, sequence1):
         #renumber all edge data to match 1-indexed positions of PDB
         new_start = len(old_seq[0]) + 1
         new_end = new_start + len(sequence1) - 1
-        print(new_start, new_end)
+        #print(new_start, new_end)
     else: #if not, manually seek the correct position - most often this is due to His tags, Met at beginning, a single missing/extra residue, X instead of name, etc.
-        print(dom1)
-        print(old_seq)
+        print(domain1)
+        print(seq_pdb)
         print("Seq to match: ", sequence1)
         new_start = int(input("Please enter the start value:"))
         new_end = new_start + len(sequence1) - 1
@@ -39,7 +39,7 @@ with open("DupPDBs_v6.txt", "r") as inData:
         incorrect_frags.append(line.strip())
 
 dom_list = []
-with open("rawData_E20_v6_2018_test.txt", "r") as edge_list, open("rawData_E20_v6_2018_Renumb.txt", "w+") as new_edges:
+with open("rawData_E20_v6_2018.txt", "r") as edge_list, open("rawData_E20_v6_2018_Renumb.txt", "w+") as new_edges:
     for line in edge_list:
         if "dom1" not in line:
             line = line.strip().split("\t")
@@ -57,8 +57,10 @@ with open("rawData_E20_v6_2018_test.txt", "r") as edge_list, open("rawData_E20_v
                 continue
             if dom2 in incorrect_frags:
                 continue
-            
+                
+            #print("dom1")            
             new_start1, new_end1 = renumber_edges(dom1, seq1)
+            #print("dom2")
             new_start2, new_end2 = renumber_edges(dom2, seq2)
         
             new_edges.write("\t".join(line[0:7]) + "\t" + str(new_start1) + "\t" + str(new_end1) + "\t" + str(new_start2) + "\t" + str(new_end2) + "\t" + "\t".join(line[11:]) + "\n")
