@@ -31,16 +31,16 @@ with open("data/rawData_E20_v6_2018.txt", "w+") as outdata:
                 outdata.write("\t".join(line[:6]) + "\t"+ "\t".join(line[7:15]))# + "\t"+ "\t".join(line[21:]))"""
     with open("data/struct.no_filtering", "r") as inData:
         for line in inData:
-            line = line.split(" ")
+            line = line.strip().split(" ")
             if line[0][0:4].upper() == line[1][0:4].upper():
                 print(line[0:2])
                 continue
-            elif float(line[2])< 20: 
+            elif float(line[2])< 20 and line[15] != "ERR" and "empty" not in line: 
                 line[0] = line[0][0:4].lower() + line[0][4:]
                 line[1] = line[1][0:4].lower()  + line[1][4:]
                 all_pdb_ids.append(line[0])
                 all_pdb_ids.append(line[1])
-                outdata.write("\t".join(line[:6]) + "\t"+ "\t".join(line[7:15])+ "\t"+ "\t".join(line[21:]))
+                outdata.write("\t".join(line[:6]) + "\t"+ "\t".join(line[7:15])+ "\t"+ "\t".join(line[21:]) + "\n")
     
         
 all_pdb_ids = sorted(set(all_pdb_ids))
