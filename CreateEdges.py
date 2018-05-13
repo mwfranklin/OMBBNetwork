@@ -14,7 +14,7 @@ def get_strands(pdb_id, aligned_res):
                     row = row.split("\t")
                     if row[3].strip() == pdb_id[-1]:
                         strands1[row[1]] = int(row[2])
-        print(strands1)
+        #print(strands1)
         strand_res1 = []
         for key in strands1:
             if int(key) in aligned_res:
@@ -31,7 +31,7 @@ def get_strands(pdb_id, aligned_res):
         #print("Can't find file", pdb1)
         strand_res1 = res1
     
-    print(strand_res1)        
+    #print(strand_res1)        
     return strand_res1
 
 def pymol_ranges(resnums):
@@ -59,8 +59,8 @@ def pymol_ranges(resnums):
     #print(strand_res1)
     return ranges1
 
-in_file = "16_18DataOnly.txt"
-out_file = "16_18DataOnly_test.txt"
+in_file = "AllDataE20_v6.txt"
+out_file = "AllDataE20_v6_Numbered.txt"
 
 barrel_sizes = {}
 all_barrels = []
@@ -73,25 +73,22 @@ with open("BarrelChars85.txt", "r") as barrel_list:
 
 dom_list = []
 count = 1
-cutoff = 1
-with open(in_file, "r") as inData, open(out_file, "w+") as outdata:    
-    outdata.write("interaction Dom1 Dom2 E-value Res1 Res2 Strand1 Strand2 Seq1 Seq2 HHS_Prob HHS_Score Length Perc_ID Perc_Sim RMSD TMScore MaxSub GDT_TS GDT_HA InCyto?\n")
+with open("data/%s"%in_file, "r") as inData, open("data/%s"%out_file, "w+") as outdata, open("data/%s_Tab.txt"%out_file[:-4], "w+") as tabbed_out:    
+    #outdata.write("interaction Dom1 Dom2 E-value Res1 Res2 Strand1 Strand2 Seq1 Seq2 HHS_Prob HHS_Score Length Perc_ID Perc_Sim RMSD TMScore MaxSub GDT_TS GDT_HA InCyto?\n")
     for line in inData:
         if "dom1" in line:
-            outdata.write("interaction Dom1 Dom2 E-value Res1 Res2 Strand1 Strand2 Seq1 Seq2 HHS_Prob HHS_Score Length Perc_ID Perc_Sim RMSD TMScore MaxSub GDT_TS GDT_HA InCyto?\n")
+            outdata.write("interaction Dom1 Dom2 E-value Res1 Res2 Strand1 Strand2 Seq1 Seq2 HHS_Prob HHS_Score Length Perc_ID Perc_Sim RMSD TMScore MaxSub GDT_TS GDT_HA InCyto?)\n")
+            tabbed_out.write("interaction\tDom1\tDom2\tE-value\tRes1\tRes2\tStrand1\tStrand2\tSeq1\tSeq2\tHHS_Prob\tHHS_Score\tLength\tPerc_ID\tPerc_Sim\tRMSD\tTMScore\tMaxSub\tGDT_TS\tGDT_HA\tInCyto?)\n")
         else:    
             line = line.strip().split("\t")
             #print(line)
             dom1 = line[0]
             dom2 = line[1]
             e_value = line[2]
-            start1 = int(line[7])
-            start2 = int(line[9])
-            seq1 = line[11]
-            seq2 = line[12]
-            #line[15] = line[3]
-            #line[16] = line[4]
-            #print(start1, end1)
+            start1 = int(line[6])
+            start2 = int(line[8])
+            seq1 = line[10]
+            seq2 = line[11]
             res1 = []
             res2 = []
         
@@ -123,21 +120,9 @@ with open(in_file, "r") as inData, open(out_file, "w+") as outdata:
             strands1 = get_strands(dom1, res1)
             strands2 = get_strands(dom2, res2)
             
-            #outdata.write("%s %s %s %s %s %s %s %s %s\n" %(count, dom1, dom2, e_value, ",".join(map(str, pymol_range1)), ",".join(map(str, pymol_range2)), ",".join(map(str, strands1)), ",".join(map(str, strands2)), " ".join(line[11:]) ))
-            outdata.write("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" %(count, dom1, dom2, e_value, ",".join(map(str, pymol_range1)), ",".join(map(str, pymol_range2)), ",".join(map(str, strands1)), ",".join(map(str, strands2)), "\t".join(line[7:]) ))
+            outdata.write("%s %s %s %s %s %s %s %s %s %s %s\n" %(count, dom1, dom2, e_value, ",".join(map(str, pymol_range1)), ",".join(map(str, pymol_range2)), ",".join(map(str, strands1)), ",".join(map(str, strands2)), " ".join(line[10:14]), " ".join(line[3:6]), " ".join(line[14:]) ))
+            tabbed_out.write("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" %(count, dom1, dom2, e_value, ",".join(map(str, pymol_range1)), ",".join(map(str, pymol_range2)), ",".join(map(str, strands1)), ",".join(map(str, strands2)), "\t".join(line[10:14]), "\t".join(line[3:6]), "\t".join(line[14:]) ))
         
             count +=1
-
-"""with open("v4_July/NumberedEdgesE<1July.txt", "r") as inData:    
-    inData = inData.readlines()
-    
-with open("v4_July/NumberedEdgesE<1July_Fix.txt", "w+") as outData:
-    for line in inData:
-        line = line.split("\t")
-        if len(line)>2:
-            if line[11] == "ERR":
-                outData.write("\t".join(line[:12])+ "\tERR"*4 + "\t" + line[-1])
-            else:
-                outData.write("\t".join(line))
-        else:
-            outData.write("\t".join(line))"""
+print(count)
+print(set(all_barrels).difference(set(dom_list)))    

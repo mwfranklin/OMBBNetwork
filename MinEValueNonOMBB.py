@@ -9,7 +9,7 @@ with open("BarrelChars85.txt", "r") as barrel_data:
 
 non_barrels = {}
 non_barrel_count = 0
-with open("AllEdgesE<20_Numbered.txt", "r") as inData:
+with open("data/AllDataE20_v6_Numbered.txt", "r") as inData:
     for line in inData:
         if "Dom1" not in line:
             line = line.split(" ")
@@ -28,7 +28,7 @@ with open("AllEdgesE<20_Numbered.txt", "r") as inData:
                     non_barrels[line[2]] = float(line[3])
 #print(non_barrels)
 print(non_barrel_count)
-with open("v4_July/NonOMBBEValues.txt", "w+") as outData:
+with open("NonOMBBEValues.txt", "w+") as outData:
     outData.write("PDB\tMin_EValue\n")
     for value in sorted(non_barrels.keys()):
         outData.write(value + "\t" + str(non_barrels[value]) + "\n")
