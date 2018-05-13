@@ -2,10 +2,15 @@ import re
 import glob
 import sys
 
+out_file = "BarrelsOnlyE20.txt"
+cutoff = 20
+
 protos = []
+barrels = []
 with open("CompCodesE<1.txt", "r") as barrel_codes:
     for line in barrel_codes:
         line = line.strip().split("\t")
+        barrels.append(line[0])
         if line[1] == "1":
             protos.append(line[0])
 
@@ -19,18 +24,18 @@ with open("BarrelChars85.txt", "r") as barrel_data:
             if int(line[1]) == 16 or int(line[1]) == 18:
                 if line[0] in protos: needed_barrels.append(line[0])
 
-with open("AllData_E20.txt", "r") as inData, open("16_18DataOnly.txt", "w+") as subnetwork:
+needed_barrels = barrels
+with open("data/AllDataE20_v6_Numbered.txt", "r") as inData, open("data/%s"%out_file, "w+") as subnetwork:
     for line in inData:
         if "Dom1" in line:
             subnetwork.write(line)
         else:
-            line = line.strip().split("\t")
-            pdb1 = line[0]
-            pdb2 = line[1]
+            line = line.strip().split(" ")
+            pdb1 = line[1]
+            pdb2 = line[2]
             
-            if pdb1 in needed_barrels and pdb2 in needed_barrels and float(line[2]) <= 1e-2:
-                if barrel_sizes[pdb1] != barrel_sizes[pdb2]:
-                    subnetwork.write("\t".join(line) + "\n")
+            if pdb1 in needed_barrels and pdb2 in needed_barrels and float(line[3]) <= cutoff:
+                subnetwork.write(" ".join(line) + "\n")
                 
                 
                 
