@@ -1,0 +1,24 @@
+Query         5wq8_A
+Match_columns 310
+No_of_seqs    309 out of 1924
+Neff          7.6 
+Searched_HMMs 1
+Date          Mon May 14 12:15:32 2018
+Command       hhalign -i MSAs/5WQ8_A.a3m -o data/IntRepeats/5WQ8_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5wq8_A                           0.9   0.058   0.058   19.0   0.0   17  142-158   237-253 (310)
+
+No 1  
+>5wq8_A
+Probab=0.94  E-value=0.058  Score=19.03  Aligned_cols=17  Identities=12%  Similarity=0.239  Sum_probs=11.7
+
+Q 5wq8_A          142 KEVGIKLKVVPQINEGN  158 (310)
+Q Consensus       142 ~~~G~~L~VtP~I~~~~  158 (310)
+                      ...=+.+-|||+|..++
+T Consensus       237 ~~~ellI~ItP~Iv~~~  253 (310)
+T 5wq8_A          237 EKKNLMVFIKPTIIRDG  253 (310)
+Confidence            34557777899987744
+
+
+Done!

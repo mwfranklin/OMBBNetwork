@@ -1,0 +1,32 @@
+Query         3KVN:X|PDBID|CHAIN|SEQUENCE
+Match_columns 632
+No_of_seqs    384 out of 3277
+Neff          9.9 
+Searched_HMMs 1
+Date          Mon May 14 12:12:25 2018
+Command       hhalign -i MSAs/3KVN_X.a3m -o data/IntRepeats/3KVN_X_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3KVN:X|PDBID|CHAIN|SEQUENCE     82.3   1E-05   1E-05   53.3   0.0  125  378-510   419-562 (632)
+
+No 1  
+>3KVN:X|PDBID|CHAIN|SEQUENCE
+Probab=82.28  E-value=1e-05  Score=53.29  Aligned_cols=125  Identities=14%  Similarity=0.097  Sum_probs=64.5
+
+Q 3KVN:X|PDBID|C  378 SGDGNGYNLTLGGSYRIDEAWRAGVAAGFYRQKLE-AGA----------KDSDYRMNSYMASAFVQYQE-----NRWWAD  441 (632)
+Q Consensus       378 ~~~~~~~g~~~G~d~~~~~~~~~G~~~~~~~~~~~-~~~----------~~~~~~~~~~~~g~y~~~~~-----~~~~~~  441 (632)
+                      ..+.+.+.+.+-+.+.. +.|.+-+.++|+..+.+ ...          ..++.+...+.+++-+.|.+     +.|.+.
+T Consensus       419 ~~~~~~~~~g~y~~~~~-~~~~~~~~~~~g~~~~~~~~R~~~~~~~~~~~~g~~~~~~~~~~~~~gy~~~~~~~~~~~l~  497 (632)
+T 3KVN:X|PDBID|C  419 DYRMNSYMASAFVQYQE-NRWWADAALTGGYLDYDDLKRKFALGGGERSEKGDTNGHLWAFSARLGYDIAQQADSPWHLS  497 (632)
+Confidence            34455555555555555 56888777777776654 211          12344555566666666653     467787
+
+
+Q 3KVN:X|PDBID|C  442 AALTGGYLDYDDLKRKFALGGG---ERSEKGDTNGHLWAFSARLGYDIAQQADSPWHLSPFVSADYARVEVD  510 (632)
+Q Consensus       442 ~~~~~g~~~~~~~~R~~~~~~~---~~~~~g~~~~~~~~~~~~~gy~~~~~~~~~~~l~P~~~l~y~~~~~~  510 (632)
+                      -.+++.+.+.+ .+.-..-+..   ..-.+.+.+.....+.+++.|.+.      ..++|++++.|.+.-.+
+T Consensus       498 P~~~l~y~~~~-~~~~~E~g~~~~~l~~~~~~~~~~~~~~G~~~~~~~~------~~~~~~~~~~~~~~~~~  562 (632)
+T 3KVN:X|PDBID|C  498 PFVSADYARVE-VDGYSEKGASATALDYDDQKRSSKRLGAGLQGKYAFG------SDTQLFAEYAHEREYED  562 (632)
+Confidence            77776666543 2211111100   001122233333333444444332      23889999999876443
+
+
+Done!

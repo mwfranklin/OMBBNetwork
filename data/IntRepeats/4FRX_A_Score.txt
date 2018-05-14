@@ -1,0 +1,24 @@
+Query         4FRX:A|PDBID|CHAIN|SEQUENCE
+Match_columns 437
+No_of_seqs    126 out of 1174
+Neff          9.1 
+Searched_HMMs 1
+Date          Mon May 14 12:14:36 2018
+Command       hhalign -i MSAs/4FRX_A.a3m -o data/IntRepeats/4FRX_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4FRX:A|PDBID|CHAIN|SEQUENCE     23.0  0.0009  0.0009   33.9   0.0   54  338-391   378-435 (437)
+
+No 1  
+>4FRX:A|PDBID|CHAIN|SEQUENCE
+Probab=22.97  E-value=0.0009  Score=33.86  Aligned_cols=54  Identities=19%  Similarity=0.209  Sum_probs=39.2
+
+Q 4FRX:A|PDBID|C  338 GERTWQVRYGYDFATVGVPGLTFNTIYLSGDKIKTA----RGDQSEWERDISLAYVIP  391 (437)
+Q Consensus       338 g~~~~~~~~~y~f~~~gl~gl~~~~~y~~~~~~~~~----~~~~~~~E~~~~~~Y~~~  391 (437)
+                      .+..+-+.+.|+|.+=-++||++.++|...+.+...    ....+..|+-+.|.|+|+
+T Consensus       378 ~~~E~~~~~~Y~~~~g~lkgL~l~~~y~~~~~~~~~~~~~~~~~d~~~~R~~~~Y~f~  435 (437)
+T 4FRX:A|PDBID|C  378 SEWERDISLAYVIPDGTFKGLGFTWKNASFRSGLPAAGSSNNQRDQDENRLIVSYTLP  435 (437)
+Confidence            456677889999853126899999999988776532    124567778888888874
+
+
+Done!

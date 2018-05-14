@@ -1,0 +1,24 @@
+Query         2YNK:A|PDBID|CHAIN|SEQUENCE
+Match_columns 456
+No_of_seqs    225 out of 1421
+Neff          9.4 
+Searched_HMMs 1
+Date          Mon May 14 12:12:53 2018
+Command       hhalign -i MSAs/2YNK_A.a3m -o data/IntRepeats/2YNK_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2YNK:A|PDBID|CHAIN|SEQUENCE      0.2    0.33    0.33   14.6   0.0   22  134-155   218-240 (456)
+
+No 1  
+>2YNK:A|PDBID|CHAIN|SEQUENCE
+Probab=0.18  E-value=0.33  Score=14.57  Aligned_cols=22  Identities=23%  Similarity=0.219  Sum_probs=10.4
+
+Q 2YNK:A|PDBID|C  134 GAVKF-WNQWLSFGQVPQWWGPG  155 (456)
+Q Consensus       134 ~~~~~-~~~~l~~Gr~~~~wG~g  155 (456)
+                      +.++. +++++.+.+.-+|=|.+
+T Consensus       218 l~~~p~~~l~~Gl~~~~~~gg~~  240 (456)
+T 2YNK:A|PDBID|C  218 FTFSPIQSLELGASRIMQWGGKG  240 (456)
+Confidence            44443 34555555554544443
+
+
+Done!

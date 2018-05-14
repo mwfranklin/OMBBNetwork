@@ -1,0 +1,24 @@
+Query         3SZV:A|PDBID|CHAIN|SEQUENCE
+Match_columns 401
+No_of_seqs    111 out of 1143
+Neff          9.2 
+Searched_HMMs 1
+Date          Mon May 14 12:13:26 2018
+Command       hhalign -i MSAs/3SZV_A.a3m -o data/IntRepeats/3SZV_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3SZV:A|PDBID|CHAIN|SEQUENCE     28.5 0.00061 0.00061   34.0   0.0   51  308-363   349-399 (401)
+
+No 1  
+>3SZV:A|PDBID|CHAIN|SEQUENCE
+Probab=28.45  E-value=0.00061  Score=33.95  Aligned_cols=51  Identities=16%  Similarity=0.015  Sum_probs=41.0
+
+Q 3SZV:A|PDBID|C  308 VDERSWQLRYDYDFGALGLPGLSFMSRYVSGDNVARGAANDGKEWERNTDLGYVVQ  363 (401)
+Q Consensus       308 ~~~~a~~~~~~y~f~~~gl~gL~~~~~y~~~~~~~~~~~~~~~~~E~~~~l~Y~~~  363 (401)
+                      ..++-+-+.+.|+|..-.++||++.++|++.+...     ..+..++-+.|.|+|+
+T Consensus       349 ~~~~E~~~~l~Y~~~~g~lkgls~~~~~~~~~~~~-----~~d~~~~R~~~~Y~F~  399 (401)
+T 3SZV:A|PDBID|C  349 GKEWERNTDLGYVVQSGPLKNLGVKWRNATVRSNF-----ANDLDENRLILSYSLA  399 (401)
+Confidence            46777888999999532278999999999997653     4677899999999984
+
+
+Done!

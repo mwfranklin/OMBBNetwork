@@ -1,0 +1,24 @@
+Query         4FSO:A|PDBID|CHAIN|SEQUENCE
+Match_columns 406
+No_of_seqs    144 out of 1278
+Neff          9.3 
+Searched_HMMs 1
+Date          Mon May 14 12:15:20 2018
+Command       hhalign -i MSAs/4FSO_A.a3m -o data/IntRepeats/4FSO_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4FSO:A|PDBID|CHAIN|SEQUENCE     29.4 0.00057 0.00057   34.2   0.0   54  310-365   351-404 (406)
+
+No 1  
+>4FSO:A|PDBID|CHAIN|SEQUENCE
+Probab=29.41  E-value=0.00057  Score=34.20  Aligned_cols=54  Identities=13%  Similarity=0.010  Sum_probs=41.7
+
+Q 4FSO:A|PDBID|C  310 PEERSWQLRYDFDLRSVGVPGLSFMTRYVNGDHIRLANGDEGKEWERDIELKYIVQ  365 (406)
+Q Consensus       310 ~~~~s~~~~~~y~f~~~gl~gL~~~~~y~~~~~~~~~~~~~~~~~E~~~~l~Y~~~  365 (406)
+                      ..+..+-+.+.|+|..--++||++.++|++.+.....  ...+..|+-+.|.|+|+
+T Consensus       351 ~~~~E~~~~l~Y~~~~g~lkgLs~~~~~~~~~~~~~~--~~~d~~~~R~~l~Y~f~  404 (406)
+T 4FSO:A|PDBID|C  351 GKEWERDIELKYIVQSGRFKDLSLRLRNATYRTDFER--SARDVDEVRLIASYNLS  404 (406)
+Confidence            4577778899999852226999999999999876531  35678899999999884
+
+
+Done!

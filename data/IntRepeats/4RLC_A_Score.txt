@@ -1,0 +1,24 @@
+Query         4RLC:A|PDBID|CHAIN|SEQUENCE
+Match_columns 175
+No_of_seqs    126 out of 1363
+Neff          9.8 
+Searched_HMMs 1
+Date          Mon May 14 12:15:27 2018
+Command       hhalign -i MSAs/4RLC_A.a3m -o data/IntRepeats/4RLC_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4RLC:A|PDBID|CHAIN|SEQUENCE     82.8 9.3E-06 9.3E-06   33.2   0.0   27   40-66    126-152 (175)
+
+No 1  
+>4RLC:A|PDBID|CHAIN|SEQUENCE
+Probab=82.83  E-value=9.3e-06  Score=33.17  Aligned_cols=27  Identities=15%  Similarity=0.228  Sum_probs=21.7
+
+Q 4RLC:A|PDBID|C   40 NADLYGGSIGYFLTDDVELALSYGEYH   66 (175)
+Q Consensus        40 ~~~~~g~~~gy~~~~~~~v~~~~~~~~   66 (175)
+                      ..+.+++.+.|.+++++++.+++.+..
+T Consensus       126 ~~~~~g~G~~y~l~~~~~l~~e~~~~~  152 (175)
+T 4RLC:A|PDBID|C  126 TMANIGAGLKYYFTENFFAKASLDGQY  152 (175)
+Confidence            467788888899999999888877653
+
+
+Done!

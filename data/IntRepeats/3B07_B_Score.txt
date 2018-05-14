@@ -1,0 +1,24 @@
+Query         3B07:B|PDBID|CHAIN|SEQUENCE
+Match_columns 290
+No_of_seqs    103 out of 114
+Neff          5.5 
+Searched_HMMs 1
+Date          Mon May 14 12:15:40 2018
+Command       hhalign -i MSAs/3B07_B.a3m -o data/IntRepeats/3B07_B_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3B07:B|PDBID|CHAIN|SEQUENCE      0.2    0.29    0.29   14.8   0.0   30   19-48     97-126 (290)
+
+No 1  
+>3B07:B|PDBID|CHAIN|SEQUENCE
+Probab=0.21  E-value=0.29  Score=14.79  Aligned_cols=30  Identities=7%  Similarity=0.207  Sum_probs=15.8
+
+Q 3B07:B|PDBID|C   19 QGAEIIKRTQDITSKRLAITQNIQFDFVKD   48 (290)
+Q Consensus        19 ~~~~v~~~t~~~~~~~~~i~~sL~f~fI~D   48 (290)
+                      ++|+|++..-.-..+...+..+|.++.-++
+T Consensus        97 ~~a~i~~~~P~N~i~~~~Vsst~gY~iGG~  126 (290)
+T 3B07:B|PDBID|C   97 SNVDLINYLPKNKIDSADVSQKLGYNIGGN  126 (290)
+Confidence            456666655544444455555555554443
+
+
+Done!

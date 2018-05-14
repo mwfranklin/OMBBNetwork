@@ -21,7 +21,7 @@ with open("/Users/meghan/Documents/PhD/SluskyLab/DBList_v4_%s.txt"%value, "r") a
         allowed_barrels.append(line.strip().lower())
 
 prototypical = []
-with open("CompCodesE<1.txt", "r") as comp_data:
+with open("CompCodesE-2.txt", "r") as comp_data:
     for line in comp_data:
         line = line.strip().split("\t")
         if line[1] == "1" and line[0][0:4] in allowed_barrels:
@@ -31,7 +31,7 @@ avg_interaction = np.zeros([27,27])
 int_counts = np.zeros([27,27])
 e_values = [ [ [] for i in range(27)] for j in range(27)]
 diff_barrel_lines = [ [ [] for i in range(27)] for j in range(27)]
-with open("16_18DataOnly_test.txt", "r") as inData:
+with open("data/AllDataE20_v6_Numbered.txt", "r") as inData:
     for line in inData:
         if "IntNum" not in line:
             line = line.strip().split()

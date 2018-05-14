@@ -1,0 +1,32 @@
+Query         3QLB:A|PDBID|CHAIN|SEQUENCE
+Match_columns 748
+No_of_seqs    481 out of 3007
+Neff          11.9
+Searched_HMMs 1
+Date          Mon May 14 12:14:47 2018
+Command       hhalign -i MSAs/3QLB_A.a3m -o data/IntRepeats/3QLB_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3QLB:A|PDBID|CHAIN|SEQUENCE     95.8 6.8E-09 6.8E-09   79.0   0.0   73    1-74      8-95  (748)
+
+No 1  
+>3QLB:A|PDBID|CHAIN|SEQUENCE
+Probab=95.83  E-value=6.8e-09  Score=78.97  Aligned_cols=73  Identities=12%  Similarity=-0.049  Sum_probs=48.4
+
+Q 3QLB:A|PDBID|C    1 MGSRVAHRNTSGCPVNCVVSRPALGRNPLACLIHGLALGLSLTQAGAAL-AA--------------DGDTDQDHALTLDT   65 (748)
+Q Consensus         1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-~~--------------~~~~~~~~~~~L~~   65 (748)
+                      |..+++..+++++ .+++...+......++|++++++++++++++..+. ++              ......+....+++
+T Consensus         8 ~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~L~~v~V~a~~~~~~~~~~~~~~~~   86 (748)
+T 3QLB:A|PDBID|C    8 RNTSGCPVNCVVS-RPALGRNPLACLIHGLALGLSLTQAGAALAADGDTDQDHALTLDTSVISATQPDSATGPQAGYVAK   86 (748)
+Confidence            9999999999999 89988777554444445443333332222221111 10              11123445567899
+
+
+Q 3QLB:A|PDBID|C   66 SVISATQPD   74 (748)
+Q Consensus        66 v~V~a~~~~   74 (748)
+                      |+|+|.+..
+T Consensus        87 ~~vt~~~~~   95 (748)
+T 3QLB:A|PDBID|C   87 RSLSGTKTD   95 (748)
+Confidence            999997643
+
+
+Done!

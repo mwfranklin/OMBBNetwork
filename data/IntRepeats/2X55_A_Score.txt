@@ -1,0 +1,32 @@
+Query         2X55:A|PDBID|CHAIN|SEQUENCE
+Match_columns 293
+No_of_seqs    114 out of 460
+Neff          8.8 
+Searched_HMMs 1
+Date          Mon May 14 12:15:01 2018
+Command       hhalign -i MSAs/2X55_A.a3m -o data/IntRepeats/2X55_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2X55:A|PDBID|CHAIN|SEQUENCE     26.7 0.00069 0.00069   30.3   0.0   75   51-138   175-249 (293)
+
+No 1  
+>2X55:A|PDBID|CHAIN|SEQUENCE
+Probab=26.74  E-value=0.00069  Score=30.32  Aligned_cols=75  Identities=16%  Similarity=-0.052  Sum_probs=40.1
+
+Q 2X55:A|PDBID|C   51 AILKGDISWDPYSFLTLNARGWTSLASGSGNMDDYDWMNENQSEWTDHSSHPATNVNHANEYDLNVKGWLLQDENYKAGI  130 (293)
+Q Consensus        51 ~~~~~~~~~~~~~~~~l~~~~~~~~~~~~G~m~D~Dw~~~~~~~~t~~s~~~~~~~~~~~~~d~~~~~~~~~~~~~~l~~  130 (293)
+                      +.+|+.+.+++ ++|.|.+.+.+.. ..  ..+|.|+=.- ++ .+  ..| +..-..++.+++.++|.+  .+.++|. 
+T Consensus       175 p~~Gl~~~~~~-~~~~l~~~~~~sp-~~--~~~~~D~H~l-R~-~~--f~~-~~~g~~~~~~~~~~~y~i--~~~~sl~-  242 (293)
+T 2X55:A|PDBID|C  175 PYIGLAGQYRI-NDFELNALFKFSD-WV--RAHDNDEHYM-RD-LT--FRE-KTSGSRYYGTVINAGYYV--TPNAKVF-  242 (293)
+Confidence            56888888888 4788777777753 22  3556664221 11 11  112 222123455666777776  4455544 
+
+
+Q 2X55:A|PDBID|C  131 TAGYQETR  138 (293)
+Q Consensus       131 ~~Gy~y~~  138 (293)
+                       ++++|+.
+T Consensus       243 -~~~~y~~  249 (293)
+T 2X55:A|PDBID|C  243 -AEFTYSK  249 (293)
+Confidence             3444444
+
+
+Done!

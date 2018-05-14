@@ -1,0 +1,24 @@
+Query         4AIP:A|PDBID|CHAIN|SEQUENCE
+Match_columns 742
+No_of_seqs    254 out of 2151
+Neff          11.2
+Searched_HMMs 1
+Date          Mon May 14 12:13:16 2018
+Command       hhalign -i MSAs/4AIP_A.a3m -o data/IntRepeats/4AIP_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4AIP:A|PDBID|CHAIN|SEQUENCE      7.6  0.0046  0.0046   32.5   0.0   33  528-560   580-612 (742)
+
+No 1  
+>4AIP:A|PDBID|CHAIN|SEQUENCE
+Probab=7.56  E-value=0.0046  Score=32.52  Aligned_cols=33  Identities=15%  Similarity=0.207  Sum_probs=22.7
+
+Q 4AIP:A|PDBID|C  528 GTKAERARNTEIGFNYNDGTFAANGSYFWQTIK  560 (742)
+Q Consensus       528 ~L~pe~~~~~e~g~~~~~~~~~~~~~~f~~~~~  560 (742)
+                      +....+...+|+.+.+..+.|.+.+++-|.+.+
+T Consensus       580 N~~~~~~~G~e~~~~~~~~~~~~~~~~~~~~~~  612 (742)
+T 4AIP:A|PDBID|C  580 NAGYIKNHGYELGASYRTGGLTAKVGVSHSKPR  612 (742)
+Confidence            345567778888888876677777766665443
+
+
+Done!

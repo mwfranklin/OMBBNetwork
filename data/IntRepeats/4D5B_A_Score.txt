@@ -1,0 +1,32 @@
+Query         4D5B:A|PDBID|CHAIN|SEQUENCE
+Match_columns 339
+No_of_seqs    18 out of 18
+Neff          2.7 
+Searched_HMMs 1
+Date          Mon May 14 12:12:06 2018
+Command       hhalign -i MSAs/4D5B_A.a3m -o data/IntRepeats/4D5B_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4D5B:A|PDBID|CHAIN|SEQUENCE      0.8   0.071   0.071   21.0   0.0   88   40-128   207-304 (339)
+
+No 1  
+>4D5B:A|PDBID|CHAIN|SEQUENCE
+Probab=0.78  E-value=0.071  Score=20.99  Aligned_cols=88  Identities=14%  Similarity=0.226  Sum_probs=45.5
+
+Q 4D5B:A|PDBID|C   40 VGTSVEYEDKVTRGFNNTDK-------KEKTITNEVFNFFYNNP-QWNFMGFYSFKIENREQKEPGYYENEDGIKQL--F  109 (339)
+Q Consensus        40 VGts~EyEdK~~~~y~g~~~-------ke~t~thevi~~fy~n~-~wnls~lYafK~~~r~~~~~~y~enEdg~Khl--~  109 (339)
+                      ||+-+=|+.|..+...++++       +|++.+ |||.==|-.+ .+=+-+=|+=+..+..-...++..+++=||-+  .
+T Consensus       207 ~GvEfyYqiKdn~~~~~~g~ine~sDFtE~YiE-PivqYSFd~aGtlyVR~R~geneT~~~~~s~g~~~~~~YFkdIrKa  285 (339)
+T 4D5B:A|PDBID|C  207 VGVEFYYQIKTNDEKQPDGTINEKSDFNERYIE-PIVQYSFDDAGTLYTRVRVGKNETKNTDRSGGGNAGINYFKDIRKA  285 (339)
+Confidence            67888899999988755433       999998 5554333332 22222333333222211112222222222221  2
+
+
+Q 4D5B:A|PDBID|C  110 SLNKGHDLGNGWATGLIYE  128 (339)
+Q Consensus       110 sLnk~f~lgnG~~tGliy~  128 (339)
+                      .|-+-..||+.|-.++=|+
+T Consensus       286 TlGYeq~igddWlvkaEyE  304 (339)
+T 4D5B:A|PDBID|C  286 TVGYEQSIGESWVAKAEYE  304 (339)
+Confidence            3444567888888776443
+
+
+Done!

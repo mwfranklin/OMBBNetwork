@@ -1,0 +1,24 @@
+Query         3QRA:A|PDBID|CHAIN|SEQUENCE
+Match_columns 157
+No_of_seqs    158 out of 1029
+Neff          11.1
+Searched_HMMs 1
+Date          Mon May 14 12:14:29 2018
+Command       hhalign -i MSAs/3QRA_A.a3m -o data/IntRepeats/3QRA_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3QRA:A|PDBID|CHAIN|SEQUENCE     91.3 9.4E-07 9.4E-07   33.8   0.0   47    5-51     88-139 (157)
+
+No 1  
+>3QRA:A|PDBID|CHAIN|SEQUENCE
+Probab=91.31  E-value=9.4e-07  Score=33.85  Aligned_cols=47  Identities=9%  Similarity=0.118  Sum_probs=31.7
+
+Q 3QRA:A|PDBID|C    5 SSISIGYAQSRVKEDG-----YKLDKNPRGFNLKYRYEFNNDWGVIGSFAQT   51 (157)
+Q Consensus         5 ~~~~~g~~~~~~~~~~-----~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   51 (157)
+                      .++++|++....+...     .+.......+++.+.|.++++|.+.+++.+.
+T Consensus        88 ~y~~~G~~~~~~~~~~~~~~~~~~~~~~~~~g~G~~y~~~~~~~l~~~~~~~  139 (157)
+T 3QRA:A|PDBID|C   88 LYGLLGAGHGKAKFSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYS  139 (157)
+Confidence            3455566555444321     1234456778899999999999999998875
+
+
+Done!

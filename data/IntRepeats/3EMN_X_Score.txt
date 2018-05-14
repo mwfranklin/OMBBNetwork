@@ -1,0 +1,40 @@
+Query         3EMN:X|PDBID|CHAIN|SEQUENCE
+Match_columns 295
+No_of_seqs    164 out of 1330
+Neff          9.1 
+Searched_HMMs 1
+Date          Mon May 14 12:12:03 2018
+Command       hhalign -i MSAs/3EMN_X.a3m -o data/IntRepeats/3EMN_X_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3EMN:X|PDBID|CHAIN|SEQUENCE     97.6 3.3E-12 3.3E-12   83.3   0.0  163   67-236   123-292 (295)
+
+No 1  
+>3EMN:X|PDBID|CHAIN|SEQUENCE
+Probab=97.61  E-value=3.3e-12  Score=83.27  Aligned_cols=163  Identities=15%  Similarity=0.307  Sum_probs=109.2
+
+Q 3EMN:X|PDBID|C   67 NGSLETKYRWTEYGLTFTEKWN-TDNTLGTEITVEDQLARGLKLTFDSSFSPNTG-KKNAKIKTGYKREHINLGCDVDFD  144 (295)
+Q Consensus        67 ~~~~~~~~~~~~~~~~~~~k~~-t~g~l~~~~~~~~~~~~glk~~~~~~~~~~~~-~~~~~l~~~y~~~~~~~~~~~~~~  144 (295)
+                      .+.+++.|+.+...+.+...++ ....+...+.+.   .+++.+-+++.|++... .....+.+.|..+.+.+.+.++  
+T Consensus       123 ~~~l~~~y~~~~~~~~~~~~~~~~~~~~~~s~v~g---~~~~~~G~e~~~~~~~~~~~~~~~~~~y~~~~~~~~~~~~--  197 (295)
+T 3EMN:X|PDBID|C  123 NAKIKTGYKREHINLGCDVDFDIAGPSIRGALVLG---YEGWLAGYQMNFETSKSRVTQSNFAVGYKTDEFQLHTNVN--  197 (295)
+Confidence            4556666666543333322222 122333333332   46677777777766542 2356788899999888766543  
+
+
+Q 3EMN:X|PDBID|C  145 IAGPSIRGALVLG-YEGWLAGYQMNFETSKSRVTQSNFAVGYKTD-EFQLHTNVNDGTEFGGSIYQKVNKKLETAVNLAW  222 (295)
+Q Consensus       145 ~~~~~~~~s~v~g-~~~~~~G~e~~~~~~~~~~~~~~~~~~y~~~-~~~~~~~~~~~~~~~~s~~~~v~~~~~~g~e~~~  222 (295)
+                       ....+.++.... .+++.+|+|+.|+...+ -+.+.+|+.|.-+ +..+-+++++.+.+.++|-++++|++.+++.+.+
+T Consensus       198 -~~~~~~~s~~~~v~~~~~~g~e~~~~~~~~-~~~~~~G~~y~~d~~t~~Kakids~g~v~~~~~~~l~~~~~~~~s~~~  275 (295)
+T 3EMN:X|PDBID|C  198 -DGTEFGGSIYQKVNKKLETAVNLAWTAGNS-NTRFGIAAKYQVDPDACFSAKVNNSSLIGLGYTQTLKPGIKLTLSALL  275 (295)
+Confidence             233455555544 47899999999998764 5678899999974 5778888888899999999999999999888888
+
+
+Q 3EMN:X|PDBID|C  223 TAGN---SNTRFGIAAK  236 (295)
+Q Consensus       223 ~~~~---~~~~~~~G~~  236 (295)
+                      +...   ....+.+|..
+T Consensus       276 d~~~~~~~~~k~G~~l~  292 (295)
+T 3EMN:X|PDBID|C  276 DGKNVNAGGHKLGLGLE  292 (295)
+Confidence            8764   3455555543
+
+
+Done!

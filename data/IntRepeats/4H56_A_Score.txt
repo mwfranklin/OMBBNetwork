@@ -1,0 +1,24 @@
+Query         4H56:A|PDBID|CHAIN|SEQUENCE
+Match_columns 296
+No_of_seqs    99 out of 99
+Neff          5.0 
+Searched_HMMs 1
+Date          Mon May 14 12:13:47 2018
+Command       hhalign -i MSAs/4H56_A.a3m -o data/IntRepeats/4H56_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4H56:A|PDBID|CHAIN|SEQUENCE      0.2    0.25    0.25   15.7   0.0   29  158-186   228-257 (296)
+
+No 1  
+>4H56:A|PDBID|CHAIN|SEQUENCE
+Probab=0.24  E-value=0.25  Score=15.68  Aligned_cols=29  Identities=10%  Similarity=0.210  Sum_probs=20.2
+
+Q 4H56:A|PDBID|C  158 QPDFRTIQRKDD-ANLASWDIKFVETKDGY  186 (296)
+Q Consensus       158 Q~dY~T~~~~~t-~k~v~W~V~f~~~~~~y  186 (296)
+                      .|+|-++++.+- ++.....|.+.+..+.|
+T Consensus       228 ~P~~~~v~~a~k~~~~S~~~V~y~r~~D~Y  257 (296)
+T 4H56:A|PDBID|C  228 SPNMALALTAPKNAKESVIIVEYQRFDNDY  257 (296)
+Confidence            388888887733 36777788777665555
+
+
+Done!

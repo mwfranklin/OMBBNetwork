@@ -1,0 +1,24 @@
+Query         1TLY:A|PDBID|CHAIN|SEQUENCE
+Match_columns 278
+No_of_seqs    166 out of 754
+Neff          7.1 
+Searched_HMMs 1
+Date          Mon May 14 12:15:43 2018
+Command       hhalign -i MSAs/1TLY_A.a3m -o data/IntRepeats/1TLY_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1TLY:A|PDBID|CHAIN|SEQUENCE      0.2    0.27    0.27   14.0   0.0   11   15-25    229-239 (278)
+
+No 1  
+>1TLY:A|PDBID|CHAIN|SEQUENCE
+Probab=0.23  E-value=0.27  Score=13.98  Aligned_cols=11  Identities=18%  Similarity=-0.312  Sum_probs=6.5
+
+Q 1TLY:A|PDBID|C   15 QSVNVVGSYHT   25 (278)
+Q Consensus        15 ~si~~~~g~~~   25 (278)
+                      +-|+|+||.+.
+T Consensus       229 ~Gv~y~Yw~NK  239 (278)
+T 1TLY:A|PDBID|C  229 YSVVARYWHDG  239 (278)
+Confidence            44566666654
+
+
+Done!

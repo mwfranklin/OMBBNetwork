@@ -1,0 +1,24 @@
+Query         7AHL:A|PDBID|CHAIN|SEQUENCE
+Match_columns 293
+No_of_seqs    91 out of 101
+Neff          5.1 
+Searched_HMMs 1
+Date          Mon May 14 12:12:12 2018
+Command       hhalign -i MSAs/7AHL_A.a3m -o data/IntRepeats/7AHL_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 7AHL:A|PDBID|CHAIN|SEQUENCE      0.1    0.56    0.56   12.5   0.0   67   25-100    44-114 (293)
+
+No 1  
+>7AHL:A|PDBID|CHAIN|SEQUENCE
+Probab=0.10  E-value=0.56  Score=12.50  Aligned_cols=67  Identities=12%  Similarity=-0.025  Sum_probs=82.2
+
+Q 7AHL:A|PDBID|C   25 LVTYDKENGMHKKVFYSFIDDKNHNKKLLVIRTKGTIAGQYRVYSEEGANKSGLAWPSAFKVQLQLP---D-NEVAQISD  100 (293)
+Q Consensus        25 ~~~~~~~~~i~~~l~~~FI~D~~~dK~~~iikt~G~i~s~~~~~~~~~~~~a~~~wps~Y~i~i~~~---~-~~~~~i~~  100 (293)
+                      ++...+|.-.=.+.+- ||.....     +....+...+.+..|   ..|.-.|.=...+.+.|--.   + ..++++-+
+T Consensus        44 ~D~~~dK~~~iikt~G-~i~s~~~-----~~~~~~~~~a~~~wp---s~Y~i~i~~~~~~~~~i~~~~PkN~i~~~~Vs~  114 (293)
+T 7AHL:A|PDBID|C   44 DDKNHNKKLLVIRTKG-TIAGQYR-----VYSEEGANKSGLAWP---SAFKVQLQLPDNEVAQISDYYPRNSIDTKEYMS  114 (293)
+Confidence            5566787666678999 9999994     779999999999999   99999999999999999999   7 57888854
+
+
+Done!

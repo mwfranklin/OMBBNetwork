@@ -1,0 +1,32 @@
+Query         4EPA:A|PDBID|CHAIN|SEQUENCE
+Match_columns 655
+No_of_seqs    352 out of 1819
+Neff          11.9
+Searched_HMMs 1
+Date          Mon May 14 12:15:11 2018
+Command       hhalign -i MSAs/4EPA_A.a3m -o data/IntRepeats/4EPA_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4EPA:A|PDBID|CHAIN|SEQUENCE     22.3 0.00094 0.00094   35.7   0.0  123  359-486   410-535 (655)
+
+No 1  
+>4EPA:A|PDBID|CHAIN|SEQUENCE
+Probab=22.32  E-value=0.00094  Score=35.70  Aligned_cols=123  Identities=9%  Similarity=0.021  Sum_probs=56.5
+
+Q 4EPA:A|PDBID|C  359 AETLAAYSDLTWHLTDRFDIGGGVRFSHDKSSTQYHGSMLGNPFGDQGKSNDDQVLGQLSAGYMLTDDWRVYTRVAQGYK  438 (655)
+Q Consensus       359 ~~~~~~y~~~~~~~~~~l~l~~GlR~d~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~~~~~y~~~~~~~l~~~~~~~~~  438 (655)
+                      ...+..-+...|++++++.|.++...............   .......-.........+++.|++.+ +.+.+++-....
+T Consensus       410 ~~~~~p~~~~~y~~~~~~~l~~~~~~~~~~p~~~~~~~---~~~~~~~l~pe~~~~~e~g~~~~~~~-~~~~~~~f~~~~  485 (655)
+T 4EPA:A|PDBID|C  410 DDQVLGQLSAGYMLTDDWRVYTRVAQGYKPSGYNIVPT---AGLDAKPFVAEKSINYELGTRYETAD-VTLQAATFYTHT  485 (655)
+Confidence            34556667777888887777766553322111000000   00000001113345566777776643 444443332111
+
+
+Q 4EPA:A|PDBID|C  439 PSGYNIVPT--AGLDAKPFVAEKSINYELGTRYETA-DVTLQAATFYTHTK  486 (655)
+Q Consensus       439 ~p~~~~~~~--~~~~~~~l~pe~~~~~e~g~~~~~~-~~~~~~~~f~~~~~  486 (655)
+                      . .......  ......+....+...+|+.+++.+. .+.+.+++-|.+.+
+T Consensus       486 ~-~~i~~~~~~~~~~~~n~~~~~~~G~e~~~~~~~~~~~~~~~~~~~~~~~  535 (655)
+T 4EPA:A|PDBID|C  486 K-DMQLYSGPVRMQTLSNAGKADATGVELEAKWRFAPGWSWDINGNVIRSE  535 (655)
+Confidence            0 0000000  0011122334678889999999874 46666666555443
+
+
+Done!

@@ -1,0 +1,32 @@
+Query         5FOK:A|PDBID|CHAIN|SEQUENCE
+Match_columns 730
+No_of_seqs    437 out of 1398
+Neff          12.0
+Searched_HMMs 1
+Date          Mon May 14 12:14:20 2018
+Command       hhalign -i MSAs/5FOK_A.a3m -o data/IntRepeats/5FOK_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5FOK:A|PDBID|CHAIN|SEQUENCE     22.4 0.00094 0.00094   37.1   0.0  113  525-646   574-686 (730)
+
+No 1  
+>5FOK:A|PDBID|CHAIN|SEQUENCE
+Probab=22.36  E-value=0.00094  Score=37.05  Aligned_cols=113  Identities=13%  Similarity=0.137  Sum_probs=61.7
+
+Q 5FOK:A|PDBID|C  525 DPERNRNLELGTKWAFFDDALSLNAALFRTDKTNARVASPDVSTLQVLDGEQRVQGVELGFNGKLTEKWKVFGGYTYLDS  604 (730)
+Q Consensus       525 ~pe~~~~~e~G~~~~~~~~~~~~~~~~f~~~~~d~i~~~~~~~~~~~n~g~~~~~G~E~~~~~~~~~~~~~~~~~t~~~~  604 (730)
+                      ...+...+|+.+++.+. ++|.+.+++-+.+.+..-........  ......-..-+-+.+.|.+.++|.+.+++.|...
+T Consensus       574 g~~~~~G~E~~~~~~~~-~~~~~~~~~t~~~~~~~~~~~~~~~~--~~~~~~p~~~~~~~~~~~~~~~~~~~~~~~y~~~  650 (730)
+T 5FOK:A|PDBID|C  574 GEQRVQGVELGFNGKLT-EKWKVFGGYTYLDSEIRKSTVKSDEG--NKMPQTAQNNFTLWTTYDLLQNFTIGGGTTYVDK  650 (730)
+Confidence            34567889999998874 45777777666554332111000000  0001111233445566666677888888888766
+
+
+Q 5FOK:A|PDBID|C  605 EIRKSTVKSDEGNKMPQTAQNNFTLWTTYDLLQNFTIGGGTT  646 (730)
+Q Consensus       605 ~~~~~~~~~~~~~~~~~~p~~~~~~~~~~~~~~~~~~~~~~~  646 (730)
+                      .....      .......+-+.+++.+.|++.++|.+.+.+.
+T Consensus       651 ~~~~~------~~~~~~~~~~~~d~~~~~~~~~~~~~~~~v~  686 (730)
+T 5FOK:A|PDBID|C  651 QYGNT------ANSTYIPSYWRYDAMASYKVSKNVDLQLNVQ  686 (730)
+Confidence            54321      1112233446677777787766666666543
+
+
+Done!

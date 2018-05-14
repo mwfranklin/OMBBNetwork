@@ -1,0 +1,32 @@
+Query         4Q35:A|PDBID|CHAIN|SEQUENCE
+Match_columns 802
+No_of_seqs    223 out of 2163
+Neff          8.9 
+Searched_HMMs 1
+Date          Mon May 14 12:14:24 2018
+Command       hhalign -i MSAs/4Q35_A.a3m -o data/IntRepeats/4Q35_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4Q35:A|PDBID|CHAIN|SEQUENCE     95.4 1.7E-08 1.7E-08   82.6   0.0  131   47-184    75-220 (802)
+
+No 1  
+>4Q35:A|PDBID|CHAIN|SEQUENCE
+Probab=95.44  E-value=1.7e-08  Score=82.63  Aligned_cols=131  Identities=11%  Similarity=-0.056  Sum_probs=87.0
+
+Q 4Q35:A|PDBID|C   47 TNDLPVTINADHAKGDYPD---------DAVFTGSVDIMQGNSRLQADEVQLHQKEAPGQPEPVRTVDALGNVHYDDNQV  117 (802)
+Q Consensus        47 ~~~~~v~i~Ad~~~~~~~~---------~~~a~GnV~i~~~~~~l~Ad~i~~~~~~~~~~~~~~~~~~a~GnV~~~~~~~  117 (802)
+                      ...+...|+||+|+++.+.         .+.|+|||++.+++.+|+||++.||.+++++.      + ..|+..+..+..
+T Consensus        75 i~~~~~~l~Ad~i~~~~~~~~~~~~~~~~~~a~GnV~~~~~~~~i~g~~~~~n~~~~~g~------~-~~~~~~~~~~~~  147 (802)
+T 4Q35:A|PDBID|C   75 IMQGNSRLQADEVQLHQKEAPGQPEPVRTVDALGNVHYDDNQVILKGPKGWANLNTKDTN------V-WEGDYQMVGRQG  147 (802)
+Confidence            3455688999999999853         58899999999999999999999999885321      1 123444444445
+
+
+Q 4Q35:A|PDBID|C  118 ILKGPKGWANLNTKDTNVWEGDYQ---MVGRQGRGKADLMKQRGENRYTILDNGSFTSCLPG---SDTWSVVG  184 (802)
+Q Consensus       118 ~i~g~~~~~n~~~~~g~~~~~~~~---~~~~~~~~~a~~i~~~~~~~~~~~~~~~~TtC~~~---~p~w~i~a  184 (802)
+                      .++|+++...-+..--.+.++.+.   ....+++++|++++...+++...++++.|--++.+   -|.+.+-.
+T Consensus       148 ~~~a~~i~~~~~~~~~~~~~~~~TtC~~~~p~w~i~a~~i~~~~~~~~i~~~~~~~~v~~vPvfy~P~~~~p~  220 (802)
+T 4Q35:A|PDBID|C  148 RGKADLMKQRGENRYTILDNGSFTSCLPGSDTWSVVGSEIIHDREEQVAEIWNARFKVGPVPIFYSPYLQLPV  220 (802)
+Confidence            566665543211110112333221   12357999999998776644456899999999865   36555543
+
+
+Done!

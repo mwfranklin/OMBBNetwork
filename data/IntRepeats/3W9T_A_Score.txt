@@ -1,0 +1,48 @@
+Query         3W9T:A|PDBID|CHAIN|SEQUENCE
+Match_columns 432
+No_of_seqs    477 out of 2994
+Neff          9.0 
+Searched_HMMs 1
+Date          Mon May 14 12:13:53 2018
+Command       hhalign -i MSAs/3W9T_A.a3m -o data/IntRepeats/3W9T_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3W9T:A|PDBID|CHAIN|SEQUENCE     99.5 2.7E-23 2.7E-23  176.2   0.0  210   10-237    51-284 (432)
+
+No 1  
+>3W9T:A|PDBID|CHAIN|SEQUENCE
+Probab=99.54  E-value=2.7e-23  Score=176.23  Aligned_cols=210  Identities=33%  Similarity=0.558  Sum_probs=176.3
+
+Q 3W9T:A|PDBID|C   10 IGELRSFKSKQCVDIVGNQGSGNIATYDCDGLS----DQQIIICGD-------------GTIRNEARNYCFTPDGSGN-A   71 (432)
+Q Consensus        10 ~g~I~~~~sg~cLDv~~~~~~~~v~~~~c~g~~----~Q~W~~~~~-------------g~i~n~~sg~cLdv~~~~~-~   71 (432)
+                      .|.|++..+|+|||+.++.. ..+.++.|++..    .|+|.+...             ..|++..+++||++.++.. .
+T Consensus        51 ~g~i~n~~sg~cLdv~~~~~-~~v~~~~c~~~~~~~~~Q~W~~~~~~~~~~~~~~~~~~~~i~~~~sg~cldv~~~~~~~  129 (432)
+T 3W9T:A|PDBID|C   51 DGTIRNEARNYCFTPDGSGN-ANVMSSPCTLYPEIPSSQRWRQGRRKTFTDNGGIEQVATEIINLASGKCLDIEGSDGTG  129 (432)
+Confidence            35678878999999997643 468999999877    899999865             4577778899999987644 4
+
+
+Q 3W9T:A|PDBID|C   72 NVMSSPCTLYPEIPSSQRWRQGRRKTFTDNGGIEQVATEIINLASGKCLDIEGSDGTGDIGVYDCQNLDDQYFYVRSRGP  151 (432)
+Q Consensus        72 ~v~~~~c~~~~~~~~~Q~W~~~~~~~~~~~~~~~~~~~~i~~~~sg~cldv~~~~~~~~i~~~~~~~~~~Q~W~~~~~~~  151 (432)
+                      .+.++.|.+..    .|+|.+.....       +..++.|++..+++||++.+...+..+.+|.|.+...|.|.+...+ 
+T Consensus       130 ~i~~~~~~~~~----~Q~W~~~~~~~-------~~~~~~i~~~~sg~cLdv~~~~~g~~v~~~~c~~~~~Q~W~~~~~g-  197 (432)
+T 3W9T:A|PDBID|C  130 DIGVYDCQNLD----DQYFYVRSRGP-------ELFYGRLRNEKSDLCLDVEGSDGKGNVLMYSCEDNLDQWFRYYENG-  197 (432)
+Confidence            68899998866    99999986511       0124788888899999998765446789999999999999998753 
+
+
+Q 3W9T:A|PDBID|C  152 ELFYGRLRNEKSDLCLDVEGSDGKGNVLMYSCEDNLDQWFRYYEN----G--EIVNAKSGMCLDVEGSDGSGNVGIYRCD  225 (432)
+Q Consensus       152 ~~~~~~i~~~~sg~cLdv~~~~~g~~v~~~~c~~~~~Q~W~~~~~----g--~i~~~~sg~cLdv~~~~~g~~v~~~~c~  225 (432)
+                           .|++..+++||++.+..++..+.+|.|.+..+|+|.+...    +  .|++..+++||++.+...+..+.+|.|.
+T Consensus       198 -----~i~~~~sg~cLdv~~~~~g~~v~~~~c~~~~~Q~W~~~~~~~~~g~~~i~~~~sg~cldv~~~~~g~~v~~~~c~  272 (432)
+T 3W9T:A|PDBID|C  198 -----EIVNAKSGMCLDVEGSDGSGNVGIYRCDDLRDQMWSRPNAYCNGDYCSFLNKESNKCLDVSGDQGTGDVGTWQCD  272 (432)
+Confidence                 6777779999999876567899999999999999999987    2  7888889999999987667899999999
+
+
+Q 3W9T:A|PDBID|C  226 DLRDQMWSRPNA  237 (432)
+Q Consensus       226 ~~~~Q~W~~~~~  237 (432)
+                      +..+|+|.+...
+T Consensus       273 ~~~~Q~W~~~~~  284 (432)
+T 3W9T:A|PDBID|C  273 GLPDQRFKWVFD  284 (432)
+Confidence            999999999876
+
+
+Done!

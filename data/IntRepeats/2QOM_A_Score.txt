@@ -1,0 +1,32 @@
+Query         2QOM:A|PDBID|CHAIN|SEQUENCE
+Match_columns 285
+No_of_seqs    130 out of 1303
+Neff          10.1
+Searched_HMMs 1
+Date          Mon May 14 12:14:31 2018
+Command       hhalign -i MSAs/2QOM_A.a3m -o data/IntRepeats/2QOM_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2QOM:A|PDBID|CHAIN|SEQUENCE     68.5 4.6E-05 4.6E-05   35.7   0.0  101   53-156    92-208 (285)
+
+No 1  
+>2QOM:A|PDBID|CHAIN|SEQUENCE
+Probab=68.46  E-value=4.6e-05  Score=35.66  Aligned_cols=101  Identities=16%  Similarity=0.088  Sum_probs=50.8
+
+Q 2QOM:A|PDBID|C   53 LDLFTGFTVTHTDSSASAD-------VFSGKTKSVGAGLYASAMFD--SGAYIDLIGKYVHHDNEYTATFA---G----L  116 (285)
+Q Consensus        53 ~~~~~G~~~~~~~~~~~~~-------~~~~~~~~~~~g~y~~~~~~--~~~~~~~~~~~~~~~~~~~~~~~---~----~  116 (285)
+                      +.+.+.+.+.++..+.+.+       .++.+...+.+.+-..|.+.  +.+.+.-.+...+...+.+.-..   .    .
+T Consensus        92 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~~~~~~l~P~~~~~y~~~~~~~~~e~~~~~~l~~  171 (285)
+T 2QOM:A|PDBID|C   92 SGAYIDLIGKYVHHDNEYTATFAGLGTRDYSTHSWYAGAEAGYRYHVTEDAWIEPQAELVYGSVSGKQFAWKDQGMHLSM  171 (285)
+Confidence            4455656666666555443       12334555555555555432  35666555554444443322110   1    1
+
+
+Q 2QOM:A|PDBID|C  117 GTRDYSTHSWYAGAEAGYRYHVTEDAWIEPQAELVYGSVS  156 (285)
+Q Consensus       117 ~~~~~~~~~~~~~~~~G~~~~~~~~~~l~P~~~~~y~~~~  156 (285)
+                      ...+.+.....+.+++.+.+.. +.+  .|++.+.+.+..
+T Consensus       172 ~~~~~~~~~~~~G~~~~~~~~~-~~~--~~~~~~~~~~~~  208 (285)
+T 2QOM:A|PDBID|C  172 KDKDYNPLIGRTGVDVGKSFSG-KDW--KVTARAGLGYQF  208 (285)
+Confidence            2235555666677777777765 344  455555544443
+
+
+Done!

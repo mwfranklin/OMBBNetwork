@@ -1,0 +1,40 @@
+Query         3WI5:A|PDBID|CHAIN|SEQUENCE
+Match_columns 312
+No_of_seqs    131 out of 1286
+Neff          9.8 
+Searched_HMMs 1
+Date          Mon May 14 12:12:37 2018
+Command       hhalign -i MSAs/3WI5_A.a3m -o data/IntRepeats/3WI5_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3WI5:A|PDBID|CHAIN|SEQUENCE     97.4 1.3E-11 1.3E-11   79.1   0.0  144  126-277   160-312 (312)
+
+No 1  
+>3WI5:A|PDBID|CHAIN|SEQUENCE
+Probab=97.38  E-value=1.3e-11  Score=79.08  Aligned_cols=144  Identities=13%  Similarity=0.088  Sum_probs=100.5
+
+Q 3WI5:A|PDBID|C  126 ISVRYDSPEFAGLSGSV--QYALNDNAG----RHNSESYHAGFNYKNGGFFVQYGGAYKRHHQVQEG--LNIEKYQIHRL  197 (312)
+Q Consensus       126 n~i~Y~sp~~~g~~~~~--~y~~~~~~~----~~~~~~~~~~~~Y~~g~~~~~~~~~y~~~~~~~~~--~~~~~~~~~~~  197 (312)
+                      -.++|..   ++|.+.+  .|...+...    ....+.|.++++|+.++|.+.+  .|.+.+.....  ....+...|.+
+T Consensus       160 ~~~~Y~~---g~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~y~~~~~~~~~--~y~~~~~~~~~~~~~~~~~~~~~~  234 (312)
+T 3WI5:A|PDBID|C  160 AGFNYKN---GGFFVQYGGAYKRHHQVQEGLNIEKYQIHRLVSGYDNDALYASV--AVQQQDAKLTDASNSHNSQTEVAA  234 (312)
+Confidence            3667774   6777774  465544321    2356899999999999888884  46655443210  12345678999
+
+
+Q 3WI5:A|PDBID|C  198 VSGYDNDALYASVAVQQQDAKLTDASNSHNSQTEVAATLAYRFGN-VTPRVSYAHGFKGLVAKADIGNRYDQVVVGAEYD  276 (312)
+Q Consensus       198 ~~~y~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~y~~~~-~~~~~~y~~~~~~~~~~~~~~~~~~~~~~g~~Y~  276 (312)
+                      +++|+++++++.+.|.+.+...........+...+.+++.|++.+ +.+++.|.+.+.+..   ....+.+.+.||+.|+
+T Consensus       235 ~~~y~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~g~~Y~l~~~~~~y~~~~~~~~~~~---~~~~~~~~~~~G~r~~  311 (312)
+T 3WI5:A|PDBID|C  235 TLAYRFGNVTPRVSYAHGFKGLVAKADIGNRYDQVVVGAEYDFSKRTSALVSAGWLQEGKG---ENKFVATAGGVGLRHK  311 (312)
+Confidence            999999999999999877654311111245788999999999997 999999988765431   1235778899999887
+
+
+Q 3WI5:A|PDBID|C  277 F  277 (312)
+Q Consensus       277 l  277 (312)
+                      |
+T Consensus       312 F  312 (312)
+T 3WI5:A|PDBID|C  312 F  312 (312)
+Confidence            5
+
+
+Done!

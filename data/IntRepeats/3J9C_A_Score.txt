@@ -1,0 +1,40 @@
+Query         3J9C:A|PDBID|CHAIN|SEQUENCE
+Match_columns 562
+No_of_seqs    120 out of 128
+Neff          4.2 
+Searched_HMMs 1
+Date          Mon May 14 12:14:39 2018
+Command       hhalign -i MSAs/3J9C_A.a3m -o data/IntRepeats/3J9C_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3J9C:A|PDBID|CHAIN|SEQUENCE     54.3 0.00013 0.00013   45.3   0.0  138    2-165    21-175 (562)
+
+No 1  
+>3J9C:A|PDBID|CHAIN|SEQUENCE
+Probab=54.28  E-value=0.00013  Score=45.33  Aligned_cols=138  Identities=17%  Similarity=0.160  Sum_probs=185.7
+
+Q 3J9C:A|PDBID|C    2 VPDRDNDGIPDSLE-----VEGYTVDVKN---KRTFLSPWISNIHEKKGLTKYKSS--PEKWSTASDPYSDFEKVTGRID   71 (562)
+Q Consensus         2 ~~DtD~DgIPD~wE-----~nGYTv~~~~---~~~~~v~Wdd~~~~~~Gy~KYvSn--P~~~sTaGDPYSD~EKvsg~~d   71 (562)
+                      +.-.++.++---|.     ..||+==+.+   ....-.|..|       |.|....  .--+.-+.||.=          
+T Consensus        21 v~~~~~~~~~v~Wdd~~~~~~Gy~KYvSnP~~~sTaGDPYSD-------~EKvsg~~d~~i~~eArnPLV----------   83 (562)
+T 3J9C:A|PDBID|C   21 VDVKNKRTFLSPWISNIHEKKGLTKYKSSPEKWSTASDPYSD-------FEKVTGRIDKNVSPEARHPLV----------   83 (562)
+Confidence            45599999999999     9999999997   4458999999       9999999  999999999999          
+
+
+Q 3J9C:A|PDBID|C   72 KNVSPEARHPLVAA-YPIVHVDME-NIILSKNEDQSTQNTDSQTRTISKNTSTSRTHTSEVHGN-----AEVHASFFDIG  144 (562)
+Q Consensus        72 ~~i~~eArnPLVAA-yP~V~V~ME-klilS~n~~is~~~G~s~s~t~S~sTStS~t~s~s~~v~-----~ev~as~~~~g  144 (562)
+                            |-=|-|.. +=.|-+... .+.-+.....+.+.  |.+.+.|.+.|.+.+-+.+++++     ++|++++. .+
+T Consensus        84 ------AAyP~V~V~MEklilS~n~~is~~~G~s~s~t~--S~sTStS~t~s~s~~v~~ev~as~~~~g~sVSa~yS-~S  154 (562)
+T 3J9C:A|PDBID|C   84 ------AAYPIVHVDMENIILSKNEDQSTQNTDSQTRTI--SKNTSTSRTHTSEVHGNAEVHASFFDIGGSVSAGFS-NS  154 (562)
+Confidence                  99999999 999999999 99999999999999  86767788888866777776654     45555432 22
+
+
+Q 3J9C:A|PDBID|C  145 GSVSAGFSNSNSSTVAIDHSL  165 (562)
+Q Consensus       145 ~sVSa~yS~S~S~T~s~~~S~  165 (562)
+                      -+-|..+++|.+.|...+|++
+T Consensus       155 ~S~T~s~~~S~S~t~~~sWs~  175 (562)
+T 3J9C:A|PDBID|C  155 NSSTVAIDHSLSLAGERTWAE  175 (562)
+Confidence            234556666655566666654
+
+
+Done!

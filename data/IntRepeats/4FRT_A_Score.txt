@@ -1,0 +1,24 @@
+Query         4FRT:A|PDBID|CHAIN|SEQUENCE
+Match_columns 400
+No_of_seqs    124 out of 1164
+Neff          9.3 
+Searched_HMMs 1
+Date          Mon May 14 12:13:11 2018
+Command       hhalign -i MSAs/4FRT_A.a3m -o data/IntRepeats/4FRT_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4FRT:A|PDBID|CHAIN|SEQUENCE     21.8 0.00099 0.00099   32.3   0.0   51  306-362   348-398 (400)
+
+No 1  
+>4FRT:A|PDBID|CHAIN|SEQUENCE
+Probab=21.75  E-value=0.00099  Score=32.32  Aligned_cols=51  Identities=14%  Similarity=-0.069  Sum_probs=39.1
+
+Q 4FRT:A|PDBID|C  306 KDERSWQLRYDYDFAAIGLPGLTFMSRYLRGEHIDLLDGGGRGKEWERDTDIAYLVQ  362 (400)
+Q Consensus       306 ~~~~~~~~~~~y~~~~~g~~gl~~~~~y~~~~~~~~~~~~~~~~~~E~~~~l~Y~~~  362 (400)
+                      ..+..+-+.+.|++..=.++||++.++|+..+...      ..+..++-+.+.|+|+
+T Consensus       348 ~~~~E~~~~l~Y~~~~g~~kgls~~~~~~~~~~~~------~~d~~~~R~~~~Y~F~  398 (400)
+T 4FRT:A|PDBID|C  348 GKEWERDTDIAYLVQSGPLKNLGIKLRNGTFRSDF------GNDIDETRLIVSYALP  398 (400)
+Confidence            35667778999998521268999999999987642      3578888899999984
+
+
+Done!

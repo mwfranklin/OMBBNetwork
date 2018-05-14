@@ -1,0 +1,40 @@
+Query         3D5K:A|PDBID|CHAIN|SEQUENCE
+Match_columns 474
+No_of_seqs    716 out of 1422
+Neff          10.9
+Searched_HMMs 1
+Date          Mon May 14 12:15:42 2018
+Command       hhalign -i MSAs/3D5K_A.a3m -o data/IntRepeats/3D5K_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3D5K:A|PDBID|CHAIN|SEQUENCE     99.4 1.2E-21 1.2E-21  160.1   0.0  195   47-245   259-453 (474)
+
+No 1  
+>3D5K:A|PDBID|CHAIN|SEQUENCE
+Probab=99.41  E-value=1.2e-21  Score=160.11  Aligned_cols=195  Identities=21%  Similarity=0.131  Sum_probs=173.3
+
+Q 3D5K:A|PDBID|C   47 PQLQQLIGVALENNRDLRVAALNVEAFRAQYRIQRADLFPRIGVDGSGTRQRLPGDLSTTGSPAISSQYGVTLGTTAWEL  126 (474)
+Q Consensus        47 lsL~~~i~~al~~np~l~~~~~~~~~a~~~~~~a~~~~~P~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~l  126 (474)
+                      .+.++++..++.+||+++.++.+++.++..++.++..++|+|++++++++........   .......++++++ +.+|+
+T Consensus       259 ~~~~~~~~~al~~~p~l~~~~~~~~~a~~~~~~a~~~~~P~l~l~~~~~~~~~~~~~~---~~~~~~~~~~gl~-~~~pl  334 (474)
+T 3D5K:A|PDBID|C  259 EVPAGLPSDLLQRRPDILEAEHQLMAANASIGAARAAFFPSISLTANAGTMSRQLSGL---FDAGSGSWLFQPS-INLPI  334 (474)
+Confidence            4567888999999999999999999999999999999999999999988765432211   1112333444444 55888
+
+
+Q 3D5K:A|PDBID|C  127 DLFGRLRSLRDQALEQYLATEQAQRSAQTTLVASVATAYLTLKADQAQLQLTKDTLGTYQKSFDLTQRSYDVGVASALDL  206 (474)
+Q Consensus       127 ~~~g~~~~~~~~a~~~~~~a~~~~~~~~~~l~~~v~~~Y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~d~  206 (474)
+                      +.+|.....++.++...+.++.+++..+.++..++..+|.++..+++.++.+++.+..+++.++.++.+|+.|.++..|+
+T Consensus       335 ~~~~~~~~~~~~a~~~~~~a~~~~~~~~~~~~~~v~~~~~~~~~~~~~~~~~~~~~~~a~~~~~~~~~~~~~G~~s~~dl  414 (474)
+T 3D5K:A|PDBID|C  335 FTAGSLRASLDYAKIQKDINVAQYEKAIQTAFQEVADGLAARGTFTEQLQAQRDLVKASDEYYQLADKRYRTGVDNYLTL  414 (474)
+Confidence            88999999999999999999999999999999999999999999999999999999999999999999999999999999
+
+
+Q 3D5K:A|PDBID|C  207 RQAQTAVEGARATLAQYTRLVAQDQNALVLLLGSGIPAN  245 (474)
+Q Consensus       207 ~~a~~~~~~~~~~~~~a~~~~~~a~~~L~~llg~~~~~~  245 (474)
+                      +.++..+.+++.++..++.++..+...|..++|.+....
+T Consensus       415 l~a~~~~~~a~~~~~~a~~~~~~a~~~L~~~~G~~~~~~  453 (474)
+T 3D5K:A|PDBID|C  415 LDAQRSLFTAQQQLITDRLNQLTSEVNLYKALGGGWNQQ  453 (474)
+Confidence            999999999999999999999999999999999876543
+
+
+Done!

@@ -1,0 +1,32 @@
+Query         3DWO:X|PDBID|CHAIN|SEQUENCE
+Match_columns 451
+No_of_seqs    147 out of 1515
+Neff          9.4 
+Searched_HMMs 1
+Date          Mon May 14 12:13:24 2018
+Command       hhalign -i MSAs/3DWO_X.a3m -o data/IntRepeats/3DWO_X_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3DWO:X|PDBID|CHAIN|SEQUENCE     93.0 3.4E-07 3.4E-07   58.9   0.0   73  282-363   333-407 (451)
+
+No 1  
+>3DWO:X|PDBID|CHAIN|SEQUENCE
+Probab=93.00  E-value=3.4e-07  Score=58.93  Aligned_cols=73  Identities=7%  Similarity=0.093  Sum_probs=47.5
+
+Q 3DWO:X|PDBID|C  282 LDIPAYASLDWVHQFNDRLSLGASATWTEWSSFQDLTLKSHGNTIVSIPYTYRNTWTLAVGGDYKVTD--QWTMRAGVAY  359 (451)
+Q Consensus       282 ~~~P~~~~~G~s~~~~~~~~i~~d~~~~~ws~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~Ey~~~~--~l~lR~G~~y  359 (451)
+                      ++-=..+++|+.|++.+++.+.+.+.|....--...         ......-.+.+.+.+|+.|++.+  ++.+-++|.|
+T Consensus       333 ~~~~~~~~~G~Ey~~~~~l~lR~G~~y~~~~~~~~~---------~~~~~~~~~~~~~s~G~g~~~~~~~~~~ld~~y~~  403 (451)
+T 3DWO:X|PDBID|C  333 YRNTWTLAVGGDYKVTDQWTMRAGVAYDQTPTHNAT---------RDPRIPDGDRYFASLGAGYRFQSMPELSIDAAYSR  403 (451)
+Confidence            344557889999999999999888887653111000         00001124578899999999974  6777777777
+
+
+Q 3DWO:X|PDBID|C  360 DQTP  363 (451)
+Q Consensus       360 ~~~~  363 (451)
+                      ....
+T Consensus       404 ~~~~  407 (451)
+T 3DWO:X|PDBID|C  404 QFVK  407 (451)
+Confidence            6653
+
+
+Done!

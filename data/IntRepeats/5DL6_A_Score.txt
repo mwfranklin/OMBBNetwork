@@ -1,0 +1,24 @@
+Query         5DL6:A|PDBID|CHAIN|SEQUENCE
+Match_columns 413
+No_of_seqs    118 out of 1160
+Neff          9.3 
+Searched_HMMs 1
+Date          Mon May 14 12:13:25 2018
+Command       hhalign -i MSAs/5DL6_A.a3m -o data/IntRepeats/5DL6_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5DL6:A|PDBID|CHAIN|SEQUENCE     30.0 0.00055 0.00055   34.5   0.0   56  313-370   355-411 (413)
+
+No 1  
+>5DL6:A|PDBID|CHAIN|SEQUENCE
+Probab=30.05  E-value=0.00055  Score=34.47  Aligned_cols=56  Identities=23%  Similarity=0.341  Sum_probs=42.0
+
+Q 5DL6:A|PDBID|C  313 NPKEKAYSFRYEYDFK-EYVPGLCFMTRYTTGHNIYAPNLGGTNLKERETDFDLGYTVQ  370 (413)
+Q Consensus       313 ~~~~~~~~~~~~y~~~-~~~~gL~~~~~y~~~~~~~~~~~~~~~~~~~E~~~~l~Y~~~  370 (413)
+                      ...+..+-+.+.|+|. ..++||++.++|+..+......  ....+..|+-+.|.|+|+
+T Consensus       355 ~~~~~E~~~~l~Y~~~~g~~kgl~~~~~y~~~~~~~~~~--~~~~d~~~~R~~l~Y~f~  411 (413)
+T 5DL6:A|PDBID|C  355 NLKERETDFDLGYTVQSGWLKNLGLRARYAIYDNNMLST--ANIKPVNETRINIDYTWK  411 (413)
+Confidence            3467788889999995 3368999999999887653210  134678999999999885
+
+
+Done!

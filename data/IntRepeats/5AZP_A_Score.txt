@@ -1,0 +1,40 @@
+Query         5AZP:A|PDBID|CHAIN|SEQUENCE
+Match_columns 455
+No_of_seqs    680 out of 1356
+Neff          11.0
+Searched_HMMs 1
+Date          Mon May 14 12:14:03 2018
+Command       hhalign -i MSAs/5AZP_A.a3m -o data/IntRepeats/5AZP_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5AZP:A|PDBID|CHAIN|SEQUENCE     99.5 6.6E-23 6.6E-23  166.2   0.0  192   43-236   254-445 (455)
+
+No 1  
+>5AZP:A|PDBID|CHAIN|SEQUENCE
+Probab=99.51  E-value=6.6e-23  Score=166.19  Aligned_cols=192  Identities=20%  Similarity=0.183  Sum_probs=176.9
+
+Q 5AZP:A|PDBID|C   43 LNQLVEQSLSGNRDLRVAFARLRAARALRDDVANDRFPVVTSRASADIGKGQQPGVTEDRVNSERYDLGLDSAWELDLFG  122 (455)
+Q Consensus        43 L~~~i~~al~~np~l~~~~~~~~~a~~~~~~a~~~~~P~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~l~~~g  122 (455)
+                      ..+.+..++.+||+++.++.+++.++..++.+++.++|+|++++++++........  .......+.+|+++++|||+||
+T Consensus       254 ~~~~~~~a~~~~p~l~~~~~~~~~a~~~~~~a~~~~~P~l~l~~~~~~~~~~~~~~--~~~~~~~~~~gl~~~~pl~~~~  331 (455)
+T 5AZP:A|PDBID|C  254 PIGDPGELLRRRPDIRAAERRLAASTADVGVATADLFPRVSLSGFLGFTAGRGSQI--GSSAARAWSVGPSISWAAFDLG  331 (455)
+Confidence            34567889999999999999999999999999999999999999998776543221  1234567889999999999999
+
+
+Q 5AZP:A|PDBID|C  123 RIRRQLESSDALSEAAEADLQQLQVSLIAELVDAYGQLRGAQLREKIALSNLENQKESRQLTEQLRDAGVGAELDVLRAD  202 (455)
+Q Consensus       123 ~~~~~~~~a~~~~~~a~~~~~~~~~~l~~~v~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~d~~~a~  202 (455)
+                      .....++.++...+.++.+++..+.++..++..+|.++..+++.++..+..++.+++.++.++.+|+.|.++..|+++++
+T Consensus       332 ~~~~~~~~a~~~~~~a~~~~~~~~~~~~~~v~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~d~l~a~  411 (455)
+T 5AZP:A|PDBID|C  332 SVRARLRGAKADADAALASYEQQVLLALEESANAFSDYGKRQERLVSLVRQSEASRAAAQQAAIRYREGTTDFLVLLDAE  411 (455)
+Confidence            99999999999999999999999999999999999999999999999999999999999999999999999999999999
+
+
+Q 5AZP:A|PDBID|C  203 ARLAATAASVPQLQAEAERARHRIATLLGQRPEE  236 (455)
+Q Consensus       203 ~~~~~~~~~~~~~~~~~~~a~~~L~~l~g~~~~~  236 (455)
+                      ..+.+++.++.+++.++..+...|..++|.+...
+T Consensus       412 ~~~~~a~~~~~~a~~~~~~a~~~L~~~~G~~~~~  445 (455)
+T 5AZP:A|PDBID|C  412 REQLSAEDAQAQAEVELYRGIVAIYRSLGGGWQP  445 (455)
+Confidence            9999999999999999999999999999987654
+
+
+Done!

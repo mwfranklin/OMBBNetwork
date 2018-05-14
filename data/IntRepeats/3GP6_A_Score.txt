@@ -1,0 +1,24 @@
+Query         3GP6:A|PDBID|CHAIN|SEQUENCE
+Match_columns 163
+No_of_seqs    111 out of 314
+Neff          5.4 
+Searched_HMMs 1
+Date          Mon May 14 12:12:05 2018
+Command       hhalign -i MSAs/3GP6_A.a3m -o data/IntRepeats/3GP6_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3GP6:A|PDBID|CHAIN|SEQUENCE      0.2     0.3     0.3   12.0   0.0   15   45-59     77-91  (163)
+
+No 1  
+>3GP6:A|PDBID|CHAIN|SEQUENCE
+Probab=0.20  E-value=0.3  Score=11.96  Aligned_cols=15  Identities=27%  Similarity=0.452  Sum_probs=8.7
+
+Q 3GP6:A|PDBID|C   45 DRYNERPWGGGFGLS   59 (163)
+Q Consensus        45 ~~yNe~n~GlG~g~~   59 (163)
+                      +..++..+=+|++|+
+T Consensus        77 DSh~~~~~~aGy~~~   91 (163)
+T 3GP6:A|PDBID|C   77 DSWNKWEPIAGYGWE   91 (163)
+Confidence            345555565666655
+
+
+Done!

@@ -1,0 +1,24 @@
+Query         4RL9:A|PDBID|CHAIN|SEQUENCE
+Match_columns 255
+No_of_seqs    151 out of 651
+Neff          7.1 
+Searched_HMMs 1
+Date          Mon May 14 12:15:00 2018
+Command       hhalign -i MSAs/4RL9_A.a3m -o data/IntRepeats/4RL9_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4RL9:A|PDBID|CHAIN|SEQUENCE      1.6   0.032   0.032   19.8   0.0   13  174-186   242-254 (255)
+
+No 1  
+>4RL9:A|PDBID|CHAIN|SEQUENCE
+Probab=1.59  E-value=0.032  Score=19.81  Aligned_cols=13  Identities=15%  Similarity=0.049  Sum_probs=8.7
+
+Q 4RL9:A|PDBID|C  174 DIAPYLGFGFAPK  186 (255)
+Q Consensus       174 ~vaPYlGiG~g~~  186 (255)
+                      ++-|.|.||.+..
+T Consensus       242 ~~yPv~~lgl~Yr  254 (255)
+T 4RL9:A|PDBID|C  242 EWMPVGKVGVNFY  254 (255)
+Confidence            5678877776543
+
+
+Done!

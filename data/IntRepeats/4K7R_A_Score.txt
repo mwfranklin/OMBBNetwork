@@ -1,0 +1,40 @@
+Query         4K7R:A|PDBID|CHAIN|SEQUENCE
+Match_columns 446
+No_of_seqs    666 out of 1310
+Neff          11.1
+Searched_HMMs 1
+Date          Mon May 14 12:12:04 2018
+Command       hhalign -i MSAs/4K7R_A.a3m -o data/IntRepeats/4K7R_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4K7R:A|PDBID|CHAIN|SEQUENCE     99.4 3.6E-21 3.6E-21  152.4   0.0  186   46-231   252-439 (446)
+
+No 1  
+>4K7R:A|PDBID|CHAIN|SEQUENCE
+Probab=99.37  E-value=3.6e-21  Score=152.38  Aligned_cols=186  Identities=15%  Similarity=0.052  Sum_probs=171.6
+
+Q 4K7R:A|PDBID|C   46 VKTLISEALVNNRDLRMATLKVQEARAQYRLTDADRYPQLNGEGSGSWSGNLKGN--TATTREFSTGLNASFDLDFFGRL  123 (446)
+Q Consensus        46 L~~~i~~al~~np~l~~~~~~~~~a~~~~~~a~~~~~P~l~~~~~~~~~~~~~~~--~~~~~~~~~~~~~~~~l~~~g~~  123 (446)
+                      .++.+..++++||+++.++.+++.++..++.++..++|+|++++++++.....+.  ......+.+++++++|||+||..
+T Consensus       252 ~~~~~~~a~~~~p~l~~~~~~~~~a~~~~~~a~~~~~P~l~l~~~~~~~~~~~~~~~~~~~~~~~~g~~l~~pl~~~~~~  331 (446)
+T 4K7R:A|PDBID|C  252 PAGLSSQILLQRPDIMEAEHALMAANANIGAARAAFFPSISLTSGISTASSDLSSLFNASSGMWNFIPKIEIPIFNAGRN  331 (446)
+Confidence            4677899999999999999999999999999999999999999998877653321  22456778899999999999999
+
+
+Q 4K7R:A|PDBID|C  124 KNMSEAERQNYLATEEAQRAVHILLVSNVAQSYFNQQLAYAQLQIAEETLRNYQQSYAFVEKQLLTGSSNVLALEQARGV  203 (446)
+Q Consensus       124 ~~~~~~a~~~~~~~~~~~~~~~~~l~~~v~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~d~~~~~~~  203 (446)
+                      ...++.++...+.++.+++..+.++..++..+|.++..+++.++..++.++.+++.++.++.+|+.|.++..|++.++..
+T Consensus       332 ~~~~~~a~~~~~~~~~~~~~~~~~~~~~i~~~~~~~~~~~~~~~~~~~~~~~a~~~~~~~~~~y~~G~~~~~dll~a~~~  411 (446)
+T 4K7R:A|PDBID|C  332 QANLDIAEIRQQQSVVNYEQKIQNAFKEVADALALRQSLNDQISAQQRYLASLQITLQRARALYQHGAVSYLEVLDAERS  411 (446)
+Confidence            99999999999999999999999999999999999999999999999999999999999999999999999999999999
+
+
+Q 4K7R:A|PDBID|C  204 IESTRSDIAKRQGELAQANNALQLLLGS  231 (446)
+Q Consensus       204 ~~~~~~~~~~~~~~~~~~~~~L~~llg~  231 (446)
+                      +..++.++.+++.++..+...|......
+T Consensus       412 ~~~a~~~~~~a~~~~~~a~~~L~~~~G~  439 (446)
+T 4K7R:A|PDBID|C  412 LFATRQTLLDLNYARQVNEISLYTALGG  439 (446)
+Confidence            9999999999999999999998776553
+
+
+Done!

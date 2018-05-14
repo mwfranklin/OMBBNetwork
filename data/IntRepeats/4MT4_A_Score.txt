@@ -1,0 +1,40 @@
+Query         4MT4:A|PDBID|CHAIN|SEQUENCE
+Match_columns 479
+No_of_seqs    703 out of 1355
+Neff          10.9
+Searched_HMMs 1
+Date          Mon May 14 12:13:29 2018
+Command       hhalign -i MSAs/4MT4_A.a3m -o data/IntRepeats/4MT4_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4MT4:A|PDBID|CHAIN|SEQUENCE     99.5 1.1E-22 1.1E-22  168.3   0.0  194   47-245   262-455 (479)
+
+No 1  
+>4MT4:A|PDBID|CHAIN|SEQUENCE
+Probab=99.50  E-value=1.1e-22  Score=168.29  Aligned_cols=194  Identities=14%  Similarity=0.193  Sum_probs=178.4
+
+Q 4MT4:A|PDBID|C   47 NKVVDLALKNNNDLKLAFIHMEQAAAQLGIDFSSLLPKFDGSASGSRAKTAINAPSNRTGEVSYGNDFKMGLNLSYEIDL  126 (479)
+Q Consensus        47 ~~~i~~al~~np~l~~~~~~~~~a~~~~~~a~~~~~P~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~l~~~~~l~~  126 (479)
+                      ++++..++.+||+|+.++..++.++..++.+++.++|+|++++++++........     .......+.+|+++++|||+
+T Consensus       262 ~~~~~~a~~~~p~l~~~~~~~~~a~~~~~~a~~~~~P~l~l~~~~~~~~~~~~~~-----~~~~~~~~~~gl~~~~pl~~  336 (479)
+T 4MT4:A|PDBID|C  262 TGISSTILLQRPDIGSSLEKLTQQNYLVGVARTAFLPSLSLTGLLGFESGDLDTL-----VKGGSKTWNIGGNFTLPIFH  336 (479)
+Confidence            5677899999999999999999999999999999999999999998876543211     12245678899999999999
+
+
+Q 4MT4:A|PDBID|C  127 WGKYRDTYRASKSGFKASEYDYEAARLSVISNTVQTYFNLVNAYENENALKEAYESAKEIYRINDEKFQVGAVGEYELAQ  206 (479)
+Q Consensus       127 ~g~~~~~~~~a~~~~~~a~~~~~~~~~~l~~~v~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~d~~~  206 (479)
+                      +|.....++.++...+.++.+++..+.++..++..+|.++..+++.++..++.++.+++.++.++.+|+.|.++..|++.
+T Consensus       337 ~~~~~~~~~~a~~~~~~~~~~~~~~~~~~~~~v~~~~~~~~~~~~~~~~~~~~~~~a~~~~~~~~~~y~~G~~~~~dll~  416 (479)
+T 4MT4:A|PDBID|C  337 WGEIYQNVNLAKLNKDEAFVNYQNTLITAFGEIRYALVARKTIRLQYDNAQASEQSYKRIYEIAKERYDIGEMSLQDYLE  416 (479)
+Confidence            99999999999999999999999999999999999999999999999999999999999999999999999999999999
+
+
+Q 4MT4:A|PDBID|C  207 ARANLESMALQYNEAKLNKENYLKALKILTSNDLNDILY  245 (479)
+Q Consensus       207 a~~~~~~~~~~l~~~~~~~~~a~~~L~~llg~~~~~~~~  245 (479)
+                      ++..+.+++..+..++.++..+...|..++|.+......
+T Consensus       417 a~~~~~~a~~~~~~a~~~~~~a~~~L~~~~G~~~~~~~~  455 (479)
+T 4MT4:A|PDBID|C  417 ARQNWLNAAVAFNNIKYSYANSIVDVIKAFGGGFEQSED  455 (479)
+Confidence            999999999999999999999999999999998765443
+
+
+Done!

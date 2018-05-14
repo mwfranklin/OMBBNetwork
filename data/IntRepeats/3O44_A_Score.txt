@@ -1,0 +1,24 @@
+Query         3O44:A|PDBID|CHAIN|SEQUENCE
+Match_columns 593
+No_of_seqs    172 out of 189
+Neff          5.7 
+Searched_HMMs 1
+Date          Mon May 14 12:12:07 2018
+Command       hhalign -i MSAs/3O44_A.a3m -o data/IntRepeats/3O44_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3O44:A|PDBID|CHAIN|SEQUENCE     94.4 8.6E-08 8.6E-08   71.4   0.0   68  339-410   379-451 (593)
+
+No 1  
+>3O44:A|PDBID|CHAIN|SEQUENCE
+Probab=94.43  E-value=8.6e-08  Score=71.38  Aligned_cols=68  Identities=13%  Similarity=0.079  Sum_probs=55.4
+
+Q 3O44:A|PDBID|C  339 NLQLASFNNRCIQVDAQGRLTANMCDSQQSAQSFIYDQLG-RYVSASNTKLCLDGAA---LDALQPCNQ-NLTQRWE  410 (593)
+Q Consensus       339 ~Lq~~~~n~~CL~v~~~~~V~~~~C~~~~~~Q~w~yd~~~-ryvS~~~~~~CLd~~~---~~~l~~C~~-~~~QkW~  410 (593)
+                      .+.+....++|||++.  .+++++|+. +.+|.|.+..++ +++++.+ ++||+.+.   .++|++|+. ..++|+.
+T Consensus       379 ryvS~~~~~~CLd~~~--~~~l~~C~~-~~~QkW~W~~~~~~L~n~~~-~~~L~~~~~~g~l~l~~~~~~~~~~~~~  451 (593)
+T 3O44:A|PDBID|C  379 RYVSASNTKLCLDGAA--LDALQPCNQ-NLTQRWEWRKGTDELTNVYS-GESLGHDKQTGELGLYASSNDAVSLRTI  451 (593)
+Confidence            4567778899999987  899999994 899999999885 7888876 89999855   889999954 3366653
+
+
+Done!

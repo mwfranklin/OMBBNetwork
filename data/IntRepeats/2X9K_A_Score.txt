@@ -1,0 +1,24 @@
+Query         2X9K:A|PDBID|CHAIN|SEQUENCE
+Match_columns 280
+No_of_seqs    68 out of 68
+Neff          6.0 
+Searched_HMMs 1
+Date          Mon May 14 12:15:32 2018
+Command       hhalign -i MSAs/2X9K_A.a3m -o data/IntRepeats/2X9K_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2X9K:A|PDBID|CHAIN|SEQUENCE     80.9 1.2E-05 1.2E-05   43.9   0.0   20  114-133   236-255 (280)
+
+No 1  
+>2X9K:A|PDBID|CHAIN|SEQUENCE
+Probab=80.91  E-value=1.2e-05  Score=43.93  Aligned_cols=20  Identities=5%  Similarity=0.034  Sum_probs=9.5
+
+Q 2X9K:A|PDBID|C  114 IAPDWDVKLTDDLRFNGWLS  133 (280)
+Q Consensus       114 ~~P~~~y~~sd~~~f~gw~a  133 (280)
+                      +...+.|+|+++|++.+-.+
+T Consensus       236 ~Gl~~~Y~l~~~lsl~~e~y  255 (280)
+T 2X9K:A|PDBID|C  236 VGLFYGYDFQNGLSVSLEYA  255 (280)
+Confidence            33444455555555544443
+
+
+Done!
