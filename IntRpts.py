@@ -4,18 +4,19 @@ import glob
 import re
 import subprocess
 
-for filename in glob.glob("MSAs/*.a3m"):
+"""for filename in glob.glob("MSAs/*.a3m"):
     pdb_id = filename.split("/")[-1][:-4]
+    pdb_id = pdb_id[0:4].lower() + pdb_id[4:]
     os.system("hhalign -i %s -o data/IntRepeats/%s_Score.txt"%(filename, pdb_id))
- 
+"""
 barrels = []
 with open("BarrelChars85.txt", "r") as barrel_list:
     for line in barrel_list:
         if "PDB" not in line:
-            barrels.append(line.split()[0].upper())
+            barrels.append(line.split()[0])
 
 with open("data/CollatedIntRpts.txt", "w+") as outdata:
-    outdata.write("PDB\t\tProb E-value P-value  Score    SS Cols Query HMM  Template HMM\tQuery Strands\tTemplate Strands\n")
+    outdata.write("PDB\t\tProb E-value Score    SS Cols Query HMM  Template HMM\tQuery Strands\tTemplate Strands\n")
     
     for filename in glob.glob("data/IntRepeats/*_Score.txt"):
         kept_lines = []
@@ -36,7 +37,7 @@ with open("data/CollatedIntRpts.txt", "w+") as outdata:
             for value in kept_lines[1:-1]:
                 value = value[36:].strip().split()
                 print(value)
-                if (float(value[0]) < 75 or float(value[1]) > 1E-2): continue
+                if (float(value[0]) < 75 or float(value[1]) > 1E-3): continue
                 else:
                     query = value[6].split("-")
                     query = [int(x) for x in query]
@@ -56,4 +57,4 @@ with open("data/CollatedIntRpts.txt", "w+") as outdata:
                     template_strands = sorted(set(template_strands))
                     query_strands = sorted(set(query_strands))                              
                                                 
-                    outdata.write("%s\t%s\t%s\t%s\n"%(pdb_ID, "\t".join(value[2:]), ",".join(map(str, query_strands)), ",".join(map(str, template_strands))))
+                    outdata.write("%s\t%s\t%s\t%s\t%s\n"%(pdb_ID, value[0], "\t".join(value[2:]), ",".join(map(str, query_strands)), ",".join(map(str, template_strands))))
