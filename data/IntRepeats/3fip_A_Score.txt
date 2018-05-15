@@ -1,0 +1,24 @@
+Query         3FIP:A|PDBID|CHAIN|SEQUENCE
+Match_columns 493
+No_of_seqs    243 out of 1449
+Neff          9.5 
+Searched_HMMs 1
+Date          Tue May 15 10:45:29 2018
+Command       hhalign -i MSAs/3FIP_A.a3m -o data/IntRepeats/3fip_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3FIP:A|PDBID|CHAIN|SEQUENCE     47.3 0.00019 0.00019   39.9   0.0   43  327-370   360-405 (493)
+
+No 1  
+>3FIP:A|PDBID|CHAIN|SEQUENCE
+Probab=47.27  E-value=0.00019  Score=39.92  Aligned_cols=43  Identities=23%  Similarity=0.325  Sum_probs=22.3
+
+Q 3FIP:A|PDBID|C  327 MYTVTLNKNVAD---WNTSFNLQYSRQTYWDIRKTDYYTVSVNRYFN  370 (493)
+Q Consensus       327 ~~~~~~s~~l~~---~~gslsls~~~~~~~~~~~~~~~~ls~s~~~~  370 (493)
+                      .++++++.++..   ...++++++.+.+... .....+.++++.+|.
+T Consensus       360 ~~~ls~s~~~~~~~~~~~~~sl~~~~~~~~~-~~d~~~~lslsiplg  405 (493)
+T 3FIP:A|PDBID|C  360 YYTVSVNRYFNVFGLQGVAVGLSASRSKYLG-RDNDSAYLRISVPLG  405 (493)
+Confidence            455666665541   0235555555444321 234566777777765
+
+
+Done!

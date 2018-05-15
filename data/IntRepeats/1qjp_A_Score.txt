@@ -1,0 +1,24 @@
+Query         1QJP:A|PDBID|CHAIN|SEQUENCE
+Match_columns 171
+No_of_seqs    182 out of 1053
+Neff          11.1
+Searched_HMMs 1
+Date          Tue May 15 10:44:36 2018
+Command       hhalign -i MSAs/1QJP_A.a3m -o data/IntRepeats/1qjp_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1QJP:A|PDBID|CHAIN|SEQUENCE     94.0 1.4E-07 1.4E-07   39.1   0.0   56    6-61     92-147 (171)
+
+No 1  
+>1QJP:A|PDBID|CHAIN|SEQUENCE
+Probab=94.03  E-value=1.4e-07  Score=39.07  Aligned_cols=56  Identities=11%  Similarity=0.086  Sum_probs=35.7
+
+Q 1QJP:A|PDBID|C    6 TWYTGAKLGWSQYHDTGFINNNGPTHENKLGAGAFGGYQVNPYVGFEMGYDWLGRM   61 (171)
+Q Consensus         6 ~~yvg~~~g~~~~~~~~~~~~~~~~~~~~~~~~~~~gy~~~~~~~~e~~~~~~~~~   61 (171)
+                      .+|+.+++++...+.+.............+.+++.+.|+++++|.++++|.+....
+T Consensus        92 ~~y~~~G~~~~~~~~~~~~~~~~~~~~~~~~~g~G~~y~~~~~~~l~~~~~~~~~~  147 (171)
+T 1QJP:A|PDBID|C   92 DIYTRLGGMVWRADTYSNVYGKNHDTGVSPVFAGGVEYAITPEIATRLEYQWTNNI  147 (171)
+Confidence            45667777766555432110111233445778888888999999999998876543
+
+
+Done!

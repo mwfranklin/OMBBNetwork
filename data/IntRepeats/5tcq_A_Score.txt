@@ -1,0 +1,24 @@
+Query         5tcq_A
+Match_columns 336
+No_of_seqs    128 out of 1299
+Neff          8.6 
+Searched_HMMs 1
+Date          Tue May 15 10:47:33 2018
+Command       hhalign -i MSAs/5TCQ_A.a3m -o data/IntRepeats/5tcq_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5tcq_A                           0.3    0.22    0.22   14.7   0.0   14  265-278   319-332 (336)
+
+No 1  
+>5tcq_A
+Probab=0.27  E-value=0.22  Score=14.70  Aligned_cols=14  Identities=21%  Similarity=0.147  Sum_probs=10.5
+
+Q 5tcq_A          265 FLGKLPLIGSLFRY  278 (336)
+Q Consensus       265 ~L~~iP~lg~LF~~  278 (336)
+                      |.|++|+-.|+|..
+T Consensus       319 ~~~~~~~~~~~~~~  332 (336)
+T 5tcq_A          319 WSGDDKLQKWVRVY  332 (336)
+Confidence            77788887777764
+
+
+Done!

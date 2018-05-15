@@ -1,0 +1,24 @@
+Query         5IVA:A|PDBID|CHAIN|SEQUENCE
+Match_columns 646
+No_of_seqs    166 out of 1454
+Neff          9.5 
+Searched_HMMs 1
+Date          Tue May 15 10:47:23 2018
+Command       hhalign -i MSAs/5IVA_A.a3m -o data/IntRepeats/5iva_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5IVA:A|PDBID|CHAIN|SEQUENCE     11.2  0.0027  0.0027   34.2   0.0   53  461-516   539-591 (646)
+
+No 1  
+>5IVA:A|PDBID|CHAIN|SEQUENCE
+Probab=11.19  E-value=0.0027  Score=34.25  Aligned_cols=53  Identities=17%  Similarity=0.278  Sum_probs=44.0
+
+Q 5IVA:A|PDBID|C  461 SPYAFAGQYRFNRDWRINSDFNWNPNTSRTESGSAIFHYQPEVDPGKVVNVGYRYR  516 (646)
+Q Consensus       461 s~~~~~~~~~~~~~~~l~~~~~~d~~~~~~~~~~~~~~~~~~~~~~~~~~~~y~y~  516 (646)
+                      ..+.+.+.+++.++|++.+..+||.+.+++.....++.+..   .=|.+.++|+..
+T Consensus       539 ~~l~~~~~~~l~~~w~~~~~~~yD~~~~~~~~~~~~l~y~~---~Cw~~~l~~~~~  591 (646)
+T 5IVA:A|PDBID|C  539 KQHDFSVIWPLVPQWSVLARWQYDYNKNRTLEAFGGFEYDS---CCWKLRLINRYW  591 (646)
+Confidence            45667888899999999999999999998888788888886   367788887654
+
+
+Done!

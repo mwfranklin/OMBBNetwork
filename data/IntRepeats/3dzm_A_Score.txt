@@ -1,0 +1,24 @@
+Query         3DZM:A|PDBID|CHAIN|SEQUENCE
+Match_columns 214
+No_of_seqs    36 out of 36
+Neff          3.8 
+Searched_HMMs 1
+Date          Tue May 15 10:45:20 2018
+Command       hhalign -i MSAs/3DZM_A.a3m -o data/IntRepeats/3dzm_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3DZM:A|PDBID|CHAIN|SEQUENCE      0.4    0.15    0.15   16.2   0.0   10   39-48    203-212 (214)
+
+No 1  
+>3DZM:A|PDBID|CHAIN|SEQUENCE
+Probab=0.41  E-value=0.15  Score=16.23  Aligned_cols=10  Identities=40%  Similarity=0.796  Sum_probs=5.4
+
+Q 3DZM:A|PDBID|C   39 PLGVRLGVGF   48 (214)
+Q Consensus        39 P~gVr~gvgy   48 (214)
+                      -+-+|+|+.|
+T Consensus       203 ~fk~riG~~~  212 (214)
+T 3DZM:A|PDBID|C  203 VLKLRLGAAY  212 (214)
+Confidence            3555666554
+
+
+Done!

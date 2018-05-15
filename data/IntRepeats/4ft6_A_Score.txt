@@ -1,0 +1,24 @@
+Query         4FT6:A|PDBID|CHAIN|SEQUENCE
+Match_columns 394
+No_of_seqs    128 out of 1240
+Neff          9.3 
+Searched_HMMs 1
+Date          Tue May 15 10:46:19 2018
+Command       hhalign -i MSAs/4FT6_A.a3m -o data/IntRepeats/4ft6_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4FT6:A|PDBID|CHAIN|SEQUENCE     33.9 0.00043 0.00043   34.7   0.0   51  301-356   342-392 (394)
+
+No 1  
+>4FT6:A|PDBID|CHAIN|SEQUENCE
+Probab=33.91  E-value=0.00043  Score=34.67  Aligned_cols=51  Identities=12%  Similarity=0.029  Sum_probs=40.1
+
+Q 4FT6:A|PDBID|C  301 AGERSWQLRYDYDFVALGIPGLTAMARYASGAHARTKAMDDGRAWERDVDVAYVIQ  356 (394)
+Q Consensus       301 ~~~~a~~~~~~y~~~~~gl~gL~~~~~y~~~~~~~~~~~~~~~~~E~~~~l~Y~~~  356 (394)
+                      .++.-+-+.+.|+|..--|+||++.++|...+...     ..+..++-+.|.|+|+
+T Consensus       342 ~~~~E~~~~l~Y~~~~g~lkgLs~~~~y~~~~~~~-----~~d~~~~R~~~~Y~F~  392 (394)
+T 4FT6:A|PDBID|C  342 GRAWERDVDVAYVIQSGPLKNLGLRWRNAMLRSNH-----AADVDENRLILSYSLP  392 (394)
+Confidence            45677778899998622378999999999977654     4578999999999984
+
+
+Done!

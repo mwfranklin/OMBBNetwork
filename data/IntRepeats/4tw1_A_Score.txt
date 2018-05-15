@@ -1,0 +1,32 @@
+Query         4TW1:A|PDBID|CHAIN|SEQUENCE
+Match_columns 311
+No_of_seqs    88 out of 88
+Neff          4.7 
+Searched_HMMs 1
+Date          Tue May 15 10:46:46 2018
+Command       hhalign -i MSAs/4TW1_A.a3m -o data/IntRepeats/4tw1_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4TW1:A|PDBID|CHAIN|SEQUENCE      0.2    0.38    0.38   14.5   0.0   91    3-103    21-117 (311)
+
+No 1  
+>4TW1:A|PDBID|CHAIN|SEQUENCE
+Probab=0.15  E-value=0.38  Score=14.52  Aligned_cols=91  Identities=11%  Similarity=0.153  Sum_probs=79.2
+
+Q 4TW1:A|PDBID|C    3 KINSEIKQVSE--KNLDGDTKMYTRTATTSDSQKNITQSLQFNFLTEPNYDKETVFIKAKGTIGSGLRILDPNGYWNSTL   80 (311)
+Q Consensus         3 ~~~~~~~~~~~--~~ig~~a~vy~~t~t~~~~~~~i~~sL~~sFI~Dp~~dK~~~iikt~G~I~s~~~~~~~~~~~~a~l   80 (311)
+                      ++-...+....  ..|-...++- =-++...++.-.-...+- ||....     .+....|-..+++..|   ..|.-.|
+T Consensus        21 ~vy~~t~t~~~~~~~i~~sL~~s-FI~Dp~~dK~~~iikt~G-~I~s~~-----~~~~~~~~~~a~l~WP---s~Y~v~l   90 (311)
+T 4TW1:A|PDBID|C   21 KMYTRTATTSDSQKNITQSLQFN-FLTEPNYDKETVFIKAKG-TIGSGL-----RILDPNGYWNSTLRWP---GSYSVSI   90 (311)
+Confidence            33333444334  4565444432 235666777666778999 999999     4558999999999999   8999999
+
+
+Q 4TW1:A|PDBID|C   81 RWPGS-YSVSIQN--VDD-NNNTNVTD  103 (311)
+Q Consensus        81 ~WPs~-Y~v~l~~--~~~-n~~~~i~~  103 (311)
+                      .-+.. =+++|--  +.+ .+.+++-.
+T Consensus        91 ~~~~~n~~~~i~~~~PkN~ies~~Vs~  117 (311)
+T 4TW1:A|PDBID|C   91 QNVDDNNNTNVTDFAPKNQDESREVKY  117 (311)
+Confidence            99997 7999995  543 38999964
+
+
+Done!

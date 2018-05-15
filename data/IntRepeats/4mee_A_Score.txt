@@ -1,0 +1,32 @@
+Query         4MEE:A|PDBID|CHAIN|SEQUENCE
+Match_columns 469
+No_of_seqs    207 out of 2053
+Neff          9.5 
+Searched_HMMs 1
+Date          Tue May 15 10:46:30 2018
+Command       hhalign -i MSAs/4MEE_A.a3m -o data/IntRepeats/4mee_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4MEE:A|PDBID|CHAIN|SEQUENCE     44.6 0.00023 0.00023   38.8   0.0  115  230-350   279-406 (469)
+
+No 1  
+>4MEE:A|PDBID|CHAIN|SEQUENCE
+Probab=44.64  E-value=0.00023  Score=38.77  Aligned_cols=115  Identities=11%  Similarity=0.139  Sum_probs=63.0
+
+Q 4MEE:A|PDBID|C  230 GDFTLGIMGGYANAKGKTINYTSNKAARNTLDGYSVGVYGTWYQNGE-------NATGLFAETWMQYNWFNASVKG--DG  300 (469)
+Q Consensus       230 ~~~~~G~~~g~~~~~~~~~~~~~~~~~~~~~~~~~~G~Y~~~~~~~~-------~~~g~y~d~~~~~~~~~~~~~~--~~  300 (469)
+                      ..|.+.+.+.|...+.+.... ....++.+...+.+++=+.|.....       ....|++.-.+++.+...+...  +.
+T Consensus       279 ~g~y~d~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~s~e~Gy~~~~~~~~~~~~~~~~~~l~P~~~l~y~~~~~~~~~e~  357 (469)
+T 4MEE:A|PDBID|C  279 TGLFAETWMQYNWFNASVKGD-GLEEEKYNLNGLTASAGGGYNLNVHTWTSPEGITGEFWLQPHLQAVWMGVTPDTHQED  357 (469)
+Confidence            467777777777666554311 1123445556666666666665310       0147888777776665544332  11
+
+
+Q 4MEE:A|PDBID|C  301 ----LEEEKYNLNGLTASAGGGYNLNVHTWTSPEGITGEFWLQPHLQAVWMGVT  350 (469)
+Q Consensus       301 ----~~~~~~~~~~~~~s~e~Gy~~~~~~~~~~~~~~~~~~l~P~~~l~y~~~~  350 (469)
+                          ....+.+.....+.++++|+|....     ...+...++|++.+.|.+--
+T Consensus       358 ~~~~v~~~~~~~~~~~~G~~~~~~~~~~~-----~~~~~~~~~p~~~~~~~~~~  406 (469)
+T 4MEE:A|PDBID|C  358 NGTVVQGAGKNNIQTKAGIRASWKVKSTL-----DKDTGREFSPYIEANWIHNT  406 (469)
+Confidence                1112334455566677776653100     00245789999999988754
+
+
+Done!

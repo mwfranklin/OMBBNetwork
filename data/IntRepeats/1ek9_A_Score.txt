@@ -1,0 +1,40 @@
+Query         1EK9:A|PDBID|CHAIN|SEQUENCE
+Match_columns 428
+No_of_seqs    703 out of 1601
+Neff          11.6
+Searched_HMMs 1
+Date          Tue May 15 10:44:22 2018
+Command       hhalign -i MSAs/1EK9_A.a3m -o data/IntRepeats/1ek9_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1EK9:A|PDBID|CHAIN|SEQUENCE     99.6 9.2E-25 9.2E-25  170.6   0.0  195    2-196   208-414 (428)
+
+No 1  
+>1EK9:A|PDBID|CHAIN|SEQUENCE
+Probab=99.63  E-value=9.2e-25  Score=170.62  Aligned_cols=195  Identities=16%  Similarity=0.160  Sum_probs=177.5
+
+Q 1EK9:A|PDBID|C    2 NLMQVYQQARLSNPELRKSAADRDAAFEKINEARSPLLPQLGLGADYTYSNGYRDAN-----------GINSNATSASLQ   70 (428)
+Q Consensus         2 sL~~~i~~al~~n~~l~~~~~~~~~a~~~~~~a~~~~~P~~~~~~~~~~~~~~~~~~-----------~~~~~~~~~~~~   70 (428)
+                      +++++++.++.+||+++.++.+++.++..+..++..++|+|++++++++........           ......+.++++
+T Consensus       208 ~~~~~~~~a~~~~p~l~~~~~~~~~a~~~~~~~~~~~~P~l~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  287 (428)
+T 1EK9:A|PDBID|C  208 PVNALLKEAEKRNLSLLQARLSQDLAREQIRQAQDGHLPTLDLTASTGISDTSYSGSKTRGAAGTQYDDSNMGQNKVGLS  287 (428)
+Confidence            578899999999999999999999999999999999999999999988776543211           123456789999
+
+
+Q 1EK9:A|PDBID|C   71 LTQSIFDMSKWR-ALTLQEKAAGIQDVTYQTDQQTLILNTATAYFNVLNAIDVLSYTQAQKEAIYRQLDQTTQRFNVGLV  149 (428)
+Q Consensus        71 ~~q~l~~~~~~~-~~~~a~~~~~~a~~~~~~~~~~~~~~v~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~  149 (428)
+                      +++|||++|... .++.++...+.++.+++..+.++..++..+|.++..+++.++..+..+...++.++.++.+|+.|.+
+T Consensus       288 ~~~pl~~~~~~~~~~~~a~~~~~~~~~~~~~~~~~~~~~v~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~  367 (428)
+T 1EK9:A|PDBID|C  288 FSLPIYQGGMVNSQVKQAQYNFVGASEQLESAHRSVVQTVRSSFNNINASISSINAYKQAVVSAQSSLDAMEAGYSVGTR  367 (428)
+Confidence            999999988755 5899999999999999999999999999999999999999999999999999999999999999999
+
+
+Q 1EK9:A|PDBID|C  150 AITDVQNARAQYDTVLANELTARNNLDNAVEQLRQITGNYYPELAAL  196 (428)
+Q Consensus       150 ~~~d~~~~~~~~~~~~~~~~~~~~~~~~~~~~L~~llg~~~~~~~~~  196 (428)
+                      +..|++.++..+.+++..+..++.++..+...|..++|..+...+..
+T Consensus       368 ~~~dll~a~~~~~~a~~~~~~~~~~~~~~~~~l~~~~G~~~~~~~~~  414 (428)
+T 1EK9:A|PDBID|C  368 TIVDVLDATTTLYNAKQELANARYNYLINQLNIKSALGTLNEQDLLA  414 (428)
+Confidence            99999999999999999999999999999999999999987655443
+
+
+Done!

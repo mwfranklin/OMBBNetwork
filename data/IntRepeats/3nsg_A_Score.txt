@@ -1,0 +1,40 @@
+Query         3NSG:A|PDBID|CHAIN|SEQUENCE
+Match_columns 341
+No_of_seqs    139 out of 1202
+Neff          10.3
+Searched_HMMs 1
+Date          Tue May 15 10:45:36 2018
+Command       hhalign -i MSAs/3NSG_A.a3m -o data/IntRepeats/3nsg_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3NSG:A|PDBID|CHAIN|SEQUENCE     97.1 6.2E-11 6.2E-11   76.0   0.0  157  134-302   176-341 (341)
+
+No 1  
+>3NSG:A|PDBID|CHAIN|SEQUENCE
+Probab=97.10  E-value=6.2e-11  Score=76.05  Aligned_cols=157  Identities=14%  Similarity=0.228  Sum_probs=111.1
+
+Q 3NSG:A|PDBID|C  134 LLTYRNSDFFGLVDGLSFGIQYQGKNQDNHS----INSQNGDGVGYTMAYEFDGFGVTAAYSNSKRTNDQQD----RDGN  205 (341)
+Q Consensus       134 ~i~Y~~p~~~~~~~g~~~~~~~~~~~~~~~~----~~~~~~~~~~~~~~Y~~~~~~~~~~y~~~~~~~~~~~----~~~~  205 (341)
+                      .+.|..+       +|++.+.|.........    ........+.+++.|+.+++.+++.|.+.+.......    ....
+T Consensus       176 ~~~Y~~~-------~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~ga~y~~~~~~l~a~y~~~~~~~~~~~~~~~~~~~  248 (341)
+T 3NSG:A|PDBID|C  176 TMAYEFD-------GFGVTAAYSNSKRTNDQQDRDGNGDRAESRAVGAKYDANNVYLAAVYAETRNMSIVENTVTDTVEM  248 (341)
+Confidence            5667654       47788888765543211    0123567889999999999999999999887643210    0112
+
+
+Q 3NSG:A|PDBID|C  206 GDRAESRAVGAKYDAN-NVYLAAVYAETRNMSIVENTVTDTVEMANKTQNLEVVAQYQFDFGLRPAISYVQSKGKQLNGA  284 (341)
+Q Consensus       206 ~~~~~~~~~ga~y~~~-~~~l~a~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Y~~~~~~~~~~~y~~~~~~~~~~~  284 (341)
+                      ..+...+.++++|+++ .+.|.+.|.+.+.......     .....+.+.+.+++.|.+.+.+.|++.|.+.+.+.....
+T Consensus       249 ~~~~~~~~~~~~Y~~~~~~~~~~~y~~~~~~~~~~~-----~~~~~~~~~~~~g~~Y~l~k~~~v~~ey~~~~~~~~~~~  323 (341)
+T 3NSG:A|PDBID|C  249 ANKTQNLEVVAQYQFDFGLRPAISYVQSKGKQLNGA-----GGSADLAKYIQAGATYYFNKNMNVWVDYRFNLLDENDYS  323 (341)
+Confidence            3467789999999997 6999999999887653110     013467889999999999999999999999888754210
+
+
+Q 3NSG:A|PDBID|C  285 GGSADLAKYIQAGATYYF  302 (341)
+Q Consensus       285 ~~~~~~~~~~~~g~~Y~l  302 (341)
+                      .....+...+.+|+.|.|
+T Consensus       324 ~~~~~~~~~~~~G~r~~F  341 (341)
+T 3NSG:A|PDBID|C  324 SSYVGTDDQAAVGITYQF  341 (341)
+Confidence            012457888999988875
+
+
+Done!

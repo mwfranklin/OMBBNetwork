@@ -1,0 +1,24 @@
+Query         5GAQ:A|PDBID|CHAIN|SEQUENCE
+Match_columns 310
+No_of_seqs    4 out of 4
+Neff          1.2 
+Searched_HMMs 1
+Date          Tue May 15 10:47:21 2018
+Command       hhalign -i MSAs/5GAQ_A.a3m -o data/IntRepeats/5gaq_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5GAQ:A|PDBID|CHAIN|SEQUENCE      0.1    0.47    0.47   13.4   0.0   22   23-44    230-251 (310)
+
+No 1  
+>5GAQ:A|PDBID|CHAIN|SEQUENCE
+Probab=0.12  E-value=0.47  Score=13.36  Aligned_cols=22  Identities=27%  Similarity=0.548  Sum_probs=14.1
+
+Q 5GAQ:A|PDBID|C   23 GYVYENRGSTSVDQKITITKGM   44 (310)
+Q Consensus        23 gyvyenrg~tsv~qkit~tkgm   44 (310)
+                      |=+|-+.|+....|.-.+.|.|
+T Consensus       230 ggiyfd~~sdnpkqrwa~~k~l  251 (310)
+T 5GAQ:A|PDBID|C  230 GGIYFDQGTDNPKQRWAINKSL  251 (310)
+Confidence            4455666777777777666654
+
+
+Done!

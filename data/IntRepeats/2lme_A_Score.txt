@@ -1,0 +1,24 @@
+Query         2LME:A|PDBID|CHAIN|SEQUENCE
+Match_columns 105
+No_of_seqs    157 out of 1075
+Neff          8.8 
+Searched_HMMs 1
+Date          Tue May 15 10:44:59 2018
+Command       hhalign -i MSAs/2LME_A.a3m -o data/IntRepeats/2lme_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2LME:A|PDBID|CHAIN|SEQUENCE     74.2 2.8E-05 2.8E-05   26.1   0.0   29    2-30      9-37  (105)
+
+No 1  
+>2LME:A|PDBID|CHAIN|SEQUENCE
+Probab=74.21  E-value=2.8e-05  Score=26.11  Aligned_cols=29  Identities=24%  Similarity=0.272  Sum_probs=55.4
+
+Q 2LME:A|PDBID|C    2 DQASWSHPQFEKGAHKFRQLDNRLDKLDT   30 (105)
+Q Consensus         2 ~~l~~~~~~~~~~~~~~~~l~~~i~~~~~   30 (105)
+                      .++..++.++++++.++++++++++..-.
+T Consensus         9 ~~~~~~~~~~~~l~~~i~~~~~~~~~g~A   37 (105)
+T 2LME:A|PDBID|C    9 PQFEKGAHKFRQLDNRLDKLDTRVDKGLA   37 (105)
+Confidence            99999999999999999999999999654
+
+
+Done!

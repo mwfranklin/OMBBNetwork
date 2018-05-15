@@ -1,0 +1,24 @@
+Query         1QJ8:A|PDBID|CHAIN|SEQUENCE
+Match_columns 148
+No_of_seqs    112 out of 1339
+Neff          10.1
+Searched_HMMs 1
+Date          Tue May 15 10:44:35 2018
+Command       hhalign -i MSAs/1QJ8_A.a3m -o data/IntRepeats/1qj8_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1QJ8:A|PDBID|CHAIN|SEQUENCE     82.1   1E-05   1E-05   30.1   0.0   29   19-48    104-132 (148)
+
+No 1  
+>1QJ8:A|PDBID|CHAIN|SEQUENCE
+Probab=82.12  E-value=1e-05  Score=30.12  Aligned_cols=29  Identities=3%  Similarity=-0.004  Sum_probs=22.8
+
+Q 1QJ8:A|PDBID|C   19 NKMGGFNLKYRYEEDNSPLGVIGSFTYTEK   48 (148)
+Q Consensus        19 ~~~~g~~~~~~~~~~~~~~~~e~~~~~~~~   48 (148)
+                      .....+++++++++++ +|.++++|.+...
+T Consensus       104 ~~~~~~g~G~~y~~~~-~~~~~~~y~~~~~  132 (148)
+T 1QJ8:A|PDBID|C  104 DYGFSYGAGLQFNPME-NVALDFSYEQSRI  132 (148)
+Confidence            4556777888888986 8999999987654
+
+
+Done!

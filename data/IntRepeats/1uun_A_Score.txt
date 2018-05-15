@@ -1,0 +1,24 @@
+Query         1UUN:A|PDBID|CHAIN|SEQUENCE
+Match_columns 184
+No_of_seqs    105 out of 620
+Neff          6.5 
+Searched_HMMs 1
+Date          Tue May 15 10:44:38 2018
+Command       hhalign -i MSAs/1UUN_A.a3m -o data/IntRepeats/1uun_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1UUN:A|PDBID|CHAIN|SEQUENCE      0.1    0.44    0.44   10.6   0.0   10   16-25    140-149 (184)
+
+No 1  
+>1UUN:A|PDBID|CHAIN|SEQUENCE
+Probab=0.13  E-value=0.44  Score=10.58  Aligned_cols=10  Identities=10%  Similarity=-0.290  Sum_probs=4.1
+
+Q 1UUN:A|PDBID|C   16 LTVQQWDTFL   25 (184)
+Q Consensus        16 vtv~~~~e~~   25 (184)
+                      -.|..+|+++
+T Consensus       140 ~~v~~~~~~i  149 (184)
+T 1UUN:A|PDBID|C  140 GGVAVSNAHG  149 (184)
+Confidence            3344444443
+
+
+Done!

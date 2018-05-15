@@ -1,0 +1,40 @@
+Query         2J1N:A|PDBID|CHAIN|SEQUENCE
+Match_columns 346
+No_of_seqs    133 out of 1238
+Neff          10.1
+Searched_HMMs 1
+Date          Tue May 15 10:44:57 2018
+Command       hhalign -i MSAs/2J1N_A.a3m -o data/IntRepeats/2j1n_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2J1N:A|PDBID|CHAIN|SEQUENCE     97.2 3.7E-11 3.7E-11   78.4   0.0  164  126-306   181-346 (346)
+
+No 1  
+>2J1N:A|PDBID|CHAIN|SEQUENCE
+Probab=97.19  E-value=3.7e-11  Score=78.38  Aligned_cols=164  Identities=12%  Similarity=0.156  Sum_probs=114.3
+
+Q 2J1N:A|PDBID|C  126 NGFATYRNTDFFGLVDGLNFAVQYQGKNGNPSGEGFTSGVTNNGRDALRQNGDGVGGSITYDYEGFGIGGAISSSKRTDA  205 (346)
+Q Consensus       126 ~~~i~Y~~p~~~~~~~gf~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Y~~~~~~~~~~y~~~~~~~~  205 (346)
+                      .-.+.|...       +|++++.|............       ...........+.+++.|..++|.|++.|...+....
+T Consensus       181 ~~~~~Y~~~-------~~~~~~~y~~~~~~~~~~~~-------~~~~~~~~~~~~~~ga~y~~~~~~l~~~y~~~~~~~~  246 (346)
+T 2J1N:A|PDBID|C  181 GGSITYDYE-------GFGIGGAISSSKRTDAQNTA-------AYIGNGDRAETYTGGLKYDANNIYLAAQYTQTYNATR  246 (346)
+Confidence            446666652       67888888766554321000       0001134567789999999999999999999887643
+
+
+Q 2J1N:A|PDBID|C  206 QNTAAYIGNGDRAETYTGGLKYDAN-NIYLAAQYTQTYNATRVGSLGWANKAQNFEAVAQYQFDFGLRPSLAYLQSKGKN  284 (346)
+Q Consensus       206 ~~~~~~~~~~~~~~~~~~ga~y~~~-~~~l~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~Y~~~~~~~~~~~y~~~~~~~  284 (346)
+                      ..   ......+.+.+.+++.|+++ .+.|.+.|.+.+............+.+.+.+++.|.+.+++.+++.|.+.+.+.
+T Consensus       247 ~~---~~~~~~~~~~~~~~~~Y~~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~g~~Y~l~k~~~~yae~~~~~~~~  323 (346)
+T 2J1N:A|PDBID|C  247 VG---SLGWANKAQNFEAVAQYQFDFGLRPSLAYLQSKGKNLGRGYDDEDILKYVDVGATYYFNKNMSTYVDYKINLLDD  323 (346)
+Confidence            11   01234578899999999998 599999999988655311011246889999999999999999999999988765
+
+
+Q 2J1N:A|PDBID|C  285 LGRG-YDDEDILKYVDVGATYYF  306 (346)
+Q Consensus       285 ~~~~-~~~~~~~~~~~~g~~Y~l  306 (346)
+                      .... .....+.+.+.+|+.|.|
+T Consensus       324 ~~~~~~~~~~~~~~~~vG~~~~F  346 (346)
+T 2J1N:A|PDBID|C  324 NQFTRDAGINTDNIVALGLVYQF  346 (346)
+Confidence            4210 012357888999998875
+
+
+Done!

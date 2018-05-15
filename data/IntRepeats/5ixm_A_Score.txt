@@ -1,0 +1,24 @@
+Query         5IXM:A|PDBID|CHAIN|SEQUENCE
+Match_columns 577
+No_of_seqs    128 out of 1180
+Neff          9.7 
+Searched_HMMs 1
+Date          Tue May 15 10:47:24 2018
+Command       hhalign -i MSAs/5IXM_A.a3m -o data/IntRepeats/5ixm_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5IXM:A|PDBID|CHAIN|SEQUENCE      6.9  0.0052  0.0052   30.6   0.0   52  403-455   478-529 (577)
+
+No 1  
+>5IXM:A|PDBID|CHAIN|SEQUENCE
+Probab=6.91  E-value=0.0052  Score=30.58  Aligned_cols=52  Identities=19%  Similarity=0.269  Sum_probs=42.3
+
+Q 5IXM:A|PDBID|C  403 WAGDTFWRINDQLGLKGGAQYDTRLGSLTLGNAIMEYRKDADRMIQLNYRYAS  455 (577)
+Q Consensus       403 ~~~~~~~~~~~~l~~~~~~~yd~~~~~~~~~~~~~~~~~~~~~~~~l~y~~~~  455 (577)
+                      +...+.+.+.+.+++.+.++||...+++.+..+++.|... =|.+.++|....
+T Consensus       478 l~~~~~~~l~~~w~~~~~~~yd~~~~~~~~~~~~l~y~~~-Cw~~~l~~~~~~  529 (577)
+T 5IXM:A|PDBID|C  478 VGTTASWPIADRWAIVGAYYYDTKAKQPASQLVGLQYNTC-CWAVNLGYERKI  529 (577)
+Confidence            5556778889999999999999999999888888888864 377888776543
+
+
+Done!

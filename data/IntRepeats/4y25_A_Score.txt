@@ -1,0 +1,40 @@
+Query         4Y25:A|PDBID|CHAIN|SEQUENCE
+Match_columns 311
+No_of_seqs    129 out of 333
+Neff          6.8 
+Searched_HMMs 1
+Date          Tue May 15 10:46:47 2018
+Command       hhalign -i MSAs/4Y25_A.a3m -o data/IntRepeats/4y25_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4Y25:A|PDBID|CHAIN|SEQUENCE     81.0 1.2E-05 1.2E-05   44.7   0.0  145   40-186   105-269 (311)
+
+No 1  
+>4Y25:A|PDBID|CHAIN|SEQUENCE
+Probab=80.99  E-value=1.2e-05  Score=44.75  Aligned_cols=145  Identities=11%  Similarity=0.006  Sum_probs=82.6
+
+Q 4Y25:A|PDBID|C   40 PLKDNWRGFAGFGYADGQFSE----GKGIVRDWLAGVEWRSR-NIWLEAEYAERVF-NHEHKPGARLSGWYDF--NDNWR  111 (311)
+Q Consensus        40 ~i~~~~R~fa~~~~~~~~f~~----g~~~~~r~g~G~e~~~~-~~~~~~e~~~~~~-~~~~~~g~~~~~~~~~--~D~W~  111 (311)
+                      .+.|+|++-+.......+.+-    .....+..++|++|+.. .+.+.+.++...+ .++.+..+.+.+..++  +.+|+
+T Consensus       105 ~~~D~W~~~~~~~~~s~~tPlrAl~~GI~a~~~~~~~~yr~~e~~~~~~~~~~~~FSDgN~R~~~~~~~~~rl~~~p~~~  184 (311)
+T 4Y25:A|PDBID|C  105 DFNDNWRIGSQLERLSHRVPLRAMKNGVTGNSAQAYVRWYQNERRKYGVSWAFTDFSDSNQRHEVSLEGQERIWSSPYLI  184 (311)
+Confidence            467999999998886555551    12456889999999985 4666666644434 3456788888888877  78888
+
+
+Q 4Y25:A|PDBID|C  112 IG----SQLERLSHRVPLRAMKNGVTGNSAQAYVRWYQN--------ERRKYGVSWAFTDFSDSNQRHEVSLEGQERIWS  179 (311)
+Q Consensus       112 ~~----~~~~~~s~~tPlrAl~~GI~a~~~~~~~~yr~~--------e~~~~~~~~~~~~FSDgN~R~~~~~~~~~rl~~  179 (311)
+                      +.    +.+.+++. ++ ...-+--...++.+++.+..-        =.-++.++++..+=.+--.-..+.+...|++--
+T Consensus       185 l~~~l~~~~s~Ns~-~d-~~YFNP~~d~s~~~~l~~~~~~~rrY~~~~~q~~~~~~G~Y~Q~~~gs~~~~~l~Y~h~w~~  262 (311)
+T 4Y25:A|PDBID|C  185 VDFLPSLYYEQNTE-HD-TPYYNPIKTFDIVPAFEASHLLWRSYENSWEQIFSAGVGASWQKHYGTDVVTQLGYGQRISW  262 (311)
+Confidence            88    44555542 22 344444444455555551111        111333333332222222334556666666644
+
+
+Q 4Y25:A|PDBID|C  180 SPYLIVD  186 (311)
+Q Consensus       180 ~p~~~l~  186 (311)
+                      ++.+.|.
+T Consensus       263 ~~~~~~~  269 (311)
+T 4Y25:A|PDBID|C  263 NDVIDAG  269 (311)
+Confidence            4444333
+
+
+Done!

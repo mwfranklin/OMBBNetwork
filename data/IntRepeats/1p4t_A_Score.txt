@@ -1,0 +1,24 @@
+Query         1P4T:A|PDBID|CHAIN|SEQUENCE
+Match_columns 155
+No_of_seqs    142 out of 1609
+Neff          10.8
+Searched_HMMs 1
+Date          Tue May 15 10:44:34 2018
+Command       hhalign -i MSAs/1P4T_A.a3m -o data/IntRepeats/1p4t_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1P4T:A|PDBID|CHAIN|SEQUENCE     90.2 1.5E-06 1.5E-06   33.2   0.0   46    5-50     79-132 (155)
+
+No 1  
+>1P4T:A|PDBID|CHAIN|SEQUENCE
+Probab=90.21  E-value=1.5e-06  Score=33.18  Aligned_cols=46  Identities=17%  Similarity=0.189  Sum_probs=27.6
+
+Q 1P4T:A|PDBID|C    5 GFYVQADAAHAKASSSL-----GSAKGFSPR--ISAGYRIND-LRFAVDYTRYK   50 (155)
+Q Consensus         5 ~~y~~~~~g~~~~~~~~-----~~~~~~~~~--~~~Gy~~~~-~~~~~~~~~~~   50 (155)
+                      .+|+++++|+...+...     ...+.+.++  +.+.|.+.+ +.+.+++.+..
+T Consensus        79 ~py~~~G~g~~~~~~~~~~~~~~~~~~~~~~~g~G~~~~~~~~~~l~~~~~~~~  132 (155)
+T 1P4T:A|PDBID|C   79 KPYLGARLSLNRASVDLGGSDSFSQTSIGLGVLTGVSYAVTPNVDLDAGYRYNY  132 (155)
+Confidence            46788888877765532     233344444  555566665 77777766544
+
+
+Done!

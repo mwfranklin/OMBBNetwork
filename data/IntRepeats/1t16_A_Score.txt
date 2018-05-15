@@ -1,0 +1,32 @@
+Query         1T16:A|PDBID|CHAIN|SEQUENCE
+Match_columns 427
+No_of_seqs    161 out of 1414
+Neff          9.8 
+Searched_HMMs 1
+Date          Tue May 15 10:44:37 2018
+Command       hhalign -i MSAs/1T16_A.a3m -o data/IntRepeats/1t16_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1T16:A|PDBID|CHAIN|SEQUENCE     95.5 1.5E-08 1.5E-08   66.8   0.0   72  270-351   322-393 (427)
+
+No 1  
+>1T16:A|PDBID|CHAIN|SEQUENCE
+Probab=95.48  E-value=1.5e-08  Score=66.78  Aligned_cols=72  Identities=13%  Similarity=0.227  Sum_probs=50.0
+
+Q 1T16:A|PDBID|C  270 NLPEMWEVSGYNRVDPQWAIHYSLAYTSWSQFQQLKATSTSGDTLFQKHEGFKDAYRIALGTTYYYDDNWTFRTGIAFDD  349 (427)
+Q Consensus       270 ~~P~~~~~G~sy~~~~~~~~~~d~~~~~ws~~~~~~~~~~~~~~~~~~~~~~~d~~~~~~G~ey~~~~~~~lR~G~~y~~  349 (427)
+                      +-=..+++|+.|++++++.+.+.+.|..-. ++.-..       .  ....--+.+.+.+|+.|++.+++.+.+++.|..
+T Consensus       322 ~d~~~~~~G~ey~~~~~~~lR~G~~y~~~~-~~~~~~-------~--~~~~~~~~~~~s~G~g~~~~~~~~ld~~~~y~~  391 (427)
+T 1T16:A|PDBID|C  322 KDAYRIALGTTYYYDDNWTFRTGIAFDDSP-VPAQNR-------S--ISIPDQDRFWLSAGTTYAFNKDASVDVGVSYMH  391 (427)
+Confidence            334678999999999999999988876421 110000       0  001113567899999999988999999998876
+
+
+Q 1T16:A|PDBID|C  350 SP  351 (427)
+Q Consensus       350 ~~  351 (427)
+                      ..
+T Consensus       392 ~~  393 (427)
+T 1T16:A|PDBID|C  392 GQ  393 (427)
+Confidence            53
+
+
+Done!

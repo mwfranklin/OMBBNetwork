@@ -1,0 +1,32 @@
+Query         3QQ2:A|PDBID|CHAIN|SEQUENCE
+Match_columns 284
+No_of_seqs    202 out of 1472
+Neff          10.8
+Searched_HMMs 1
+Date          Tue May 15 10:45:45 2018
+Command       hhalign -i MSAs/3QQ2_A.a3m -o data/IntRepeats/3qq2_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3QQ2:A|PDBID|CHAIN|SEQUENCE     94.4 9.3E-08 9.3E-08   50.3   0.0  128   41-171    84-223 (284)
+
+No 1  
+>3QQ2:A|PDBID|CHAIN|SEQUENCE
+Probab=94.36  E-value=9.3e-08  Score=50.27  Aligned_cols=128  Identities=10%  Similarity=-0.018  Sum_probs=77.5
+
+Q 3QQ2:A|PDBID|C   41 AYDQTVSGLEIGLDRGWSASGGRWYAGGLLGYTYADRTYPG--------DGGGKVKGLHVGGYAAYVGD--GGYYLDTVL  110 (284)
+Q Consensus        41 ~~~~~~~g~~~G~d~~~~~~~~~~~~G~~~~~~~~~~~~~~--------~~~~~~~~~~~g~y~~~~~~--~~~~~~~~~  110 (284)
+                      ..+.+..++.+-+.+...   ..+.+.+.++|+..+.+...        .++.+.+.+.+++-+.|.+.  +.|.+...+
+T Consensus        84 ~~~~~~~~~g~y~~~~~~---~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Gy~~~~~~~~~l~P~~  160 (284)
+T 3QQ2:A|PDBID|C   84 GGKVKGLHVGGYAAYVGD---GGYYLDTVLRLGRYDQQYNIAGTDGGRVTADYRTSGAAWSLEGGRRFELPNDWFAEPQA  160 (284)
+Confidence            344444444444444443   47777777777766654331        23445566666666666654  367777777
+
+
+Q 3QQ2:A|PDBID|C  111 RLGRYDQQYNIAGTD--GGRVTADYRTSGAAWSLEGGRRFELPNDWFAEPQAEVMLWRTSGKR  171 (284)
+Q Consensus       111 ~~~~~~~~~~~~~~~--~~~~~~~~~~~~~~~~~~~Gy~~~~~~~~~l~P~~~~~~~~~~~~~  171 (284)
+                      ++.+...+.......  ......+.+.....+++++.+.+.+.+...++|++.+.|.+.-.+.
+T Consensus       161 ~~~~~~~~~~~~~e~~~~~~~~~~~~~~~~~~G~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  223 (284)
+T 3QQ2:A|PDBID|C  161 EVMLWRTSGKRYRASNGLRVKVDANTATLGRLGLRFGRRIALAGGNIVQPYARLGWTQEFKST  223 (284)
+Confidence            776665544422111  1222344556667788888888887656789999999988754433
+
+
+Done!

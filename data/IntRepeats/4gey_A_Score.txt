@@ -1,0 +1,24 @@
+Query         4GEY:A|PDBID|CHAIN|SEQUENCE
+Match_columns 436
+No_of_seqs    216 out of 1598
+Neff          9.0 
+Searched_HMMs 1
+Date          Tue May 15 10:46:21 2018
+Command       hhalign -i MSAs/4GEY_A.a3m -o data/IntRepeats/4gey_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4GEY:A|PDBID|CHAIN|SEQUENCE      0.3    0.18    0.18   16.8   0.0   17  130-147   390-406 (436)
+
+No 1  
+>4GEY:A|PDBID|CHAIN|SEQUENCE
+Probab=0.34  E-value=0.18  Score=16.79  Aligned_cols=17  Identities=12%  Similarity=0.075  Sum_probs=8.7
+
+Q 4GEY:A|PDBID|C  130 RLTQMWIKQKYFDGALDV  147 (436)
+Q Consensus       130 ~L~~l~~~q~~~~~~l~l  147 (436)
+                      ...|++|+.++ .+.+.|
+T Consensus       390 ~~~E~~Y~~~l-~~~l~i  406 (436)
+T 4GEY:A|PDBID|C  390 YNAELYYGFHV-TNWLTV  406 (436)
+Confidence            44566666665 334443
+
+
+Done!

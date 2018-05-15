@@ -1,0 +1,24 @@
+Query         2ERV:A|PDBID|CHAIN|SEQUENCE
+Match_columns 150
+No_of_seqs    170 out of 1237
+Neff          7.7 
+Searched_HMMs 1
+Date          Tue May 15 10:44:43 2018
+Command       hhalign -i MSAs/2ERV_A.a3m -o data/IntRepeats/2erv_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2ERV:A|PDBID|CHAIN|SEQUENCE      0.9   0.064   0.064   14.1   0.0   14   74-87    101-114 (150)
+
+No 1  
+>2ERV:A|PDBID|CHAIN|SEQUENCE
+Probab=0.87  E-value=0.064  Score=14.08  Aligned_cols=14  Identities=21%  Similarity=0.131  Sum_probs=8.5
+
+Q 2ERV:A|PDBID|C   74 SIKPFIEAGIGVAA   87 (150)
+Q Consensus        74 ~~~~~~~~g~G~~~   87 (150)
+                      ++.+...+|+|..+
+T Consensus       101 ~f~F~~~~G~G~~~  114 (150)
+T 2ERV:A|PDBID|C  101 SLNFEDRIGAGLKF  114 (150)
+Confidence            45666666666654
+
+
+Done!

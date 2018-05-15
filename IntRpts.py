@@ -4,11 +4,11 @@ import glob
 import re
 import subprocess
 
-"""for filename in glob.glob("MSAs/*.a3m"):
+for filename in glob.glob("MSAs/*.a3m"):
     pdb_id = filename.split("/")[-1][:-4]
     pdb_id = pdb_id[0:4].lower() + pdb_id[4:]
     os.system("hhalign -i %s -o data/IntRepeats/%s_Score.txt"%(filename, pdb_id))
-"""
+
 barrels = []
 with open("BarrelChars85.txt", "r") as barrel_list:
     for line in barrel_list:

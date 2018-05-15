@@ -1,0 +1,24 @@
+Query         5FR8:A|PDBID|CHAIN|SEQUENCE
+Match_columns 733
+No_of_seqs    498 out of 1329
+Neff          12.2
+Searched_HMMs 1
+Date          Tue May 15 10:47:21 2018
+Command       hhalign -i MSAs/5FR8_A.a3m -o data/IntRepeats/5fr8_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5FR8:A|PDBID|CHAIN|SEQUENCE      8.9  0.0037  0.0037   32.1   0.0   29  506-534   575-603 (733)
+
+No 1  
+>5FR8:A|PDBID|CHAIN|SEQUENCE
+Probab=8.92  E-value=0.0037  Score=32.12  Aligned_cols=29  Identities=3%  Similarity=-0.186  Sum_probs=20.0
+
+Q 5FR8:A|PDBID|C  506 LKPETSVNKELGIQFQKDIVNASLTWFRN  534 (733)
+Q Consensus       506 Lkpe~~~~~e~g~~~~~~~~~~~~~~f~~  534 (733)
+                      +...+...+|+.+.+....+.+.+++-|.
+T Consensus       575 ~~~~~~~G~e~~~~~~~~~~~~~~~~~~~  603 (733)
+T 5FR8:A|PDBID|C  575 TPKALIQGFEGSLGLDFGDIRWTNNFTYM  603 (733)
+Confidence            44556778888888886556666665554
+
+
+Done!

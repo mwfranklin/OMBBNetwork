@@ -1,0 +1,32 @@
+Query         4AUI:A|PDBID|CHAIN|SEQUENCE
+Match_columns 327
+No_of_seqs    139 out of 1399
+Neff          10.0
+Searched_HMMs 1
+Date          Tue May 15 10:46:04 2018
+Command       hhalign -i MSAs/4AUI_A.a3m -o data/IntRepeats/4aui_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4AUI:A|PDBID|CHAIN|SEQUENCE     96.4   1E-09   1E-09   67.7   0.0  139  144-292   178-327 (327)
+
+No 1  
+>4AUI:A|PDBID|CHAIN|SEQUENCE
+Probab=96.45  E-value=1e-09  Score=67.66  Aligned_cols=139  Identities=15%  Similarity=0.194  Sum_probs=94.6
+
+Q 4AUI:A|PDBID|C  144 HVSVRYDSPEFAGFSGSVQ--YVPNDNSGKNRSESYHAGFNYKNDGFFVQYAGSYKRHNYT--------TEKHQVHRLVG  213 (327)
+Q Consensus       144 ~n~i~Y~sp~~~g~~~~~~--y~~~~~~~~~~~~~~~~~~~Y~~~~~~~~~~~~~~~~~~~--------~~~~~~~~~g~  213 (327)
+                      .-.+.|..   ++|++.+.  |...... ......+.+++.|+.++|.+.+.  |.+.+..        ..+...+.+++
+T Consensus       178 ~~~~~Y~~---~~~~~~~~~~~~~~~~~-~~~~~~~~~g~~y~~~~~~~~~~--~~~~~~~~~~~~~~~~~~~~~~~~~~  251 (327)
+T 4AUI:A|PDBID|C  178 HAGFNYKN---DGFFVQYAGSYKRHNYT-TEKHQVHRLVGGYDHDALYASVA--VQQQDAKLTWRDDNSHNSQTEVATTV  251 (327)
+Confidence            45567764   46777765  4433221 13567899999999998988876  4443321        23456788999
+
+
+Q 4AUI:A|PDBID|C  214 GYDHDALYASVAVQQQDAKLTWRDDNSHNSQTEVATTVAYRFGN-VTPRVSYAHGFKGSVYDADHDNTYDQVVVGAEYDF  292 (327)
+Q Consensus       214 ~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~y~~~~-~~~~~~y~~~~~~~~~~~~~~~~~~~~~lg~~Y~l  292 (327)
+                      .|.++++++.+.|.+.+...... .....+.+.+.+++.|++.+ +.+.+.|.+.+.+..   ....+.+.+.+|+.|+|
+T Consensus       252 ~y~~~~~~~~~~y~~~~~~~~~~-~~~~~~~~~~~lg~~Y~l~~~~~ly~~~~~~~~~~~---~~~~~~~~~~~G~~~~F  327 (327)
+T 4AUI:A|PDBID|C  252 AYRFGNVTPRVSYAHGFKGSVYD-ADHDNTYDQVVVGAEYDFSKRTSALVSAGWLQKGKG---AEKFVATVGGVGLRHKF  327 (327)
+Confidence            99999999999998766432110 11234567889999999996 899999998765431   12346778889988875
+
+
+Done!

@@ -1,0 +1,24 @@
+Query         5FQ8:B|PDBID|CHAIN|SEQUENCE
+Match_columns 984
+No_of_seqs    304 out of 2494
+Neff          10.5
+Searched_HMMs 1
+Date          Tue May 15 10:47:16 2018
+Command       hhalign -i MSAs/5FQ8_B.a3m -o data/IntRepeats/5fq8_B_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5FQ8:B|PDBID|CHAIN|SEQUENCE      0.2    0.27    0.27   19.7   0.0   31  289-319   380-411 (984)
+
+No 1  
+>5FQ8:B|PDBID|CHAIN|SEQUENCE
+Probab=0.22  E-value=0.27  Score=19.73  Aligned_cols=31  Identities=3%  Similarity=-0.028  Sum_probs=22.6
+
+Q 5FQ8:B|PDBID|C  289 SYDKYTFSARGSHKAG-ALTFSSSLNYAYQKN  319 (984)
+Q Consensus       289 ~~~r~~~~~~~~~~~~-~l~~~~~~~~~~~~~  319 (984)
+                      ..+++.+.+++++++. .|++...+.+.+...
+T Consensus       380 ~~~~~~~~~~~~~~~~~~l~~~~~~~~~~~~~  411 (984)
+T 5FQ8:B|PDBID|C  380 ESERFYGKFQLDYEFLKYFKFTYRMGLDTTTG  411 (984)
+Confidence            3456778888888874 688888887776544
+
+
+Done!
