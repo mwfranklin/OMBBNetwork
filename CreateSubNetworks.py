@@ -40,7 +40,7 @@ for x in range(27):
                         else:
                             continue
         if len(keep_lines) > 1:
-            with open("data/%s_%s_E-2.txt"%(x, y), "w+") as subnetwork:
+            with open("data/BtwnBarrels/%s_%s_E-2.txt"%(x, y), "w+") as subnetwork:
                 for value in keep_lines:
                     subnetwork.write("\t".join(value) + "\n")
 

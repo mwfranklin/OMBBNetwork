@@ -136,8 +136,8 @@ print(sorted(set(all_8str)))
             
 
 used_strands = [np.zeros(x) for x in range(27) ]
-for x in range(27):
-    for y in range(x+1, 27):
+for x in range(8,9):
+    for y in range(x+1, 16):
         if len(e_values[x][y]) > 1:
             print(x, y, "total aligns:",int_counts[x][y])
             terminal_align = 0
@@ -195,7 +195,7 @@ c_term_align = 0
 n_term_align = 0
 for entry in diff_barrel_lines[16][18]:                
     #identify any alignments between terminal strands or falling into that pattern
-    if abs(entry[4][-1] - entry[5][-1]) == 2 and len(entry[4]) == len(entry[5]):
+    if abs(entry[4][-1] - entry[5][-1]) == abs(barrels[entry[1]] - barrels[entry[2]]) and len(entry[4]) == len(entry[5]):
         #print("C-Terminal Align", entry)
         c_term_align += 1
     elif entry[4][0] == entry[5][0] and len(entry[4]) == len(entry[5]):
