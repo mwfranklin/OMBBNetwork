@@ -4,16 +4,17 @@ import glob
 import re
 import subprocess
 
-for filename in glob.glob("MSAs/*.a3m"):
+"""for filename in glob.glob("MSAs/*.a3m"):
     pdb_id = filename.split("/")[-1][:-4]
     pdb_id = pdb_id[0:4].lower() + pdb_id[4:]
-    os.system("hhalign -i %s -o data/IntRepeats/%s_Score.txt"%(filename, pdb_id))
+    os.system("hhalign -i %s -o data/IntRepeats/%s_Score.txt"%(filename, pdb_id))"""
 
-barrels = []
+barrels = {}
 with open("BarrelChars85.txt", "r") as barrel_list:
     for line in barrel_list:
         if "PDB" not in line:
-            barrels.append(line.split()[0])
+            line = line.split("\t")
+            barrels[line[0]] = int(line[1])
 
 with open("data/CollatedIntRpts.txt", "w+") as outdata:
     outdata.write("PDB\t\tProb E-value Score    SS Cols Query HMM  Template HMM\tQuery Strands\tTemplate Strands\n")
@@ -22,7 +23,7 @@ with open("data/CollatedIntRpts.txt", "w+") as outdata:
         kept_lines = []
         pdb_ID = filename.split("/")[-1][:-10]
         print(pdb_ID)
-        if pdb_ID in barrels:  
+        if pdb_ID in barrels.keys():  
             with open(filename, "r") as score_file:
                 keep_line = False
                 for line in score_file:
@@ -57,4 +58,4 @@ with open("data/CollatedIntRpts.txt", "w+") as outdata:
                     template_strands = sorted(set(template_strands))
                     query_strands = sorted(set(query_strands))                              
                                                 
-                    outdata.write("%s\t%s\t%s\t%s\t%s\n"%(pdb_ID, value[0], "\t".join(value[2:]), ",".join(map(str, query_strands)), ",".join(map(str, template_strands))))
+                    outdata.write("%s\t%s\t%s\t%s\t%s\t%s\n"%(barrels[pdb_ID], pdb_ID, value[0], "\t".join(value[2:]), ",".join(map(str, query_strands)), ",".join(map(str, template_strands))))

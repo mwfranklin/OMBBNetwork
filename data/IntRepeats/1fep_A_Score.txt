@@ -3,7 +3,7 @@ Match_columns 724
 No_of_seqs    554 out of 1277
 Neff          12.3
 Searched_HMMs 1
-Date          Tue May 15 10:44:27 2018
+Date          Tue May 15 15:49:07 2018
 Command       hhalign -i MSAs/1FEP_A.a3m -o data/IntRepeats/1fep_A_Score.txt 
 
  No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
