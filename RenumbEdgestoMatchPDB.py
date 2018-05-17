@@ -43,6 +43,7 @@ with open("data/rawData_E20_v6_2018.txt", "r") as edge_list, open("data/FiltData
     for line in edge_list:
         if "dom1" not in line:
             line = line.strip().split("\t")
+            #print(line)
             dom1 = line[0]
             dom2 = line[1]
             seq1 = line[10]

@@ -16,7 +16,7 @@ with open("data/rawData_E20_v6_2018.txt", "w+") as outdata:
                 line[1] = line[1][0:4].lower()  + line[1][4:]
                 all_pdb_ids.append(line[0])
                 all_pdb_ids.append(line[1])
-                outdata.write("\t".join(line[:6]) + "\t"+ "\t".join(line[7:15])+ "\t"+ "\t".join(line[21:]) + "\n")
+                outdata.write("\t".join(line[:6]) + "\t"+ "\t".join(line[7:15])+ "\t"+ "\t".join(line[21:]))# + "\n")
 
 all_pdb_ids = sorted(set(all_pdb_ids))
 all_pdb_ids_no_chain = [x[0:4] for x in all_pdb_ids]
