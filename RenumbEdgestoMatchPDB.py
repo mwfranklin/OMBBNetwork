@@ -38,6 +38,7 @@ with open("DupPDBs_v6.txt", "r") as inData:
     for line in inData:
         incorrect_frags.append(line.strip())
 
+prob_cutoff = 75
 dom_list = []
 with open("data/rawData_E20_v6_2018.txt", "r") as edge_list, open("data/FiltData_E20_v6_2018_Renumb.txt", "w+") as new_edges:
     for line in edge_list:
@@ -48,6 +49,7 @@ with open("data/rawData_E20_v6_2018.txt", "r") as edge_list, open("data/FiltData
             dom2 = line[1]
             seq1 = line[10]
             seq2 = line[11]
+            hhprob = float(line[12])
         
             #remove gaps from sequences
             seq1 = seq1.replace("-", "")
@@ -58,12 +60,13 @@ with open("data/rawData_E20_v6_2018.txt", "r") as edge_list, open("data/FiltData
                 continue
             if dom2 in incorrect_frags:
                 continue
-                
-            #print("dom1")            
-            new_start1, new_end1 = renumber_edges(dom1, seq1)
-            #print("dom2")
-            new_start2, new_end2 = renumber_edges(dom2, seq2)
+            
+            if hhprob >= prob_cutoff: 
+                #print("dom1")            
+                new_start1, new_end1 = renumber_edges(dom1, seq1)
+                #print("dom2")
+                new_start2, new_end2 = renumber_edges(dom2, seq2)
         
-            new_edges.write("\t".join(line[0:6]) + "\t" + str(new_start1) + "\t" + str(new_end1) + "\t" + str(new_start2) + "\t" + str(new_end2) + "\t" + "\t".join(line[10:]) + "\n")
+                new_edges.write("\t".join(line[0:6]) + "\t" + str(new_start1) + "\t" + str(new_end1) + "\t" + str(new_start2) + "\t" + str(new_end2) + "\t" + "\t".join(line[10:]) + "\n")
         else:
             new_edges.write(line)

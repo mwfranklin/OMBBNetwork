@@ -4,7 +4,7 @@ import glob
 import sys
 import numpy as np
 
-cutoff = 20
+cutoff = 1
 
 all_barrels = []
 with open("BarrelChars85.txt", "r") as barrel_list:
@@ -58,7 +58,7 @@ for key in stubs:
 #graph now only consists of pdbs with multiple connections to the same pdb
 
 multi_edge_lines = []
-with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData, open("data/NoMultiEdgesE<20_v6.txt", "w+") as all_edges, open("data/MultiEdgesE<20_v6.txt", "w+") as multi_edges:
+with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData, open("data/NoMultiEdgesE%s_v6.txt"%cutoff, "w+") as all_edges, open("data/MultiEdgesE%s_v6.txt"%cutoff, "w+") as multi_edges, open("data/MultiEdgesE%s_v6_DontCheck.txt"%cutoff, "w+") as dontcheck:
     for line in inData:
         if "dom1" not in line:
             line = line.strip().split("\t")
@@ -105,10 +105,10 @@ with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData, open("data/NoM
                             pop_list.append(x)
                         
                     #check if nearly identical segments
-                    elif (abs(int(edges[x][7]) - int(first_row[7])) < 3 and abs(int(edges[x][9]) - int(first_row[9])) < 3):
+                    elif (abs(int(edges[x][7]) - int(first_row[7])) < 6 and abs(int(edges[x][9]) - int(first_row[9])) < 6):
                         #print(first_row, edges[x])
                         #print("ends the same", abs(int(edges[x][8]) - int(first_row[8])), abs(int(edges[x][10]) - int(first_row[10])))
-                        if abs( abs(int(edges[x][6]) - int(first_row[6])) + abs(int(edges[x][8]) - int(first_row[8])) ) < 10:
+                        if abs( abs(int(edges[x][6]) - int(first_row[6])) + abs(int(edges[x][8]) - int(first_row[8])) ) < 15:
                             #print("start ~same", abs(int(edges[x][7]) - int(first_row[7])), abs(int(edges[x][9]) - int(first_row[9])))
                             if float(edges[x][2]) <= e_value: 
                                 del edges[0]
@@ -120,11 +120,11 @@ with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData, open("data/NoM
                         else:
                             #print("Ends identical ", first_row, edges[x])
                             if int(edges[x][3]) < int(first_row[3]):
-                                if len(first_row[10].split(edges[x][10])) == 2 and len(first_row[11].split(edges[x][11])) == 2:
+                                if len(first_row[10].split(edges[x][10][5:-5])) == 2 and len(first_row[11].split(edges[x][11][5:-5])) == 2:
                                     #print(first_row, edges[x])
                                     pop_list.append(x)
                             elif int(edges[x][3]) > int(first_row[3]):
-                                if len(edges[x][10].split(first_row[10])) == 2 and len(edges[x][11].split(first_row[11])) == 2:
+                                if len(edges[x][10].split(first_row[10][5:-5])) == 2 and len(edges[x][11].split(first_row[11][5:-5])) == 2:
                                     #print(first_row, edges[x])
                                     del edges[0]
                                     print_row = False
@@ -133,11 +133,11 @@ with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData, open("data/NoM
                     else:
                         #print("Starts identical ", first_row, edges[x])
                         if int(edges[x][3]) < int(first_row[3]):
-                            if len(first_row[10].split(edges[x][10])) == 2 and len(first_row[11].split(edges[x][11])) == 2:
+                            if len(first_row[10].split(edges[x][10][5:-5])) == 2 and len(first_row[11].split(edges[x][11][5:-5])) == 2:
                                 #print(first_row, edges[x])
                                 pop_list.append(x)
                         elif int(edges[x][3]) > int(first_row[3]):
-                            if len(edges[x][10].split(first_row[10])) == 2 and len(edges[x][11].split(first_row[11])) == 2:
+                            if len(edges[x][10].split(first_row[10][5:-5])) == 2 and len(edges[x][11].split(first_row[11][5:-5])) == 2:
                                 #print(first_row, edges[x])
                                 del edges[0]
                                 print_row = False
@@ -161,9 +161,47 @@ with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData, open("data/NoM
                 for x in range(1,len(kept_edges)):
                     if float(kept_edges[x][2]) < float(keep_row[2]):
                         keep_row = kept_edges[x]
-    
-                for value in kept_edges:
-                    if value == keep_row:
-                        multi_edges.write("\t".join(value) + "\t1\n")
+                        
+                if len(kept_edges) == 2:
+                    if (int(kept_edges[1][7]) < int(kept_edges[0][6])+10) or (int(kept_edges[1][6]) > int(kept_edges[0][7])-10) or (int(kept_edges[1][9]) < int(kept_edges[0][8])+10) or (int(kept_edges[1][8]) > int(kept_edges[0][9])-10):
+                        for value in kept_edges:
+                            if value == keep_row:
+                                dontcheck.write("\t".join(value) + "\t1\n")
+                            else:
+                                dontcheck.write("\t".join(value) + "\t0\n")
+                    elif (abs(int(kept_edges[1][7]) - int(kept_edges[0][7])) < 10 and abs(int(kept_edges[1][8]) - int(kept_edges[0][8])) < 10 and abs(int(kept_edges[1][6]) - int(kept_edges[0][6])) > 25 and abs(int(kept_edges[1][9]) - int(kept_edges[0][9])) > 25):
+                        for value in kept_edges:
+                            if value == keep_row:
+                                dontcheck.write("\t".join(value) + "\t1\n")
+                            else:
+                                dontcheck.write("\t".join(value) + "\t0\n")             
+                    elif (abs(int(kept_edges[1][7]) - int(kept_edges[0][7])) > 25 and abs(int(kept_edges[1][8]) - int(kept_edges[0][8])) > 25 and abs(int(kept_edges[1][6]) - int(kept_edges[0][6])) < 10 and abs(int(kept_edges[1][9]) - int(kept_edges[0][9])) < 10):
+                        for value in kept_edges:
+                            if value == keep_row:
+                                dontcheck.write("\t".join(value) + "\t1\n")
+                            else:
+                                dontcheck.write("\t".join(value) + "\t0\n")
+                    elif (abs(int(kept_edges[1][7]) - int(kept_edges[0][7])) < 6 and abs(int(kept_edges[1][9]) - int(kept_edges[0][9])) > 25) or (abs(int(kept_edges[1][7]) - int(kept_edges[0][7])) > 25 and abs(int(kept_edges[1][9]) - int(kept_edges[0][9])) < 6):
+                        for value in kept_edges:
+                            if value == keep_row:
+                                dontcheck.write("\t".join(value) + "\t1\n")
+                            else:
+                                dontcheck.write("\t".join(value) + "\t0\n")
+                    elif (abs(int(kept_edges[1][6]) - int(kept_edges[0][6])) < 6 and abs(int(kept_edges[1][8]) - int(kept_edges[0][8])) > 25) or (abs(int(kept_edges[1][6]) - int(kept_edges[0][6])) > 25 and abs(int(kept_edges[1][8]) - int(kept_edges[0][8])) < 6):
+                        for value in kept_edges:
+                            if value == keep_row:
+                                dontcheck.write("\t".join(value) + "\t1\n")
+                            else:
+                                dontcheck.write("\t".join(value) + "\t0\n")                                       
                     else:
-                        multi_edges.write("\t".join(value) + "\t0\n")
+                        for value in kept_edges:
+                            if value == keep_row:
+                                multi_edges.write("\t".join(value) + "\t1\n")
+                            else:
+                                multi_edges.write("\t".join(value) + "\t0\n")
+                else:
+                    for value in kept_edges:
+                        if value == keep_row:
+                            multi_edges.write("\t".join(value) + "\t1\n")
+                        else:
+                            multi_edges.write("\t".join(value) + "\t0\n")
