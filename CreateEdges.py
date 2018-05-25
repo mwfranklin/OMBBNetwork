@@ -59,8 +59,8 @@ def pymol_ranges(resnums):
     #print(strand_res1)
     return ranges1
 
-in_file = "AllDataE20_v6.txt"
-out_file = "AllDataE20_v6_Numbered.txt"
+in_file = "AllDataE1_v6.txt"
+out_file = "AllDataE1_v6_Numbered.txt"
 
 barrel_sizes = {}
 all_barrels = []
@@ -70,6 +70,10 @@ with open("BarrelChars85.txt", "r") as barrel_list:
             line = line.split("\t")
             all_barrels.append(line[0])
             barrel_sizes[line[0]] = int(line[1])
+incorrect_frags = []
+with open("DupPDBs_v6.txt", "r") as inData:
+    for line in inData:
+        incorrect_frags.append(line.strip())
 
 dom_list = []
 count = 1
@@ -77,10 +81,12 @@ with open("data/%s"%in_file, "r") as inData, open("data/%s"%out_file, "w+") as o
     #outdata.write("interaction Dom1 Dom2 E-value Res1 Res2 Strand1 Strand2 Seq1 Seq2 HHS_Prob HHS_Score Length Perc_ID Perc_Sim RMSD TMScore MaxSub GDT_TS GDT_HA InCyto?\n")
     for line in inData:
         if "dom1" in line:
-            outdata.write("interaction Dom1 Dom2 E-value Res1 Res2 Strand1 Strand2 Seq1 Seq2 HHS_Prob HHS_Score Length Perc_ID Perc_Sim RMSD TMScore MaxSub GDT_TS GDT_HA InCyto?)\n")
-            tabbed_out.write("interaction\tDom1\tDom2\tE-value\tRes1\tRes2\tStrand1\tStrand2\tSeq1\tSeq2\tHHS_Prob\tHHS_Score\tLength\tPerc_ID\tPerc_Sim\tRMSD\tTMScore\tMaxSub\tGDT_TS\tGDT_HA\tInCyto?)\n")
+            outdata.write("interaction Dom1 Dom2 E-value Res1 Res2 Strand1 Strand2 Seq1 Seq2 HHS_Prob HHS_Score Length Perc_ID Perc_Sim RMSD TMScore MaxSub GDT_TS GDT_HA InCyto?\n")
+            tabbed_out.write("interaction\tDom1\tDom2\tE-value\tRes1\tRes2\tStrand1\tStrand2\tSeq1\tSeq2\tHHS_Prob\tHHS_Score\tLength\tPerc_ID\tPerc_Sim\tRMSD\tTMScore\tMaxSub\tGDT_TS\tGDT_HA\tInCyto?\n")
         else:    
             line = line.strip().split("\t")
+            if line[14] == "ERR":
+                continue
             #print(line)
             dom1 = line[0]
             dom2 = line[1]
@@ -91,7 +97,12 @@ with open("data/%s"%in_file, "r") as inData, open("data/%s"%out_file, "w+") as o
             seq2 = line[11]
             res1 = []
             res2 = []
-        
+            
+            if dom1 in incorrect_frags:
+                continue
+            if dom2 in incorrect_frags:
+                continue
+                
             dom_list.append(dom1)
             dom_list.append(dom2)    
             #print(seq1)

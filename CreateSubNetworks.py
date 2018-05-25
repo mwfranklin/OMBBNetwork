@@ -23,7 +23,7 @@ cutoff = 1e-3
 for x in range(27):
     for y in range(x+1, 27):
         keep_lines = []
-        with open("data/AllDataE20_v6_Numbered.txt", "r") as inData:
+        with open("data/AllDataE1_v6_Numbered_Tabbed.txt", "r") as inData:
             for line in inData:
                 if "Dom1" in line:
                     keep_lines.append(line.strip().split(" "))

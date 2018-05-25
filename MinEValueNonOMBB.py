@@ -9,7 +9,7 @@ with open("BarrelChars85.txt", "r") as barrel_data:
 
 non_barrels = {}
 non_barrel_count = 0
-with open("data/AllDataE20_v6_Numbered.txt", "r") as inData:
+with open("data/AllDataE1_v6_Numbered.txt", "r") as inData:
     for line in inData:
         if "Dom1" not in line:
             line = line.split(" ")
