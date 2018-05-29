@@ -18,7 +18,7 @@ seq_IDs = ["85"]
 for value in seq_IDs:  
     #value = "85"
     allowed_barrels = []
-    with open("/Users/meghan/Documents/PhD/SluskyLab/DBList_v4_%s.txt"%value, "r") as allowed_data:
+    with open("/Users/meghan/Documents/PhD/SluskyLab/DBList_v5_%s.txt"%value, "r") as allowed_data:
         for line in allowed_data:
             allowed_barrels.append(line.strip().lower())
     
@@ -38,11 +38,11 @@ for value in seq_IDs:
     int_counts = np.zeros([27,27])
     e_values = [ [ [] for i in range(27)] for j in range(27)]
     diff_barrel_lines = [ [ [] for i in range(27)] for j in range(27)]
-    with open("data/AllDataE20_v6_Numbered.txt", "r") as inData:
+    with open("data/AllDataE1_v6_Numbered.txt", "r") as inData:
         for line in inData:
             if "IntNum" not in line:
                 line = line.strip().split()
-                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-4: #add line[-1] == "1" for min e-value calcs; remove float(line[3]) if not looking at Fig 4 tiers.
+                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-3: #add line[-1] == "1" for min e-value calcs; remove float(line[3]) if not looking at Fig 4 tiers.
                     #print(line[1], line[2])
                     #print(barrels[line[1]], barrels[line[2]])
                     e_values[ barrels[line[1]]][ barrels[line[2]] ].append(float(line[3]))
@@ -193,7 +193,8 @@ for x in range(27):
 
 c_term_align = 0
 n_term_align = 0
-for entry in diff_barrel_lines[16][18]:                
+double_hairpin = 0
+for entry in diff_barrel_lines[8][16]:                
     #identify any alignments between terminal strands or falling into that pattern
     if abs(entry[4][-1] - entry[5][-1]) == abs(barrels[entry[1]] - barrels[entry[2]]) and len(entry[4]) == len(entry[5]):
         #print("C-Terminal Align", entry)
@@ -209,8 +210,11 @@ for entry in diff_barrel_lines[16][18]:
         else:
             if entry[5][-1] == x-1: terminal_strands += 1
             #else: print(entry)"""
+    elif abs(entry[4][-1] - entry[5][-1]) == 4 and len(entry[4]) == len(entry[5]):
+        double_hairpin += 1
     else:
         print("Oddball", entry)
         #non_hairpins.append(entry[0])
-print(c_term_align, n_term_align)
+print(c_term_align, n_term_align, double_hairpin)
             
+
