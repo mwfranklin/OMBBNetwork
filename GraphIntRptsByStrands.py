@@ -33,26 +33,26 @@ with open("data/CollatedIntRpts.txt", "r") as inData:
     for line in inData:
         if "PDB" not in line:
             line = line.strip().split("\t")
-            if line[0] in proto_barrels:
-                if float(line[2]) <= 1e-3:
+            if line[1] in proto_barrels:
+                if float(line[3]) <= 1e-3:
                     print(line, len(line))
-                    proto_cons_barrels.append(line[0])
-                    strand_cons_patt[ barrels[line[0]] ][3] += 1
-                    if len(line) == 10:
-                        strands = sorted(set([int(x) for x in line[8].split(",")] + [int(x) for x in line[9].split(",")]))
+                    proto_cons_barrels.append(line[1])
+                    strand_cons_patt[ barrels[line[1]] ][3] += 1
+                    if len(line) == 11:
+                        strands = sorted(set([int(x) for x in line[10].split(",")] + [int(x) for x in line[11].split(",")]))
                         #print(strands)
                         if strands[0] != 0:
                             if strands[-1] != barrels[line[0]] - 1:
-                                strand_cons_patt[ barrels[line[0]] ] [2] += 1
+                                strand_cons_patt[ barrels[line[1]] ] [2] += 1
                             else:
-                                strand_cons_patt[ barrels[line[0]] ][0] += 1
+                                strand_cons_patt[ barrels[line[1]] ][0] += 1
                         else:
-                            if strands[-1] != barrels[line[0]] - 1:
-                                strand_cons_patt[ barrels[line[0]] ][1] += 1
+                            if strands[-1] != barrels[line[1]] - 1:
+                                strand_cons_patt[ barrels[line[1]] ][1] += 1
                     else:
-                        strand_cons_patt[ barrels[line[0]] ] [2] += 1
+                        strand_cons_patt[ barrels[line[1]] ] [2] += 1
                     
-                cons_barrels[barrels[line[0]]] += 1
+                cons_barrels[barrels[line[1]]] += 1
                 #if barrels[line[0]] == 18: print(line)
 
 for pdb in set(proto_barrels).difference(proto_cons_barrels):
