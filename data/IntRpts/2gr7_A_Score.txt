@@ -1,0 +1,24 @@
+Query         2GR7:A|PDBID|CHAIN|SEQUENCE
+Match_columns 129
+No_of_seqs    123 out of 1038
+Neff          8.2 
+Searched_HMMs 1
+Date          Wed May 30 09:37:33 2018
+Command       hhalign -i MSAs/2GR7_A.a3m -o data/IntRpts/2gr7_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2GR7:A|PDBID|CHAIN|SEQUENCE      2.5   0.019   0.019   15.5   0.0   24   27-50     34-57  (129)
+
+No 1  
+>2GR7:A|PDBID|CHAIN|SEQUENCE
+Probab=2.50  E-value=0.019  Score=15.49  Aligned_cols=24  Identities=29%  Similarity=0.473  Sum_probs=16.3
+
+Q 2GR7:A|PDBID|C   27 LYAVAKGVTNLAGQVNNLEGKVNK   50 (129)
+Q Consensus        27 l~~va~~~~~~~~~~~~l~~~i~~   50 (129)
+                      +.....++.++..+++++..+++.
+T Consensus        34 ~~~~~~~~~~l~~~i~~~~~~a~~   57 (129)
+T 2GR7:A|PDBID|C   34 VTNLAGQVNNLEGKVNKVGKRADA   57 (129)
+Confidence            444456667787888888877653
+
+
+Done!

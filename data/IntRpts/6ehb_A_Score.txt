@@ -1,0 +1,32 @@
+Query         6EHB:A|PDBID|CHAIN|SEQUENCE
+Match_columns 320
+No_of_seqs    135 out of 1229
+Neff          10.0
+Searched_HMMs 1
+Date          Wed May 30 09:40:25 2018
+Command       hhalign -i MSAs/6EHB_A.a3m -o data/IntRpts/6ehb_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 6EHB:A|PDBID|CHAIN|SEQUENCE     97.0 9.2E-11 9.2E-11   73.9   0.0  100  182-283   210-320 (320)
+
+No 1  
+>6EHB:A|PDBID|CHAIN|SEQUENCE
+Probab=97.02  E-value=9.2e-11  Score=73.91  Aligned_cols=100  Identities=24%  Similarity=0.395  Sum_probs=84.3
+
+Q 6EHB:A|PDBID|C  182 EDGYSLSAIYTFGDTGFNVGAGYADQD-----DQNEYMLAASYRMENLYFAGLFTDGELAKDVDYTGYELAAGYKLGQ-A  255 (320)
+Q Consensus       182 ~~~~~~~~~y~~~~~~~~~~~ay~~~~-----~~~~~~~g~~y~~~~~~l~~~y~~~~~~~~~~~~~~~~~~~Y~~~~-~  255 (320)
+                      ...+.+++.|..+  ++.+++.|.+.+     +.+.+.++++|++++|.+.+.|...+.....+.+.+.+++.|.+.+ +
+T Consensus       210 ~~~~~~g~~y~~~--~~~l~~~y~~~~~~~~~~~~~~~~~~~Y~~~~~~~~~~y~~~~~~~~~~~~~~~lg~~y~l~~~~  287 (320)
+T 6EHB:A|PDBID|C  210 QNEYMLAASYRME--NLYFAGLFTDGELAKDVDYTGYELAAGYKLGQAAFTATYNNAETAKKTSADNFAIDATYYFKPNF  287 (320)
+Confidence            4568899999988  889999988764     4678999999999999999999998876567899999999999999 9
+
+
+Q 6EHB:A|PDBID|C  256 AFTATYNNAETAK-----KTSADNFAIDATYYF  283 (320)
+Q Consensus       256 ~~~~~y~~~~~~~-----~~~~~~~~lg~~y~l  283 (320)
+                      .+++.|...+.+.     ..+.+.+.+|+.|.|
+T Consensus       288 ~~~~ey~~~~~~~~~~~~~~~~~~~~~Gl~~~F  320 (320)
+T 6EHB:A|PDBID|C  288 RSYISYQFNLLDSDKASKVASEDELAIGLRYDF  320 (320)
+Confidence            9999999888653     346777888888765
+
+
+Done!

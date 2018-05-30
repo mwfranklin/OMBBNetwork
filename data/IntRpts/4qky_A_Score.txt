@@ -1,0 +1,32 @@
+Query         4QKY:A|PDBID|CHAIN|SEQUENCE
+Match_columns 554
+No_of_seqs    310 out of 2215
+Neff          10.2
+Searched_HMMs 1
+Date          Wed May 30 09:39:20 2018
+Command       hhalign -i MSAs/4QKY_A.a3m -o data/IntRpts/4qky_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4QKY:A|PDBID|CHAIN|SEQUENCE     37.8 0.00034 0.00034   38.8   0.0   72   60-136   135-210 (554)
+
+No 1  
+>4QKY:A|PDBID|CHAIN|SEQUENCE
+Probab=37.84  E-value=0.00034  Score=38.82  Aligned_cols=72  Identities=11%  Similarity=0.057  Sum_probs=47.6
+
+Q 4QKY:A|PDBID|C   60 TVHAVDLDFGVEGRL---FDPAPLVQDYLNRPLDNEQLFLLVKALSAALYDRGYATSIVTFVPPG-VVDGVLKLKVEWGR  135 (554)
+Q Consensus        60 ~i~~I~i~g~~~~~~---~~l~~~~~~~~g~~~~~~~i~~~~~~i~~~y~~~GY~~~~v~~~~q~-~~~g~l~i~v~eG~  135 (554)
+                      +|.+|+|+|+.....   ..+...+...+|++++..+|++.+..|...     ...+++.+.+.+ ...-.|.|+|.|.+
+T Consensus       135 ~i~~I~i~g~~~~~~~~~~~i~~~~~~~~G~~~~~~~le~~l~~l~~~-----~~~v~~~~~p~~~~g~~~l~v~v~e~~  209 (554)
+T 4QKY:A|PDBID|C  135 RIKGWLIDGKPLEGTRDRMMVFSAMPGWQDKVLNVFDIDQAIYNINNG-----GKTGNITIVPADEYGYSYLDLQLQRRA  209 (554)
+Confidence            588899988642111   114556677799999999999998888762     345566554432 23446778887764
+
+
+Q 4QKY:A|PDBID|C  136 I  136 (554)
+Q Consensus       136 i  136 (554)
+                      -
+T Consensus       210 ~  210 (554)
+T 4QKY:A|PDBID|C  210 L  210 (554)
+Confidence            3
+
+
+Done!

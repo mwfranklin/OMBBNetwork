@@ -1,0 +1,24 @@
+Query         5O65:A|PDBID|CHAIN|SEQUENCE
+Match_columns 334
+No_of_seqs    150 out of 1448
+Neff          9.4 
+Searched_HMMs 1
+Date          Wed May 30 09:40:16 2018
+Command       hhalign -i MSAs/5O65_A.a3m -o data/IntRpts/5o65_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5O65:A|PDBID|CHAIN|SEQUENCE     44.2 0.00023 0.00023   34.3   0.0   69  195-266   245-314 (334)
+
+No 1  
+>5O65:A|PDBID|CHAIN|SEQUENCE
+Probab=44.22  E-value=0.00023  Score=34.34  Aligned_cols=69  Identities=13%  Similarity=0.073  Sum_probs=37.6
+
+Q 5O65:A|PDBID|C  195 ITPGLSMVKTFD-PAVLFGSVSYTHNLEDSFDDISSDVNQKVGGKVRLGDSFQFGVGVAFALNERMSMSFSVS  266 (334)
+Q Consensus       195 ~~~~l~~~~~~~-~~~l~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~g~~~~~~~g~~~~l~~~~~l~~~~~  266 (334)
+                      +.+++.+.+.+. +|.+.+.+.+.+........  ... +.....-.....+.+.+++.|.+++++.+.+.+.
+T Consensus       245 ~~~~~g~~~~l~~~~~l~~~~~~~~~~~~~~~~--~g~-~~~~~~~~~~~~~~~~~G~~y~~~~~~~l~~~~~  314 (334)
+T 5O65:A|PDBID|C  245 FQFGVGVAFALNERMSMSFSVSDLIQRKSKLKP--DGG-GWQSIVSSDANAGYFNVGMTIAASENLTIVPNLA  314 (334)
+Confidence            345556666665 57777777665543221100  000 0000001223577788999999999988877664
+
+
+Done!

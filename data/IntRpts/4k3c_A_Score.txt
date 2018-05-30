@@ -1,0 +1,32 @@
+Query         4K3C:A|PDBID|CHAIN|SEQUENCE
+Match_columns 532
+No_of_seqs    222 out of 1974
+Neff          11.3
+Searched_HMMs 1
+Date          Wed May 30 09:39:08 2018
+Command       hhalign -i MSAs/4K3C_A.a3m -o data/IntRpts/4k3c_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4K3C:A|PDBID|CHAIN|SEQUENCE     87.3 3.8E-06 3.8E-06   51.2   0.0   74    2-81     84-158 (532)
+
+No 1  
+>4K3C:A|PDBID|CHAIN|SEQUENCE
+Probab=87.33  E-value=3.8e-06  Score=51.19  Aligned_cols=74  Identities=14%  Similarity=0.342  Sum_probs=54.1
+
+Q 4K3C:A|PDBID|C    2 NISEMRIIGDTQKLDNELNQLLTHFKAGQLFRKTELSIIEEQIKQILGDRGYGS-AKVDLYPKFNEEDHTVQINFIVDAG   80 (532)
+Q Consensus         2 ~v~~i~i~g~~~~~~~~l~~~~~~~~~g~~~~~~~l~~~~~~i~~~y~~~Gy~~-~~v~~~~~~~~~~g~~~~~~~v~eg   80 (532)
+                      +|.+|+|+|+...+++.|.+.+ ++++|++++.++|++.+++|.+.    |+.. +.+.+.+. ..+.+.+.|++.+.|.
+T Consensus        84 ~i~~I~i~g~~~~~~~~i~~~l-~~~~g~~~~~~~l~~~~~~L~~~----~~f~~v~~~~~~~-~~~~~~~~l~i~v~e~  157 (532)
+T 4K3C:A|PDBID|C   84 YVRKIRFEGNDVTADSTLRREM-RQQEGAWLSTSAVSLAKSRLERT----GFYETVEMSMPTV-KNTDDQVDIIYKIKER  157 (532)
+Confidence            5889999999998999999998 57899999999888887777654    5432 44444221 2234566777777776
+
+
+Q 4K3C:A|PDBID|C   81 R   81 (532)
+Q Consensus        81 ~   81 (532)
+                      +
+T Consensus       158 ~  158 (532)
+T 4K3C:A|PDBID|C  158 N  158 (532)
+Confidence            5
+
+
+Done!

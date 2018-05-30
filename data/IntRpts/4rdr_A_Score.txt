@@ -1,0 +1,24 @@
+Query         4RDR:A|PDBID|CHAIN|SEQUENCE
+Match_columns 748
+No_of_seqs    175 out of 2397
+Neff          10.9
+Searched_HMMs 1
+Date          Wed May 30 09:39:22 2018
+Command       hhalign -i MSAs/4RDR_A.a3m -o data/IntRpts/4rdr_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4RDR:A|PDBID|CHAIN|SEQUENCE     21.9 0.00097 0.00097   38.6   0.0   34  525-558   586-620 (748)
+
+No 1  
+>4RDR:A|PDBID|CHAIN|SEQUENCE
+Probab=21.95  E-value=0.00097  Score=38.57  Aligned_cols=34  Identities=9%  Similarity=-0.054  Sum_probs=23.4
+
+Q 4RDR:A|PDBID|C  525 HLNKERSNNIELALGYE-GDRWQYNLALYRNRFGN  558 (748)
+Q Consensus       525 ~L~pe~~~~~e~g~~~~-~~~~~~~~~~f~~~~~d  558 (748)
+                      +....+..-+|+.+.+. .++|.+.+++.|.+.+.
+T Consensus       586 N~~~~~~~G~e~~~~~~~~~~~~l~~~~~y~~~~~  620 (748)
+T 4RDR:A|PDBID|C  586 NQSGADFYGAEGEIYFKPTPRYRIGVSGDYVRGRL  620 (748)
+Confidence            34456677788888887 46777777777666554
+
+
+Done!

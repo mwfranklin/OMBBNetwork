@@ -1,0 +1,32 @@
+Query         5IV9:A|PDBID|CHAIN|SEQUENCE
+Match_columns 758
+No_of_seqs    216 out of 1982
+Neff          9.1 
+Searched_HMMs 1
+Date          Wed May 30 09:40:02 2018
+Command       hhalign -i MSAs/5IV9_A.a3m -o data/IntRpts/5iv9_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5IV9:A|PDBID|CHAIN|SEQUENCE     95.3 2.1E-08 2.1E-08   80.2   0.0  128   26-160    54-196 (758)
+
+No 1  
+>5IV9:A|PDBID|CHAIN|SEQUENCE
+Probab=95.32  E-value=2.1e-08  Score=80.18  Aligned_cols=128  Identities=12%  Similarity=-0.022  Sum_probs=84.9
+
+Q 5IV9:A|PDBID|C   26 LPVTINADHAKGNYP---------DNAVFTGNVDINQGNSRLRADEVQLHQQQAAGQAQPVRTVDALGNVHYDDNQVILK   96 (758)
+Q Consensus        26 ~~v~i~Ad~~~~~~~---------~~~~a~G~V~i~~~~~~l~AD~i~~~~~~~~~~a~~~~~i~a~G~V~~~~~~~~~~   96 (758)
+                      +...|.||+|+++.+         ..+.|+|+|++..++..|+||++.||.++++..      + ..+...+..+...++
+T Consensus        54 ~~~~l~AD~i~~~~~~~~~~a~~~~~i~a~G~V~~~~~~~~~~g~~~~~n~~~~~g~------~-~~~~~~~~~~~~~~~  126 (758)
+T 5IV9:A|PDBID|C   54 GNSRLRADEVQLHQQQAAGQAQPVRTVDALGNVHYDDNQVILKGPKAWSNLNTKDTN------V-WQGDYQMVGRQGRGT  126 (758)
+Confidence            456789999999863         258999999999999999999999999986431      1 123333334445667
+
+
+Q 5IV9:A|PDBID|C   97 GPKAWSNLNTKDTNVWQGDY---QMVGRQGRGTADLMKQRGENRYTILENGSFTSCLPG---SDTWSVVG  160 (758)
+Q Consensus        97 g~~~~~n~~~~~g~~~~~~~---~~~~~~~~~~a~~i~~~~~~~~~~~~~~~~TtC~~~---~p~w~i~a  160 (758)
+                      |+++...-+.+--.+.++.+   .....+|+++|++|+...++++..++++.+--+..+   -|-+.+-.
+T Consensus       127 a~~i~~~~~~~~~~~~~~~~TtC~~~~p~w~i~a~~i~i~~~~~~~~~~~~~l~v~~vPvfy~P~~~~p~  196 (758)
+T 5IV9:A|PDBID|C  127 ADLMKQRGENRYTILENGSFTSCLPGSDTWSVVGSEVIHDREEQVAEIWNARFKLGSVPIFYSPYLQLPV  196 (758)
+Confidence            77665321111011233322   223468999999999655545556899998888865   46555433
+
+
+Done!

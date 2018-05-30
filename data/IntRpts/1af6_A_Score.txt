@@ -1,0 +1,24 @@
+Query         1AF6:A|PDBID|CHAIN|SEQUENCE
+Match_columns 421
+No_of_seqs    118 out of 693
+Neff          8.0 
+Searched_HMMs 1
+Date          Wed May 30 09:37:09 2018
+Command       hhalign -i MSAs/1AF6_A.a3m -o data/IntRpts/1af6_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1AF6:A|PDBID|CHAIN|SEQUENCE      0.6   0.091   0.091   19.5   0.0   33  265-297   301-333 (421)
+
+No 1  
+>1AF6:A|PDBID|CHAIN|SEQUENCE
+Probab=0.63  E-value=0.091  Score=19.50  Aligned_cols=33  Identities=6%  Similarity=-0.090  Sum_probs=26.4
+
+Q 1AF6:A|PDBID|C  265 NNGHMLRILDHGAISMGDNWDMMYVGMYQDINW  297 (421)
+Q Consensus       265 ~~a~~~r~~~~g~~~~~~~~~~~~~~~y~~~~~  297 (421)
+                      .+.+.+.+.-.-.+.+++++++...+-|+..+.
+T Consensus       301 ~~~~w~s~gvRP~y~~~~~~~l~~E~G~~~~~~  333 (421)
+T 1AF6:A|PDBID|C  301 NGTKWWTVGIRPMYKWTPIMSTVMEIGYDNVES  333 (421)
+Confidence            345667788888899999999999999986543
+
+
+Done!

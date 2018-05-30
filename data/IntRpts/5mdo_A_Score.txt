@@ -1,0 +1,40 @@
+Query         5MDO:A|PDBID|CHAIN|SEQUENCE
+Match_columns 352
+No_of_seqs    130 out of 1281
+Neff          9.5 
+Searched_HMMs 1
+Date          Wed May 30 09:40:11 2018
+Command       hhalign -i MSAs/5MDO_A.a3m -o data/IntRpts/5mdo_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5MDO:A|PDBID|CHAIN|SEQUENCE     97.1 7.8E-11 7.8E-11   78.3   0.0  148  153-305   190-352 (352)
+
+No 1  
+>5MDO:A|PDBID|CHAIN|SEQUENCE
+Probab=97.05  E-value=7.8e-11  Score=78.30  Aligned_cols=148  Identities=13%  Similarity=0.015  Sum_probs=105.4
+
+Q 5MDO:A|PDBID|C  153 NTIRWDSPMYADKFSIDAAVGAGDKAGL--GAGDDYWGGIAAHYKLG-PLQLDAAYEGNRNIEAEGQTWENNTYLVGVQG  229 (352)
+Q Consensus       153 ~~i~Y~sp~~~~g~~~~~~y~~~~~~~~--~~~~~~~~~~~~~Y~~g-~~~~~~~y~~~~~~~~~~~~~~~~~~~~ga~y  229 (352)
+                      -.+.|..    ++|.+.+.|........  .......+.+++.|..+ +|.|++.|++.+.........+.+.|.++++|
+T Consensus       190 ~~~~Y~~----g~~~~~~~y~~~~~~~~~~~~~~~~~~~~ga~y~~~~~~~l~~~y~~~~~~~~~~~~~~~~~~~~g~~y  265 (352)
+T 5MDO:A|PDBID|C  190 IAAHYKL----GPLQLDAAYEGNRNIEAEGQTWENNTYLVGVQGWFENGISFFAQYKYMEADASNGVNEKQDAMSAGLMY  265 (352)
+Confidence            3466653    47788888876544321  11245568899999986 89999999988775432224577899999999
+
+
+Q 5MDO:A|PDBID|C  230 WFENGISFFAQYKYMEADAS---NGVNEKQDAMSAGLMYTTGD-WQYKLGYAANFDLERDG--------KTLSNTSDDVV  297 (352)
+Q Consensus       230 ~~~~~~~l~~~y~~~~~~~~---~~~~~~~~~~~~g~~y~~~~-~~~~~~y~~~~~~~~~~--------~~~~~~~~~~~  297 (352)
+                      .++ .++|.+.|.+.+....   .....+.+.+.+++.|.+.| +.|.+.|.+.+......        ......+.+.+
+T Consensus       266 ~~~-~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~lg~~Y~lsk~~~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~d~~~~  344 (352)
+T 5MDO:A|PDBID|C  266 TTG-DWQYKLGYAANFDLERDGKTLSNTSDDVVSAQIMYFVDPSAVLYARARMNDFNEGLDGLDDAARWTSGTNGDYNEY  344 (352)
+Confidence            998 7999999998755321   11356889999999999995 99999998874432110        00124678889
+
+
+Q 5MDO:A|PDBID|C  298 SAQIMYFV  305 (352)
+Q Consensus       298 ~lg~~Y~l  305 (352)
+                      .+|+.|+|
+T Consensus       345 ~vG~ry~F  352 (352)
+T 5MDO:A|PDBID|C  345 SVGVEYYF  352 (352)
+Confidence            99998876
+
+
+Done!

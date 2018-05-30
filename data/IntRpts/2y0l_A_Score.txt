@@ -1,0 +1,24 @@
+Query         2Y0L:A|PDBID|CHAIN|SEQUENCE
+Match_columns 402
+No_of_seqs    136 out of 1163
+Neff          9.5 
+Searched_HMMs 1
+Date          Wed May 30 09:37:50 2018
+Command       hhalign -i MSAs/2Y0L_A.a3m -o data/IntRpts/2y0l_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2Y0L:A|PDBID|CHAIN|SEQUENCE     15.6  0.0017  0.0017   30.6   0.0   50  309-364   351-400 (402)
+
+No 1  
+>2Y0L:A|PDBID|CHAIN|SEQUENCE
+Probab=15.62  E-value=0.0017  Score=30.55  Aligned_cols=50  Identities=14%  Similarity=0.053  Sum_probs=36.7
+
+Q 2Y0L:A|PDBID|C  309 KERSWQLRYDYDFVGLGIPGLTFMTRYVKGDNVELAGQSGEGREWERNTELQYVFQ  364 (402)
+Q Consensus       309 g~~a~~~~~~y~~~~~gl~gl~~~~~y~~~~~~~~~~~~~~~~~~E~~~~~~Y~~~  364 (402)
+                      .+..+-+.+.|+|..=-++||++.+.|++.+...      ..+..++-+.+.|+|+
+T Consensus       351 ~~~E~~~~~~Y~~~~g~lkgls~~~~y~~~~~~~------~~d~~~~R~~~~Y~F~  400 (402)
+T 2Y0L:A|PDBID|C  351 REWERNTELQYVFQSGALKNLGIRWRNATFRSNF------TRDIDENRLIVSYTLP  400 (402)
+Confidence            3556678899998532268999999999987542      3456688888999884
+
+
+Done!

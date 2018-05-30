@@ -1,0 +1,40 @@
+Query         1PHO:A|PDBID|CHAIN|SEQUENCE
+Match_columns 330
+No_of_seqs    138 out of 1257
+Neff          10.3
+Searched_HMMs 1
+Date          Wed May 30 09:37:22 2018
+Command       hhalign -i MSAs/1PHO_A.a3m -o data/IntRpts/1pho_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1PHO:A|PDBID|CHAIN|SEQUENCE     97.5 6.5E-12 6.5E-12   81.3   0.0  156  127-293   168-330 (330)
+
+No 1  
+>1PHO:A|PDBID|CHAIN|SEQUENCE
+Probab=97.50  E-value=6.5e-12  Score=81.27  Aligned_cols=156  Identities=13%  Similarity=0.212  Sum_probs=111.1
+
+Q 1PHO:A|PDBID|C  127 ASGLATYRNTDFFGVIDGLNLTLQYQGKNENRD------VKKQNGDGFGTSLTYDFGGSDFAISGAYTNSDRTNEQNLQS  200 (330)
+Q Consensus       127 ~~~~i~Y~~p~~~~~~~g~~~~~~y~~~~~~~~------~~~~~~~~~~~~~~y~~~~~~~~~~~~y~~~~~~~~~~~~~  200 (330)
+                      ..-.+.|+.+.+     +|++.+.|........      ........+.+++.|+.++  |.+++.|.+........   
+T Consensus       168 ~~~~~~y~~~~~-----~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~ga~y~~~~--~~l~~~y~~~~~~~~~~---  237 (330)
+T 1PHO:A|PDBID|C  168 FGTSLTYDFGGS-----DFAISGAYTNSDRTNEQNLQSRGTGKRAEAWATGLKYDANN--IYLATFYSETRKMTPIT---  237 (330)
+Confidence            345677776422     6888888886554421      1124578899999999975  99999998887654211   
+
+
+Q 1PHO:A|PDBID|C  201 RGTGKRAEAWATGLKYDAN-NIYLATFYSETRKMTPITGGFANKTQNFEAVAQYQFDFGLRPSLGYVLSKGKDIEGIGDE  279 (330)
+Q Consensus       201 ~~~~~~~~~~~~ga~y~~~-~~~l~~~y~~~~~~~~~~~~~~~~~~~~~~~~~y~~~~~~~~~~~y~~~~~~~~~~~~~~  279 (330)
+                      .....+.+.+.+++.|+++ .|.+.+.|.+.+...........+.+.+.+++.|.+.|.+.|++.|.+.+.+.... ...
+T Consensus       238 ~~~~~~~~~~~~~~~y~~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~g~~Y~l~~~~~ly~e~~~~~~~~~~~-~~~  316 (330)
+T 1PHO:A|PDBID|C  238 GGFANKTQNFEAVAQYQFDFGLRPSLGYVLSKGKDIEGIGDEDLVNYIDVGATYYFNKNMSAFVDYKINQLDSDNK-LNI  316 (330)
+Confidence            1234577889999999998 59999999988754321111356789999999999999999999999877654211 123
+
+
+Q 1PHO:A|PDBID|C  280 DLVNYIDVGATYYF  293 (330)
+Q Consensus       280 ~~~~~~~~g~~Y~l  293 (330)
+                      .+.+.+.+|+.|.|
+T Consensus       317 ~~~~~~~~G~~~~F  330 (330)
+T 1PHO:A|PDBID|C  317 NNDDIVAVGMTYQF  330 (330)
+Confidence            56788888888865
+
+
+Done!

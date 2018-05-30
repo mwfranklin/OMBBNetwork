@@ -1,0 +1,24 @@
+Query         1A0S:P|PDBID|CHAIN|SEQUENCE
+Match_columns 413
+No_of_seqs    120 out of 693
+Neff          8.1 
+Searched_HMMs 1
+Date          Wed May 30 09:37:08 2018
+Command       hhalign -i MSAs/1A0S_P.a3m -o data/IntRpts/1a0s_P_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1A0S:P|PDBID|CHAIN|SEQUENCE      0.4    0.13    0.13   17.9   0.0   30  264-293   302-331 (413)
+
+No 1  
+>1A0S:P|PDBID|CHAIN|SEQUENCE
+Probab=0.44  E-value=0.13  Score=17.92  Aligned_cols=30  Identities=10%  Similarity=-0.100  Sum_probs=21.9
+
+Q 1A0S:P|PDBID|C  264 ADTWRIASYGTTPLSENWSVAPAMLAQRSK  293 (413)
+Q Consensus       264 ~~~~rv~~~g~~~~~~~~~~~~~~~y~~~~  293 (413)
+                      .+.+.+.-=-.+.+++++++...+.|+..+
+T Consensus       302 ~~w~s~gvRp~y~~~~~~~l~~E~G~~~~~  331 (413)
+T 1A0S:P|PDBID|C  302 YQWATFNLRLIQAINQNFALAYEGSYQYMD  331 (413)
+Confidence            445555666677788999999888887553
+
+
+Done!

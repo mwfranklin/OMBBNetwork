@@ -1,0 +1,40 @@
+Query         2POR:A|PDBID|CHAIN|SEQUENCE
+Match_columns 301
+No_of_seqs    137 out of 1254
+Neff          10.1
+Searched_HMMs 1
+Date          Wed May 30 09:37:46 2018
+Command       hhalign -i MSAs/2POR_A.a3m -o data/IntRpts/2por_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2POR:A|PDBID|CHAIN|SEQUENCE     97.2 4.1E-11 4.1E-11   74.1   0.0  128  125-271   158-301 (301)
+
+No 1  
+>2POR:A|PDBID|CHAIN|SEQUENCE
+Probab=97.18  E-value=4.1e-11  Score=74.13  Aligned_cols=128  Identities=23%  Similarity=0.300  Sum_probs=97.2
+
+Q 2POR:A|PDBID|C  125 AGAFSVAASMSDGKVGET-SEDDAQEMAVAAAYTFGNYTVGLGYEKIDSPDTA--------------LMADMEQLELAAI  189 (301)
+Q Consensus       125 ~~g~~~~~~~~~~~~~~~-~~~~~~~~~~~~~y~~~~~~~~~~y~~~~~~~~~--------------~~~~~~~~~~g~~  189 (301)
+                      .++|++++.|........ ...+.+.+.+++.|+.+++++++.|.+.+.....              ...+.+.+.+++.
+T Consensus       158 ~~~~~~~~~y~~~~~~~~~~~~~~~~~~~g~~y~~~~~~l~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  237 (301)
+T 2POR:A|PDBID|C  158 FGNYTVGLGYEKIDSPDTALMADMEQLELAAIAKFGATNVKAYYADGELDRDFARAVFDLTPVAAAATAVDHKAYGLSVD  237 (301)
+Confidence            577899999887765421 1246788999999999999999999988765321              2467789999999
+
+
+Q 2POR:A|PDBID|C  190 AKFGATNVKAYYADGELDRDFARAVFDLTPVAAAATAVDHKAYGLSVDSTFGA-TTVGGYVQVLDIDTIDDVTYYGLGAS  268 (301)
+Q Consensus       190 y~~~~~~l~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Y~~g~-~~~~~~y~~~~~~~~~~~~~~~~g~~  268 (301)
+                      |++++++|.+.|...+..                 ...+.+.+.+++.|.+.| +.+.+.|...+.  +.+.+.+.+++.
+T Consensus       238 Y~~g~~~~~~~y~~~~~~-----------------~~~~~~~~~~g~~Y~l~k~~~l~a~~~~~~~--~~~~~~~~~G~~  298 (301)
+T 2POR:A|PDBID|C  238 STFGATTVGGYVQVLDID-----------------TIDDVTYYGLGASYDLGGGASIVGGIADNDL--PNSDMVADLGVK  298 (301)
+Confidence            999999998866443322                 146789999999999998 899996654433  346788888888
+
+
+Q 2POR:A|PDBID|C  269 YDL  271 (301)
+Q Consensus       269 Y~l  271 (301)
+                      |+|
+T Consensus       299 ~~F  301 (301)
+T 2POR:A|PDBID|C  299 FKF  301 (301)
+Confidence            865
+
+
+Done!

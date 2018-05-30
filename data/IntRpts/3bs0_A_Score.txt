@@ -1,0 +1,40 @@
+Query         3BS0:A|PDBID|CHAIN|SEQUENCE
+Match_columns 439
+No_of_seqs    115 out of 1516
+Neff          9.3 
+Searched_HMMs 1
+Date          Wed May 30 09:37:56 2018
+Command       hhalign -i MSAs/3BS0_A.a3m -o data/IntRpts/3bs0_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3BS0:A|PDBID|CHAIN|SEQUENCE     95.9 5.1E-09 5.1E-09   71.8   0.0  187  133-361   217-403 (439)
+
+No 1  
+>3BS0:A|PDBID|CHAIN|SEQUENCE
+Probab=95.94  E-value=5.1e-09  Score=71.76  Aligned_cols=187  Identities=16%  Similarity=0.134  Sum_probs=99.4
+
+Q 3BS0:A|PDBID|C  133 IVLRAPIGFSYQATSKLTFGASVDLVWTSLNLELLLPSSQVGALTAQGNLSGGLVPSLAGFVGTGGAAHFSLSRNSTAGG  212 (439)
+Q Consensus       133 ~~~~~~~~~a~~l~~~lslG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  212 (439)
+                      ....+.+++.|++.+++++|+.++......+.+...........           +           .....  +.....
+T Consensus       217 ~g~~~~~G~~~~~~~~~~~G~~y~~~~~~~~~~~~~~~~~~~~~-----------~-----------~~~~~--~~~~~~  272 (439)
+T 3BS0:A|PDBID|C  217 VGWGGRLGLTYKLTDNTVLGAMYNFKTSVGDLEGKATLSAISGD-----------G-----------AVLPL--DGDIRV  272 (439)
+Confidence            33567889999999999999988865431111111111100000           0           00000  000000
+
+
+Q 3BS0:A|PDBID|C  213 AVDAVGWGGRLGLTYKLTDNTVLGAMYNFKTSVGDLEGKATLSAISGDGAVLPLDGDIRVKNFEMPASLTLGLAHQFNER  292 (439)
+Q Consensus       213 ~~~~~g~~~~~G~~~~~~~~~~~G~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~P~~l~lG~s~~~~~~  292 (439)
+                      ..-..-..+.+|+.|++.+++.+++.++....- +.............+   ....... ..++--..+++|+.|++.++
+T Consensus       273 ~~~~~P~~l~lG~s~~~~~~~~l~~d~~~~~~s-~~~~~~~~~~~~~~~---~~~~~~~-~~~~d~~~~~~G~ey~~~~~  347 (439)
+T 3BS0:A|PDBID|C  273 KNFEMPASLTLGLAHQFNERWVVAADIKRAYWG-DVMDSMNVAFISQLG---GIDVALP-HRYQDITVASIGTAYKYNND  347 (439)
+Confidence            112233456888899988888888877643321 111111100000000   0001111 24555667899999999999
+
+
+Q 3BS0:A|PDBID|C  293 WVVAADIKRAYWGDVMDSMNVAFISQLGGIDVALPHRYQDITVASIGTAYKYNNDLTLRAGYSYAQQAL  361 (439)
+Q Consensus       293 ~~l~~d~~~~~~s~~~~~~~~~~~~~~~~~~~~~~~~~~d~~~~~~G~ey~~~~~l~lR~G~~yd~~~~  361 (439)
+                      +.+.+.+.|...... ..    .        ......-.+.+.+.+|+.|++.+.+.+.+++.|.....
+T Consensus       348 l~lR~G~~yd~~~~~-~~----~--------~~~~~~~~~~~~~s~G~g~~~~~~~~idl~~~y~~~~~  403 (439)
+T 3BS0:A|PDBID|C  348 LTLRAGYSYAQQALD-SE----L--------ILPVIPAYLKRHVTFGGEYDFDKDSRINLAISFGLRER  403 (439)
+Confidence            998888876533221 00    0        00001123568899999999988899999988876543
+
+
+Done!

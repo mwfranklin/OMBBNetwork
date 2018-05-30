@@ -4,10 +4,10 @@ import glob
 import re
 import subprocess
 
-"""for filename in glob.glob("MSAs/*.a3m"):
+for filename in glob.glob("MSAs/*.a3m"):
     pdb_id = filename.split("/")[-1][:-4]
     pdb_id = pdb_id[0:4].lower() + pdb_id[4:]
-    os.system("hhalign -i %s -o data/IntRepeats/%s_Score.txt"%(filename, pdb_id))"""
+    os.system("hhalign -i %s -o data/IntRpts/%s_Score.txt"%(filename, pdb_id))
 
 barrels = {}
 with open("BarrelChars85.txt", "r") as barrel_list:
@@ -19,7 +19,7 @@ with open("BarrelChars85.txt", "r") as barrel_list:
 with open("data/CollatedIntRpts.txt", "w+") as outdata:
     outdata.write("PDB\t\tProb E-value Score    SS Cols Query HMM  Template HMM\tQuery Strands\tTemplate Strands\n")
     
-    for filename in glob.glob("data/IntRepeats/*_Score.txt"):
+    for filename in glob.glob("data/IntRpts/*_Score.txt"):
         kept_lines = []
         pdb_ID = filename.split("/")[-1][:-10]
         print(pdb_ID)

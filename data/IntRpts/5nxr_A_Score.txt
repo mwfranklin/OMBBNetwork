@@ -1,0 +1,40 @@
+Query         5NXR:A|PDBID|CHAIN|SEQUENCE
+Match_columns 352
+No_of_seqs    142 out of 1255
+Neff          10.2
+Searched_HMMs 1
+Date          Wed May 30 09:40:15 2018
+Command       hhalign -i MSAs/5NXR_A.a3m -o data/IntRpts/5nxr_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5NXR:A|PDBID|CHAIN|SEQUENCE     96.9   2E-10   2E-10   73.7   0.0  162  133-312   179-352 (352)
+
+No 1  
+>5NXR:A|PDBID|CHAIN|SEQUENCE
+Probab=96.85  E-value=2e-10  Score=73.72  Aligned_cols=162  Identities=10%  Similarity=0.159  Sum_probs=111.6
+
+Q 5NXR:A|PDBID|C  133 LLTYRNNNAFGYVDGLSFALQYQGKNGDNNKSSA----------GMAKDNGDGYGFSTAYELGWGVTLGGGYSSSSRTPN  202 (352)
+Q Consensus       133 ~i~Y~~~~~~~~~~g~~~~~~y~~~~~~~~~~~~----------~~~~~~~~~~~~~~~y~~~~~~~~~~~y~~~~~~~~  202 (352)
+                      .+.|..+      .+|.+.+.|............          .........+.+++.|.++ ++.+++.|.+.+....
+T Consensus       179 ~~~y~~~------~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~g~~y~~~-~~~l~a~y~~~~~~~~  251 (352)
+T 5NXR:A|PDBID|C  179 STAYELG------WGVTLGGGYSSSSRTPNQKAGVVTSEGDSYYSATGKRAQAWNVGGKFDAN-NVYLAAMYGQTQNTSR  251 (352)
+Confidence            4566643      178888888875544211000          0123456789999999998 8999999999887532
+
+
+Q 5NXR:A|PDBID|C  203 QKAGVVTSEGDSYYSATGKRAQAWNVGGKFDAN-NVYLAAMYGQTQNTSRYGDLDLIANKTENVELVAQYLFDFGLKPSI  281 (352)
+Q Consensus       203 ~~~~~~~~~~~~~~~~~~~~~~~~~~g~~y~~~-~~~l~a~y~~~~~~~~~~~~~~~~~~~~~~~~~~~y~~~~~~~~~~  281 (352)
+                      ...          ......+.+.|.++++|+++ .+.|.+.|.+.+....... .....+.+.+.+++.|.+.+.+.+++
+T Consensus       252 ~~~----------~~~~~~~~~~~~~~~~y~~~~~~~~~~~y~~~~~~~~~~~-~~~~~~~~~~~~g~~Y~l~~~~~~~~  320 (352)
+T 5NXR:A|PDBID|C  252 YGD----------LDLIANKTENVELVAQYLFDFGLKPSIGYNQSKGKNLGNG-YDNQDLVKYISVGSYYYFNKNMSAVV  320 (352)
+Confidence            100          00124567889999999998 5999999999887643110 01246789999999999999999999
+
+
+Q 5NXR:A|PDBID|C  282 GYNQSKGKNLGNG-YDNQDLVKYISVGSYYYF  312 (352)
+Q Consensus       282 ~y~~~~~~~~~~~-~~~~~~~~~~~~g~~Y~l  312 (352)
+                      .|.+.+.+..... .....+.+.+.+|+.|.|
+T Consensus       321 e~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~F  352 (352)
+T 5NXR:A|PDBID|C  321 DYKINLLKDNDFTKEYGINTDNVLGLGLVYQF  352 (352)
+Confidence            9999887653210 012467888899988875
+
+
+Done!

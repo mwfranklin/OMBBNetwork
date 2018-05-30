@@ -1,0 +1,24 @@
+Query         3SY7:A|PDBID|CHAIN|SEQUENCE
+Match_columns 428
+No_of_seqs    111 out of 1101
+Neff          8.9 
+Searched_HMMs 1
+Date          Wed May 30 09:38:30 2018
+Command       hhalign -i MSAs/3SY7_A.a3m -o data/IntRpts/3sy7_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3SY7:A|PDBID|CHAIN|SEQUENCE      9.3  0.0035  0.0035   29.5   0.0   54  311-379   365-418 (428)
+
+No 1  
+>3SY7:A|PDBID|CHAIN|SEQUENCE
+Probab=9.28  E-value=0.0035  Score=29.50  Aligned_cols=54  Identities=15%  Similarity=0.134  Sum_probs=40.3
+
+Q 3SY7:A|PDBID|C  311 PGEKSWQARYDLNLASYGVPGLTFMVRYINGKDIDGTKMSDNNVGYKNYGYGEDGKHHETNLEAKYVVQ  379 (428)
+Q Consensus       311 ~~~~a~~~~~~Y~f~~~gi~gL~~~~~y~~~~~~~~~~~~~~~~g~~~~~~~~~~~~~E~~~~l~Y~~~  379 (428)
+                      ..+.-+.+.+.|+|..=.++||++.++|+..+....               ....+..|+-+.|.|...
+T Consensus       365 ~~~~E~~~~l~Y~~~~g~~kgL~~~~~y~~~~~d~~---------------~~~~d~~~~R~~~~Y~~~  418 (428)
+T 3SY7:A|PDBID|C  365 GKHHETNLEAKYVVQSGPAKDLSFRIRQAWHRANAD---------------QGEGDQNEFRLIVDYPLS  418 (428)
+Confidence            567778889999994312799999999988665432               124688888888998873
+
+
+Done!

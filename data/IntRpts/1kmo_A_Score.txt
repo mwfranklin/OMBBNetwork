@@ -1,0 +1,32 @@
+Query         1KMO:A|PDBID|CHAIN|SEQUENCE
+Match_columns 774
+No_of_seqs    471 out of 3192
+Neff          11.7
+Searched_HMMs 1
+Date          Wed May 30 09:37:21 2018
+Command       hhalign -i MSAs/1KMO_A.a3m -o data/IntRpts/1kmo_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1KMO:A|PDBID|CHAIN|SEQUENCE     17.0  0.0015  0.0015   36.7   0.0  112  565-686   611-738 (774)
+
+No 1  
+>1KMO:A|PDBID|CHAIN|SEQUENCE
+Probab=16.98  E-value=0.0015  Score=36.70  Aligned_cols=112  Identities=12%  Similarity=0.094  Sum_probs=53.1
+
+Q 1KMO:A|PDBID|C  565 VEPEKARTWELGTRYDD-------GALTAEMGLFLINFNNQYDSNQTNDTVTARGKTRHTGLETQARYDLGTLTPTLDNV  637 (774)
+Q Consensus       565 L~pe~~~~~elG~~~~~-------~~~~~~~~~f~~~~~n~i~~~~~~~~~~n~~~~~~~G~El~~~~~~~~~~~~~~~~  637 (774)
+                      ....+...+|+.+++..       +.|.+.+++-+.+.+..-..........+..   ..-+-+.+.|++       ++|
+T Consensus       611 ~~~~~~~G~El~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~g~~~~~~p---~~~~~~~~~y~~-------~~~  680 (774)
+T 1KMO:A|PDBID|C  611 RGKTRHTGLETQARYDLGTLTPTLDNVSIYASYAYVNAEIREKGDTYGNLVPFSP---KHKGTLGVDYKP-------GNW  680 (774)
+Confidence            34567777888887663       4566666555544432211110001111111   112344444544       367
+
+
+Q 1KMO:A|PDBID|C  638 SIYASYAYVNAEIREKGDT-----YGNLVPFSPKHKGTLGVDYKPG----NWTFNLNS  686 (774)
+Q Consensus       638 ~~~~~~~~~~~~~~~~~~~-----~g~~~~~~p~~~~~~~~~y~~~----~~~~~~~~  686 (774)
+                      .+.+++.|...........     ........+.+.+++.+.|++.    +|.+.+.+
+T Consensus       681 ~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~y~~~dl~~~y~~~~~~~~~~l~l~v  738 (774)
+T 1KMO:A|PDBID|C  681 TFNLNSDFQSSQFADNANTVKESADGSTGRIPGFMLWGARVAYDFGPQMADLNLAFGV  738 (774)
+Confidence            7777777765544321100     0011112244667888888864    25555544
+
+
+Done!

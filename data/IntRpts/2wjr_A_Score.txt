@@ -1,0 +1,32 @@
+Query         2WJR:A|PDBID|CHAIN|SEQUENCE
+Match_columns 214
+No_of_seqs    144 out of 398
+Neff          8.4 
+Searched_HMMs 1
+Date          Wed May 30 09:37:48 2018
+Command       hhalign -i MSAs/2WJR_A.a3m -o data/IntRpts/2wjr_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2WJR:A|PDBID|CHAIN|SEQUENCE     96.3 1.9E-09 1.9E-09   60.0   0.0  119   53-175    84-213 (214)
+
+No 1  
+>2WJR:A|PDBID|CHAIN|SEQUENCE
+Probab=96.27  E-value=1.9e-09  Score=59.96  Aligned_cols=119  Identities=8%  Similarity=0.028  Sum_probs=78.5
+
+Q 2WJR:A|PDBID|C   53 DVQVEVNYAIKLDDQWTVRPGMLTHFSS-----------NGTRYGPYVKLSWDATKDLNFGIRYRYDWKAYRQQDLSGDM  121 (214)
+Q Consensus        53 ~~e~~~~y~~~l~~~~~l~P~~~~~~~~-----------~~~~ykp~l~~~Y~~~~~~~~~~RYRy~~~~~~~~~~~~~~  121 (214)
+                      .....+...|+|++.|+|...+.+....           .....+..|.++|++++.|.|+.+++|........ .  ..
+T Consensus        84 ~ykp~l~~~Y~~~~~~~~~~RYRy~~~~~~~~~~~~~~~~~~~~r~d~~~~Y~~~~~~~l~y~~~y~~~~~~~~-~--~~  160 (214)
+T 2WJR:A|PDBID|C   84 RYGPYVKLSWDATKDLNFGIRYRYDWKAYRQQDLSGDMSRDNVHRWDGYVTYHINSDFTFAWQTTLYSKQNDYR-Y--AN  160 (214)
+Confidence            4455688888999999999999888753           23477889999999998899999998864332211 0  12
+
+
+Q 2WJR:A|PDBID|C  122 SRDNVHRWDGYVTYHINSDFTFAWQTTLYSKQNDYRYANHKKWATENAFVLQYH  175 (214)
+Q Consensus       122 ~~~~~~r~d~~~~Y~~~~~~~l~y~~~y~~~~~~~~~~~~k~~~~~~~~~~~Y~  175 (214)
+                      ......+..+.+.|++++.|.--.++.......... .......++..+-+.|+
+T Consensus       161 ~k~~~~~~~~~~~Y~~~~~~~PY~e~~~~~~~~~~~-~~~~~~q~r~rvG~~Y~  213 (214)
+T 2WJR:A|PDBID|C  161 HKKWATENAFVLQYHMTPDITPYIEYDYLDRQGVYN-GRDNLSENSYRIGVSFK  213 (214)
+Confidence            456677889999999975676666655542211100 11223455666666664
+
+
+Done!

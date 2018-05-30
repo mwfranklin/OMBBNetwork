@@ -1,0 +1,48 @@
+Query         3X2R:A|PDBID|CHAIN|SEQUENCE
+Match_columns 277
+No_of_seqs    210 out of 1915
+Neff          8.6 
+Searched_HMMs 1
+Date          Wed May 30 09:38:42 2018
+Command       hhalign -i MSAs/3X2R_A.a3m -o data/IntRpts/3x2r_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3X2R:A|PDBID|CHAIN|SEQUENCE      0.7   0.082   0.082   16.5   0.0  207    3-241     8-249 (277)
+
+No 1  
+>3X2R:A|PDBID|CHAIN|SEQUENCE
+Probab=0.69  E-value=0.082  Score=16.54  Aligned_cols=207  Identities=10%  Similarity=0.016  Sum_probs=138.8
+
+Q 3X2R:A|PDBID|C    3 RLFLLVAVMLLSGCLTA-PPK------E----------AARPTLMPRAQSYKDLTHLPA-----------PTGKIFVSVY   54 (277)
+Q Consensus         3 ~~~~~l~~~~l~gC~~~-~~~------~----------~~~~~~~~~~~~~~~~~~~~~-----------~~~~~~VAV~   54 (277)
+                      -++++|..|....+... .+.      .          ..++.+.  .-++.+......           ...-..+.+-
+T Consensus         8 l~~~~l~gC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VA--V~~f~n~t~~~~~~~~~~~~~~~~~~~~~~l~~   85 (277)
+T 3X2R:A|PDBID|C    8 VAVMLLSGCLTAPPKEAARPTLMPRAQSYKDLTHLPAPTGKIFVS--VYNIQDETGQFKPYPASNFSTAVPQSATAMLVT   85 (277)
+Confidence            79999999999999999 654      2          2345453  234444322211           1222234444
+
+
+Q 3X2R:A|PDBID|C   55 NIQDETGQFKPYPASNFSTAVPQ-SATAMLVTA-LKD----SRWFIPLERQGLQNLLNERKIIRAAQENGTVAINNRIPL  128 (277)
+Q Consensus        55 ~f~n~t~~~~~~~~~~~~~~~~~-~~~~~l~~~-L~~----sg~f~vver~~l~~~~~E~~l~~~~~~sg~~~~~~~~~~  128 (277)
+                      .+.+ ++..         .-+.. .+.+++... |..    +|.   ++.....++-+.++-...  ..|.+..-.....
+T Consensus        86 ~L~~-sg~f---------~vver~~l~~~~~E~~l~~~~~~sg~---~~~~~~~~~g~~lgad~v--i~G~I~~~~~~~~  150 (277)
+T 3X2R:A|PDBID|C   86 ALKD-SRWF---------IPLERQGLQNLLNERKIIRAAQENGT---VAINNRIPLQSLTAANIM--VEGSIIGYESNVK  150 (277)
+Confidence            5665 5642         33544 566766654 555    798   999987676565544321  1799986554333
+
+
+Q 3X2R:A|PDBID|C  129 QSLTAANIMVEGSIIGYESNVKSGGVGARYFGIGADTQYQLDQIAVNLRVVNVSTGEILSSVNTSKTIL-SYEVQAGVFR  207 (277)
+Q Consensus       129 g~~lgad~vi~G~I~~~~~~~~~~~~g~~~~g~~~~~~~~~~~v~v~lrLiDv~TG~vv~s~~~~~~~~-~~~~~~~~~~  207 (277)
+                      ....|..+.-.|    +............+.-+...+.........+-+..+...+.-++.     ... ....+.+...
+T Consensus       151 ~~~~g~~~~g~~----~~~~~~~~~v~v~lrLiDv~TG~vv~s~~~~~~~~~~~~~~~~~~-----~~~~~~~~~~~~~~  221 (277)
+T 3X2R:A|PDBID|C  151 SGGVGARYFGIG----ADTQYQLDQIAVNLRVVNVSTGEILSSVNTSKTILSYEVQAGVFR-----FIDYQRLLEGEVGY  221 (277)
+Confidence            334566553223    222222222333332222334444456666666655544433332     222 2334434432
+
+
+Q 3X2R:A|PDBID|C  208 FIDYQRLLEGEVGYTSNEPVMLCLMSAIETGVIF  241 (277)
+Q Consensus       208 ~~~~~~~~~~~~~~~~~~~~~~A~~~ai~~av~~  241 (277)
+                       .. ...+    ...-.+.+.+|+.+++.+....
+T Consensus       222 -~~-~~~~----~~A~~~ai~~av~~lv~~~~~~  249 (277)
+T 3X2R:A|PDBID|C  222 -TS-NEPV----MLCLMSAIETGVIFLINDGIDR  249 (277)
+Confidence             22 2444    4445678888988888776543
+
+
+Done!

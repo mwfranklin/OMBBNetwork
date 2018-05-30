@@ -1,0 +1,32 @@
+Query         2GSK:A|PDBID|CHAIN|SEQUENCE
+Match_columns 590
+No_of_seqs    379 out of 1327
+Neff          12.1
+Searched_HMMs 1
+Date          Wed May 30 09:37:35 2018
+Command       hhalign -i MSAs/2GSK_A.a3m -o data/IntRpts/2gsk_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2GSK:A|PDBID|CHAIN|SEQUENCE     10.9  0.0028  0.0028   30.5   0.0  106  405-517   451-562 (590)
+
+No 1  
+>2GSK:A|PDBID|CHAIN|SEQUENCE
+Probab=10.89  E-value=0.0028  Score=30.54  Aligned_cols=106  Identities=10%  Similarity=0.025  Sum_probs=54.1
+
+Q 2GSK:A|PDBID|C  405 NLDPEKSKQWEGAFEGLTAGVNWRISGYRNDVSDLIDYDDHTLKYYNEGKARIKGVEATANFDTGPLTHTVSYDYVDARN  484 (590)
+Q Consensus       405 ~L~pe~~~~~e~g~~~~~~~~~~~~~~f~~~~~~~i~~~~~~~~~~N~~~~~~~G~e~~~~~~~~~~~~~~~~~~~~~~~  484 (590)
+                      +....+...+|+.+++....+.+.+++-|.+.++.....+       ....-...+.+.+.+...+|.+.+.+.|.....
+T Consensus       451 N~~~~~~~G~e~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-------~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  523 (590)
+T 2GSK:A|PDBID|C  451 NEGKARIKGVEATANFDTGPLTHTVSYDYVDARNAITDTP-------LLRRAKQQVKYQLDWQLYDFDWGITYQYLGTRY  523 (590)
+Confidence            3556677778888887665566666665555443321111       001112234444555555677777776665543
+
+
+Q 2GSK:A|PDBID|C  485 AITDT-----PLLRRAKQQVKYQLDWQLY-DFDWGITYQ  517 (590)
+Q Consensus       485 ~~~~~-----~~~~~~~~~~~~~~~~~~~-~~~~~~~~~  517 (590)
+                      .....     .....+-..+.+.+.|++. +|.+.+.+.
+T Consensus       524 ~~~~~~~~~~~~~~~~~~~~d~~~~y~~~~~~~l~l~v~  562 (590)
+T 2GSK:A|PDBID|C  524 DKDYSSYPYQTVKMGGVSLWDLAVAYPVTSHLTVRGKIA  562 (590)
+Confidence            22110     0111123455666777763 566666553
+
+
+Done!

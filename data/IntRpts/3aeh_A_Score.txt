@@ -1,0 +1,32 @@
+Query         3AEH:A|PDBID|CHAIN|SEQUENCE
+Match_columns 308
+No_of_seqs    166 out of 1299
+Neff          10.3
+Searched_HMMs 1
+Date          Wed May 30 09:37:53 2018
+Command       hhalign -i MSAs/3AEH_A.a3m -o data/IntRpts/3aeh_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3AEH:A|PDBID|CHAIN|SEQUENCE     83.6 8.2E-06 8.2E-06   41.1   0.0  100   82-184   121-236 (308)
+
+No 1  
+>3AEH:A|PDBID|CHAIN|SEQUENCE
+Probab=83.59  E-value=8.2e-06  Score=41.13  Aligned_cols=100  Identities=11%  Similarity=0.031  Sum_probs=59.4
+
+Q 3AEH:A|PDBID|C   82 MDLFTGVMATYTDTDASADL-------YSGKTKSWGGGFYASGLFR--SGAYFDVIAKYIHNENKYDL--N-F-A---GA  145 (308)
+Q Consensus        82 ~~~~~G~~~~~~~~~~~~~~-------~~~~~~~~~~g~y~~~~~~--~~~~~~~~~~~~~~~~~~~~--~-~-~---~~  145 (308)
+                      +.+.+.+.++|+..+.+...       .+.+.+.+.+.+-+.|.+.  +++.+.-.+++.....+.+.  . . .   ..
+T Consensus       121 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Gy~~~~~~~~~l~P~~~~~~~~~~~~~~~e~~~~~~l~~  200 (308)
+T 3AEH:A|PDBID|C  121 SGAYFDVIAKYIHNENKYDLNFAGAGKQNFRSHSLYAGAEVGYRYHLTDTTFVEPQAELVWGRLQGQTFNWNDSGMDVSM  200 (308)
+Confidence            36777777777766555432       2334555667777777664  46788766665554444331  1 0 0   11
+
+
+Q 3AEH:A|PDBID|C  146 GKQNFRSHSLYAGAEVGYRYHLTDTTFVEPQAELVWGRL  184 (308)
+Q Consensus       146 ~~~~~~~~~~~~~~~~Gy~~~~~~~~~l~P~~~~~~~~~  184 (308)
+                      ...+.+.....+++++++.+.. .  .++|++.+.+.+-
+T Consensus       201 ~~~~~~~~~~~~G~~~~~~~~~-~--~~~~~~~~~~~~~  236 (308)
+T 3AEH:A|PDBID|C  201 RRNSVNPLVGRTGVVSGKTFSG-K--DWSLTARAGLHYE  236 (308)
+Confidence            2344566667788888888875 2  3778887777754
+
+
+Done!

@@ -1,0 +1,32 @@
+Query         1XKW:A|PDBID|CHAIN|SEQUENCE
+Match_columns 665
+No_of_seqs    436 out of 1306
+Neff          12.2
+Searched_HMMs 1
+Date          Wed May 30 09:37:30 2018
+Command       hhalign -i MSAs/1XKW_A.a3m -o data/IntRpts/1xkw_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1XKW:A|PDBID|CHAIN|SEQUENCE     69.0 4.4E-05 4.4E-05   45.7   0.0  116  459-590   513-631 (665)
+
+No 1  
+>1XKW:A|PDBID|CHAIN|SEQUENCE
+Probab=69.04  E-value=4.4e-05  Score=45.74  Aligned_cols=116  Identities=15%  Similarity=0.112  Sum_probs=56.9
+
+Q 1XKW:A|PDBID|C  459 PLSPVEGKTYETGIKGELADGRLNLSLAAFRIDLENNPQEDPDHPGPPNNPFYISGGKVRSQGFELEGTGYLT---PYWS  535 (665)
+Q Consensus       459 ~l~pe~~~~~elG~~~~~~~~~~~~~~~~f~~~~~n~i~~~~~~~~~~~~~~~~n~~~~~~~G~E~~~~~~~~---~~~~  535 (665)
+                      +....+...+|+.+.+.+.+ .|.+.+++-+.+.+..-........    ...   ...-.+-+.+.+.+.+.   .+|.
+T Consensus       513 n~~~~~~~G~E~~~~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~~----~~~---~~~p~~~~~~~~~~~~~~~~~~~~  584 (665)
+T 1XKW:A|PDBID|C  513 SGGKVRSQGFELEGTGYLTP-YWSLSAGYTYTSTEYLKDSQNDSGT----RYS---TFTPRHLLRLWSNYDLPWQDRRWS  584 (665)
+Confidence            34566778889999988754 6777777666554322111000000    000   00111122233333332   4677
+
+
+Q 1XKW:A|PDBID|C  536 LSAGYTYTSTEYLKDSQNDSGTRYSTFTPRHLLRLWSNYDLPWQDRRWSVGGGLQ  590 (665)
+Q Consensus       536 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~~~~~~~~~~~~~~~~~~~~~~~~~~  590 (665)
+                      +.+++.|.........     .......+-+.+.+.+.|.+.   ++|.+.+.+.
+T Consensus       585 ~~~~~~~~~~~~~~~~-----~~~~~~~~~~~~d~~~~~~~~---~~~~l~l~v~  631 (665)
+T 1XKW:A|PDBID|C  585 VGGGLQAQSDYSVDYR-----GVSMRQGGYALVNMRLGYKID---EHWTAAVNVN  631 (665)
+Confidence            7777766654332111     001123455677777777763   4566666553
+
+
+Done!

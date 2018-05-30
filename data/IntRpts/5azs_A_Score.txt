@@ -1,0 +1,40 @@
+Query         5AZS:A|PDBID|CHAIN|SEQUENCE
+Match_columns 468
+No_of_seqs    730 out of 1552
+Neff          11.1
+Searched_HMMs 1
+Date          Wed May 30 09:39:35 2018
+Command       hhalign -i MSAs/5AZS_A.a3m -o data/IntRpts/5azs_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5AZS:A|PDBID|CHAIN|SEQUENCE     99.5 4.3E-22 4.3E-22  161.4   0.0  197   42-242   255-451 (468)
+
+No 1  
+>5AZS:A|PDBID|CHAIN|SEQUENCE
+Probab=99.45  E-value=4.3e-22  Score=161.41  Aligned_cols=197  Identities=16%  Similarity=0.077  Sum_probs=174.2
+
+Q 5AZS:A|PDBID|C   42 AELRRLVDMALDNNRSLRQTLLDIEAARAQYRIQRADRVPGLNAAATGNRQRQPADLSAGNRSEVASSYQVGLALPEYEL  121 (468)
+Q Consensus        42 ltl~~~i~~al~~np~l~~~~~~~~~a~~~~~~a~~~~~P~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~~~~  121 (468)
+                      .++++++..++++||+++.++.+++.++..++.+++.++|+|++++++++........+ ........+++++++|+|+ 
+T Consensus       255 ~~~~~~~~~al~~~p~l~~~~~~~~~a~~~~~~a~~~~~P~l~l~~~~~~~~~~~~~~~-~~~~~~~~~gl~~~~pl~~-  332 (468)
+T 5AZS:A|PDBID|C  255 DIAPGTPSELIERRPDILAAEHRLRARNADIGAARAAFFPRISLTGSFGTSSAEMSGLF-DGGSRSWSFLPTLTLPIFD-  332 (468)
+Confidence            45678899999999999999999999999999999999999999999987764432211 1223345556666666444 
+
+
+Q 5AZS:A|PDBID|C  122 DLFGRVKSLTDAALQQYLASEEAARAARIALVAEVSQAYLSYDGALRRLALTRQTLVSREYSFALIDQRRAAGAATALDY  201 (468)
+Q Consensus       122 ~~~~~~~~~~~~a~~~~~~a~~~~~~~~~~~~~~v~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~d~  201 (468)
+                        +|.....++.++...+.++.+++..+.++..++..+|.++..+++.++..++.+..+++.++.++.+|+.|.++..|+
+T Consensus       333 --~~~~~~~~~~a~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~~~dl  410 (468)
+T 5AZS:A|PDBID|C  333 --GGRNRANLSLAEARKDSAVAAYEGTIQTAFREVADALAASDTLRREEKALRALANSSNEALKLAKARYESGVDNHLRY  410 (468)
+Confidence              888899999999999999999999999999999999999999999999999999999999999999999999999999
+
+
+Q 5AZS:A|PDBID|C  202 QEALGLVEQARAEQERNLRQKQQAFNALVLLLGSDDAAQAI  242 (468)
+Q Consensus       202 ~~a~~~~~~~~~~~~~~~~~~~~a~~~L~~l~g~~~~~~~~  242 (468)
+                      +.++..+.+++.++.+++.++..+...|..++|.+......
+T Consensus       411 l~a~~~~~~a~~~~~~a~~~~~~a~~~L~~~~G~~~~~~~~  451 (468)
+T 5AZS:A|PDBID|C  411 LDAQRSSFLNEIAFIDGSTQRQIALVDLFRALGGGWDEGRS  451 (468)
+Confidence            99999999999999999999999999999999998765443
+
+
+Done!

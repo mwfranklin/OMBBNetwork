@@ -1,0 +1,24 @@
+Query         4N75:A|PDBID|CHAIN|SEQUENCE
+Match_columns 385
+No_of_seqs    152 out of 1397
+Neff          9.8 
+Searched_HMMs 1
+Date          Wed May 30 09:39:15 2018
+Command       hhalign -i MSAs/4N75_A.a3m -o data/IntRpts/4n75_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4N75:A|PDBID|CHAIN|SEQUENCE      0.5    0.11    0.11   17.1   0.0   24   13-36     42-65  (385)
+
+No 1  
+>4N75:A|PDBID|CHAIN|SEQUENCE
+Probab=0.54  E-value=0.11  Score=17.15  Aligned_cols=24  Identities=13%  Similarity=0.029  Sum_probs=11.4
+
+Q 4N75:A|PDBID|C   13 VSFQAGVQQDNWLGTGYAVGINGT   36 (385)
+Q Consensus        13 ~~~~~~~~~~n~~g~~~~l~~~~~   36 (385)
+                      ..+.+.+....+++..-.+.+.+.
+T Consensus        42 ~~~~l~~~~p~~~~~~~~~~~~~~   65 (385)
+T 4N75:A|PDBID|C   42 TYAELSVTNPYFTVDGVSLGGRLF   65 (385)
+Confidence            344555555555444434444443
+
+
+Done!

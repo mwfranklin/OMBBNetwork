@@ -1,0 +1,24 @@
+Query         2F1V:A|PDBID|CHAIN|SEQUENCE
+Match_columns 197
+No_of_seqs    116 out of 1116
+Neff          9.0 
+Searched_HMMs 1
+Date          Wed May 30 09:37:32 2018
+Command       hhalign -i MSAs/2F1V_A.a3m -o data/IntRpts/2f1v_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2F1V:A|PDBID|CHAIN|SEQUENCE     71.0 3.7E-05 3.7E-05   32.9   0.0   56    5-60     97-157 (197)
+
+No 1  
+>2F1V:A|PDBID|CHAIN|SEQUENCE
+Probab=71.05  E-value=3.7e-05  Score=32.86  Aligned_cols=56  Identities=9%  Similarity=-0.091  Sum_probs=34.1
+
+Q 2F1V:A|PDBID|C    5 EFFMRAGSATVRPTEGAGGTL-----GSLGGFSVTNNTQLGLTFTYMATDNIGVELLAATP   60 (197)
+Q Consensus         5 ~~~~~~~~~~~~~~~~~~~~~-----~~~~~~~~~~~~~~~~~~gy~~~~~~~vel~~~~~   60 (197)
+                      +-++++|+++...........     ......+..-.+.+++.+.|.++++|++.+++.|.
+T Consensus        97 ~Pyvg~G~g~~~~~~~~~~~~~~~~~~~~~~~~~~~g~~~~~Gv~y~~~~~~~l~~~~~y~  157 (197)
+T 2F1V:A|PDBID|C   97 RPYVGAGINYTTFFDNGFNDHGKEAGLSDLSLKDSWGAAGQVGVDYLINRDWLVNMSVWYM  157 (197)
+Confidence            447888888876543321100     00011112234556788889999999999998874
+
+
+Done!

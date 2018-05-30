@@ -1,0 +1,24 @@
+Query         1QD5:A|PDBID|CHAIN|SEQUENCE
+Match_columns 275
+No_of_seqs    155 out of 971
+Neff          6.1 
+Searched_HMMs 1
+Date          Wed May 30 09:37:23 2018
+Command       hhalign -i MSAs/1QD5_A.a3m -o data/IntRpts/1qd5_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1QD5:A|PDBID|CHAIN|SEQUENCE      0.8   0.067   0.067   18.8   0.0   16  195-210   246-261 (275)
+
+No 1  
+>1QD5:A|PDBID|CHAIN|SEQUENCE
+Probab=0.83  E-value=0.067  Score=18.80  Aligned_cols=16  Identities=31%  Similarity=0.586  Sum_probs=9.9
+
+Q 1QD5:A|PDBID|C  195 TKYMGYYQLKIGYHLG  210 (275)
+Q Consensus       195 ~dY~G~gel~~~y~~~  210 (275)
+                      .=+.||||--+.|...
+T Consensus       246 Qyf~GYGESLidYn~~  261 (275)
+T 1QD5:A|PDBID|C  246 QVYSGYGESLIDYNFN  261 (275)
+Confidence            3455777777777654
+
+
+Done!

@@ -1,0 +1,32 @@
+Query         4RL8:A|PDBID|CHAIN|SEQUENCE
+Match_columns 275
+No_of_seqs    221 out of 1457
+Neff          9.3 
+Searched_HMMs 1
+Date          Wed May 30 09:39:24 2018
+Command       hhalign -i MSAs/4RL8_A.a3m -o data/IntRpts/4rl8_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4RL8:A|PDBID|CHAIN|SEQUENCE     76.6 2.1E-05 2.1E-05   38.4   0.0  130   66-207   114-249 (275)
+
+No 1  
+>4RL8:A|PDBID|CHAIN|SEQUENCE
+Probab=76.59  E-value=2.1e-05  Score=38.39  Aligned_cols=130  Identities=9%  Similarity=0.011  Sum_probs=68.6
+
+Q 4RL8:A|PDBID|C   66 EPQFLLPFGRVSSSGDASALGDTSGVGDLTLTAPL--KYRLNEANDILGATVYLTAPTGNYNRDDALNLGEN----RWKV  139 (275)
+Q Consensus        66 ~~~~~~P~~~~~~~~~~~~~~~~sGlGD~~l~~~~--~~~~~~~~~~~~~~~~v~~PTG~y~~~~~~n~G~g----~w~~  139 (275)
+                      .+.+.+|-+.-+...     .-..|-|...+.+.+  .+... .++.+.+.+...+.+-.-+.+    .+++    .=.+
+T Consensus       114 ~~~v~~PTG~y~~~~-----~~n~G~g~w~~~~~~~~t~~~~-~~~~~~~~~~y~~~~~n~~~~----~~~~~~~~~~~~  183 (275)
+T 4RL8:A|PDBID|C  114 TVYLTAPTGNYNRDD-----ALNLGENRWKVDLQAAYVKHLG-EKWAVDLVGDAIWYSDNDDFG----SSSARREQDVSY  183 (275)
+Confidence            356777877654321     123455665555543  33332 245566666666666332111    1111    1134
+
+
+Q 4RL8:A|PDBID|C  140 DLQAAYVKHLGEKWAVDLVGDAIWYSDNDDFGSSSARREQDVSYGAQLMGRYIVDPGTSLAIGLGHTW  207 (275)
+Q Consensus       140 ~~~~~~t~~~~~~~~~~~~~~y~~~~~n~~~~~~~~~~~~~~~~~~~~~~~y~~~~~~~~~~~~~~~~  207 (275)
+                      ..++.+.|.+.++|.+.+.+.|.+.++.+..+.. .. .....+.+.+++.|.+++++.+.+.+....
+T Consensus       184 ~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~G~~-~~-~~~~~~~~g~g~~~~~~~~~~l~~~~~~~~  249 (275)
+T 4RL8:A|PDBID|C  184 GAQLMGRYIVDPGTSLAIGLGHTWGGENQIDGTA-QD-DRAETTNFRVTANKFFTAKDQLQMQLGRDL  249 (275)
+Confidence            4666667888777888888888776443211110 00 012345577888899988855555555444
+
+
+Done!

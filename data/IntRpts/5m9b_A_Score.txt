@@ -1,0 +1,32 @@
+Query         5M9B:A|PDBID|CHAIN|SEQUENCE
+Match_columns 724
+No_of_seqs    563 out of 1366
+Neff          12.4
+Searched_HMMs 1
+Date          Wed May 30 09:40:10 2018
+Command       hhalign -i MSAs/5M9B_A.a3m -o data/IntRpts/5m9b_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5M9B:A|PDBID|CHAIN|SEQUENCE     57.6  0.0001  0.0001   44.0   0.0  110  502-633   564-683 (724)
+
+No 1  
+>5M9B:A|PDBID|CHAIN|SEQUENCE
+Probab=57.60  E-value=0.0001  Score=44.01  Aligned_cols=110  Identities=16%  Similarity=0.048  Sum_probs=58.3
+
+Q 5M9B:A|PDBID|C  502 LKAETSVNKELGIEYSH-DGLVAGLTYFRNDYKNKIESGLSPVDHASGGKGDYANAAIYQWENVPKAVVEGLEGTLTLPL  580 (724)
+Q Consensus       502 L~pe~~~~~elg~~~~~-~~~~~~~~~f~~~~~n~i~~~~~~~~~~~~~~~~~~~~~~~~~~N~~~~~~~G~e~~~~~~~  580 (724)
+                      ....+...+|+.+++.. ++|.+.+++-+.........   ..                ...   ..-.+-+.+.+.+++
+T Consensus       564 ~~~~~~~G~e~~~~~~~~~~~~~~~~~~~~~~~~~~~~---~~----------------~~~---~~p~~~~~~~~~~~~  621 (724)
+T 5M9B:A|PDBID|C  564 VPKAVVEGLEGTLTLPLADGLKWSNNLTYMLQSKNKET---GD----------------VLS---VTPRYTLNSMLDWQA  621 (724)
+Confidence            44566778899888886 56666666655422211100   00                000   011223445555666
+
+
+Q 5M9B:A|PDBID|C  581 ADGLKWSNNLTYMLQSKNK---------ETGDVLSVTPRYTLNSMLDWQATDDLSLQATVTW  633 (724)
+Q Consensus       581 ~~~~~~~~~~~~~~~~~~~---------~~~~~~~~~p~~~~~~~~~~~~~~~~~~~~~~~~  633 (724)
+                      .++|.+.+.+.|.......         .........+.+.+++.+.|++.++|.+.+.+.=
+T Consensus       622 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~d~~~~~~~~~~~~~~l~v~N  683 (724)
+T 5M9B:A|PDBID|C  622 TDDLSLQATVTWYGKQKPKKYDYHGDRVTGSANDQLSPYAIAGLGGTYRLSKNLSLGAGVDN  683 (724)
+Confidence            5677777777765322110         0011122345667888888887667777776643
+
+
+Done!

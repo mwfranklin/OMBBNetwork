@@ -1,0 +1,24 @@
+Query         3SY9:A|PDBID|CHAIN|SEQUENCE
+Match_columns 430
+No_of_seqs    149 out of 1272
+Neff          9.3 
+Searched_HMMs 1
+Date          Wed May 30 09:38:31 2018
+Command       hhalign -i MSAs/3SY9_A.a3m -o data/IntRpts/3sy9_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3SY9:A|PDBID|CHAIN|SEQUENCE      4.3  0.0096  0.0096   26.0   0.0   56  309-379   364-420 (430)
+
+No 1  
+>3SY9:A|PDBID|CHAIN|SEQUENCE
+Probab=4.28  E-value=0.0096  Score=26.01  Aligned_cols=56  Identities=13%  Similarity=0.109  Sum_probs=39.5
+
+Q 3SY9:A|PDBID|C  309 GPNEKSWKLQYDYDFVALG-VPGLSASASYSRGKLDLTRVDPDSPGYGGWYSADGKNAKHWERDLDLQYVVQ  379 (430)
+Q Consensus       309 ~~~~~a~~~~~~y~~~~~g-l~gl~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~E~~~~l~Y~~~  379 (430)
+                      ...++.+-+.+.|+|.. | ++||++.++|...+.+..     .         .....+..|+-+.|.|...
+T Consensus       364 ~~~~~E~~~~l~Y~~~~-g~lkgl~~~~~~~~~~~~~~-----~---------~~~~~d~~~~R~~~~Y~~~  420 (430)
+T 3SY9:A|PDBID|C  364 NAKHWERDLDLQYVVQG-GPAKDLSLRLRWATHRGTGG-----Y---------SAVDNDIDEYRVIVDYPID  420 (430)
+Confidence            35678888999999953 2 689999999998875320     0         0124466788888888874
+
+
+Done!

@@ -1,0 +1,40 @@
+Query         5FVN:A|PDBID|CHAIN|SEQUENCE
+Match_columns 342
+No_of_seqs    147 out of 1266
+Neff          10.3
+Searched_HMMs 1
+Date          Wed May 30 09:39:59 2018
+Command       hhalign -i MSAs/5FVN_A.a3m -o data/IntRpts/5fvn_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5FVN:A|PDBID|CHAIN|SEQUENCE     96.8 2.3E-10 2.3E-10   72.3   0.0  164  126-302   177-342 (342)
+
+No 1  
+>5FVN:A|PDBID|CHAIN|SEQUENCE
+Probab=96.82  E-value=2.3e-10  Score=72.28  Aligned_cols=164  Identities=16%  Similarity=0.228  Sum_probs=108.7
+
+Q 5FVN:A|PDBID|C  126 NGFATYRNSDFFGLVDGLNFAVQYQGKNGSASGEDQTNNGRTELRQNGDGVGGSITYNLGEGFGIGTAVSSSKRTSSQND  205 (342)
+Q Consensus       126 ~~~i~Y~~p~~~~~~~g~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Y~~~~~~~~~~~y~~~~~~~~~~~  205 (342)
+                      .-.+.|+..      .+|.+++.|...........+    ..........+.+++.|+++ +|.|++.|...+...... 
+T Consensus       177 ~~~~~Y~~~------~~~~~~~~y~~~~~~~~~~~~----~~~~~~~~~~~~~g~~y~~~-~~~l~~~y~~~~~~~~~~-  244 (342)
+T 5FVN:A|PDBID|C  177 GGSITYNLG------EGFGIGTAVSSSKRTSSQNDL----TYGNGDRAETYTGGLKYDAN-NIYLAAQYTQTYNATRVG-  244 (342)
+Confidence            345666642      257777777655443211000    00123456788999999998 899999999887643210 
+
+
+Q 5FVN:A|PDBID|C  206 LTYGNGDRAETYTGGLKYDAN-NIYLAAQYTQTYNATRVGNLGWANKAQNFEVVAQYQFDFGLRPSVAYLQSKGKDLENG  284 (342)
+Q Consensus       206 ~~~~~~~~~~~~~~g~~y~~~-~~~l~~~y~~~~~~~~~~~~~~~~~~~~~~~~~~Y~~~~~~~~~~~y~~~~~~~~~~~  284 (342)
+                       ......+.+.+.+++.|+++ .+.+.+.|.+.+............+.+.+.+++.|.+.+.+.+++.|.+.+.+.....
+T Consensus       245 -~~~~~~~~~~~~~~~~Y~~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~g~~Y~l~~~~~~~ae~~~~~~~~~~~~  323 (342)
+T 5FVN:A|PDBID|C  245 -NLGWANKAQNFEVVAQYQFDFGLRPSVAYLQSKGKDLENGYGDQDLLKYVDVGATYYFNKNMSTYVDYKINLLDDKEFT  323 (342)
+Confidence             01123577889999999998 5999999999886532100012468889999999999999999999999886543210
+
+
+Q 5FVN:A|PDBID|C  285 -YGDQDLLKYVDVGATYYF  302 (342)
+Q Consensus       285 -~~~~~~~~~~~~g~~Y~l  302 (342)
+                       .....+.+.+.+|+.|.|
+T Consensus       324 ~~~~~~~~~~~~~G~~~~F  342 (342)
+T 5FVN:A|PDBID|C  324 RNAGISTDDIVALGLVYQF  342 (342)
+Confidence             011357788888888764
+
+
+Done!

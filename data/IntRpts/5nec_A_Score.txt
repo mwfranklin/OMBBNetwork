@@ -1,0 +1,32 @@
+Query         5NEC:A|PDBID|CHAIN|SEQUENCE
+Match_columns 741
+No_of_seqs    386 out of 1964
+Neff          12.0
+Searched_HMMs 1
+Date          Wed May 30 09:40:15 2018
+Command       hhalign -i MSAs/5NEC_A.a3m -o data/IntRpts/5nec_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 5NEC:A|PDBID|CHAIN|SEQUENCE     78.4 1.7E-05 1.7E-05   51.2   0.0  114  528-659   575-699 (741)
+
+No 1  
+>5NEC:A|PDBID|CHAIN|SEQUENCE
+Probab=78.36  E-value=1.7e-05  Score=51.24  Aligned_cols=114  Identities=14%  Similarity=0.095  Sum_probs=66.9
+
+Q 5NEC:A|PDBID|C  528 NLEPEETTNYELGTKWAFFNERLELSAAIFRTDKDNTRILVAN-----------QTYDNAGQSRVDGVELSASGKLTEKW  596 (741)
+Q Consensus       528 ~L~pe~~~~~elG~~~~~~~~~~~~~~~~f~~~~~d~i~~~~~-----------~~~~N~~~~~~~G~E~~~~~~~~~~~  596 (741)
+                      +....+.+.+|+.+.+++. ++|.+.+++-+.+.+........           ..-......-..-+.+.+.|++.++|
+T Consensus       575 N~~~~~~~G~E~~~~~~~~-~~~~~~~~~t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~~~~~~~~~~~~~~~~  653 (741)
+T 5NEC:A|PDBID|C  575 NAGQSRVDGVELSASGKLT-EKWKVFAGYSYLDSELVDAGKAGRNGNVNASAASNNGNEMPNTPKNSFSLWTTYDIFPKT  653 (741)
+Confidence            4556778889999999874 67777777766655432211000           00011122333445566666666677
+
+
+Q 5NEC:A|PDBID|C  597 KVFAGYSYLDSELVDAGKAGRNGNVNASAASNNGNEMPNTPKNSFSLWTTYDIFPKTTIGGGA  659 (741)
+Q Consensus       597 ~~~~~~t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~~~~~~~~~~~~~~~~~~~~~~  659 (741)
+                      .+.+++.|........                 .......+.+.+.+.+.|++.++|.+.+.+
+T Consensus       654 ~~~~~~~y~~~~~~~~-----------------~~~~~~~~y~~~d~~~~~~~~~~~~~~~~v  699 (741)
+T 5NEC:A|PDBID|C  654 TIGGGAFYVDKVYGDV-----------------GNTVYVPDYWRYDAMASYKLSKNVDFQLNV  699 (741)
+Confidence            8888777766544321                 111223456778888888886667776655
+
+
+Done!

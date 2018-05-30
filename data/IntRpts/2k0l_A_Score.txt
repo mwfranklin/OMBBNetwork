@@ -1,0 +1,24 @@
+Query         2K0L:A|PDBID|CHAIN|SEQUENCE
+Match_columns 216
+No_of_seqs    189 out of 1740
+Neff          10.5
+Searched_HMMs 1
+Date          Wed May 30 09:37:45 2018
+Command       hhalign -i MSAs/2K0L_A.a3m -o data/IntRpts/2k0l_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 2K0L:A|PDBID|CHAIN|SEQUENCE     93.2   3E-07   3E-07   42.9   0.0   63   17-79    108-170 (216)
+
+No 1  
+>2K0L:A|PDBID|CHAIN|SEQUENCE
+Probab=93.16  E-value=3e-07  Score=42.85  Aligned_cols=63  Identities=10%  Similarity=0.034  Sum_probs=36.1
+
+Q 2K0L:A|PDBID|C   17 NTWYAGGKLGWSQYHDTGFYGNGFQNNNGPTRNDQLGAGAFGGYQVNPYLGFEMGYDWLGRMA   79 (216)
+Q Consensus        17 ~~~yig~~~g~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Gy~~~~~~~~e~~~~~~~~~~   79 (216)
+                      -.+|+++++++...+.+..................+.+++.+.|+++++|.++++|.+.....
+T Consensus       108 ~~~y~~~G~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~g~G~~y~l~~~~~l~~~~~~~~~~~  170 (216)
+T 2K0L:A|PDBID|C  108 LDIYTRLGGMVWRADSKGNYASTGVSRSEHDTGVSPVFAGGVEWAVTRDIATRLEYQWVNNIG  170 (216)
+Confidence            345566666555444432110000001123345566777888899999999999998876543
+
+
+Done!

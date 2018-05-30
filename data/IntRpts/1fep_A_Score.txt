@@ -1,0 +1,32 @@
+Query         1FEP:A|PDBID|CHAIN|SEQUENCE
+Match_columns 724
+No_of_seqs    554 out of 1277
+Neff          12.3
+Searched_HMMs 1
+Date          Wed May 30 09:37:15 2018
+Command       hhalign -i MSAs/1FEP_A.a3m -o data/IntRpts/1fep_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1FEP:A|PDBID|CHAIN|SEQUENCE     14.9  0.0018  0.0018   34.4   0.0  109  502-626   558-676 (724)
+
+No 1  
+>1FEP:A|PDBID|CHAIN|SEQUENCE
+Probab=14.91  E-value=0.0018  Score=34.39  Aligned_cols=109  Identities=12%  Similarity=0.087  Sum_probs=57.9
+
+Q 1FEP:A|PDBID|C  502 LKAETSINKEIGLEFKR-DGWLAGVTWFRNDYRNKIEAGYVAVGQNAVGTDLYQWDNVPKAVVEGLEGSLNVPVSETVMW  580 (724)
+Q Consensus       502 L~pe~~~~~elg~~~~~-~~~~~~~~~f~~~~~n~i~~~~~~~~~~~~~~~~~~~~N~~~~~~~G~e~~~~~~~~~~~~~  580 (724)
+                      ....+...+|+.+.+.. +++.+.+++-+.+.+....     .     +.   .   ....-.+.+.+.+.+++.++|.+
+T Consensus       558 ~~~~~~~G~e~~~~~~~~~~~~~~~~~~~~~~~~~~~-----~-----~~---~---~~~~p~~~~~~~~~~~~~~~~~~  621 (724)
+T 1FEP:A|PDBID|C  558 VPKAVVEGLEGSLNVPVSETVMWTNNITYMLKSENKT-----T-----GD---R---LSIIPEYTLNSTLSWQAREDLSM  621 (724)
+Confidence            44566788888888875 5666666665543221100     0     00   0   01112244445566666567777
+
+
+Q 1FEP:A|PDBID|C  581 TNNITYMLKSENKTT---------GDRLSIIPEYTLNSTLSWQAREDLSMQTTFT  626 (724)
+Q Consensus       581 ~~~~~~~~~~~~~~~---------~~~~~~~p~~~~~~~~~~~~~~~~~~~~~~~  626 (724)
+                      .+.+.|.........         .......+-+.+++.+.|++.++|.+.+.+.
+T Consensus       622 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~d~~~~~~~~~~~~~~l~v~  676 (724)
+T 1FEP:A|PDBID|C  622 QTTFTWYGKQQPKKYNYKGQPAVGPETKEISPYSIVGLSATWDVTKNVSLTGGVD  676 (724)
+Confidence            777776532211100         0122234456778888888766677666554
+
+
+Done!

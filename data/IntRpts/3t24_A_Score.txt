@@ -1,0 +1,24 @@
+Query         3T24:A|PDBID|CHAIN|SEQUENCE
+Match_columns 401
+No_of_seqs    128 out of 1172
+Neff          9.4 
+Searched_HMMs 1
+Date          Wed May 30 09:38:36 2018
+Command       hhalign -i MSAs/3T24_A.a3m -o data/IntRpts/3t24_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3T24:A|PDBID|CHAIN|SEQUENCE     12.1  0.0024  0.0024   29.5   0.0   49  309-363   351-399 (401)
+
+No 1  
+>3T24:A|PDBID|CHAIN|SEQUENCE
+Probab=12.12  E-value=0.0024  Score=29.45  Aligned_cols=49  Identities=14%  Similarity=0.071  Sum_probs=35.1
+
+Q 3T24:A|PDBID|C  309 EKSWQARYDYNFAGVGIPGLTFMTRYVKGDNIDLLTTSGEGKEWERDMDIAYVFQ  363 (401)
+Q Consensus       309 ~~~~~~~~~y~~~~~gl~gl~~~~~y~~~~~~~~~~~~~~~~~~E~~~~i~Y~~~  363 (401)
+                      +.-+-+.+.|++..--|+||++.+.|+..+...      ..+..++-+.+.|+|+
+T Consensus       351 ~~E~~~~i~Y~~~~~~lkgLs~~~~~~~~~~~~------~~d~~~~r~~~~Y~f~  399 (401)
+T 3T24:A|PDBID|C  351 EWERDMDIAYVFQSGPLKNLGVKWRNATMRTNY------TNDYDENRLIVSYTLP  399 (401)
+Confidence            344568889998532278999999999887543      2345667788999883
+
+
+Done!

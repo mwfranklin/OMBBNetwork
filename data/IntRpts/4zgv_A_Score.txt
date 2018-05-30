@@ -1,0 +1,24 @@
+Query         4ZGV:A|PDBID|CHAIN|SEQUENCE
+Match_columns 868
+No_of_seqs    411 out of 1513
+Neff          11.2
+Searched_HMMs 1
+Date          Wed May 30 09:39:32 2018
+Command       hhalign -i MSAs/4ZGV_A.a3m -o data/IntRpts/4zgv_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4ZGV:A|PDBID|CHAIN|SEQUENCE      0.2    0.26    0.26   18.8   0.0   30  292-322   506-535 (868)
+
+No 1  
+>4ZGV:A|PDBID|CHAIN|SEQUENCE
+Probab=0.23  E-value=0.26  Score=18.77  Aligned_cols=30  Identities=10%  Similarity=-0.058  Sum_probs=21.6
+
+Q 4ZGV:A|PDBID|C  292 ERINETYLLKGTYLTDSGDIIRMTGMYSPHE  322 (868)
+Q Consensus       292 ~~~~~~~~~~~~~~~~~~~~l~~~~~~~~~~  322 (868)
+                      ......+++...|++ ++++|.+.+.|....
+T Consensus       506 ~~~~~a~y~q~~~~~-~~l~l~~GlR~d~~~  535 (868)
+T 4ZGV:A|PDBID|C  506 SNVNYAAYLQNSMSY-GRLEVTPGVRVSYDD  535 (868)
+Confidence            344577788888888 788888877776543
+
+
+Done!

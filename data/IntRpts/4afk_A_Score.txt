@@ -1,0 +1,24 @@
+Query         4AFK:A|PDBID|CHAIN|SEQUENCE
+Match_columns 458
+No_of_seqs    188 out of 1138
+Neff          8.7 
+Searched_HMMs 1
+Date          Wed May 30 09:38:43 2018
+Command       hhalign -i MSAs/4AFK_A.a3m -o data/IntRpts/4afk_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 4AFK:A|PDBID|CHAIN|SEQUENCE      0.6   0.094   0.094   19.5   0.0   17  358-374   422-438 (458)
+
+No 1  
+>4AFK:A|PDBID|CHAIN|SEQUENCE
+Probab=0.61  E-value=0.094  Score=19.52  Aligned_cols=17  Identities=12%  Similarity=-0.212  Sum_probs=14.0
+
+Q 4AFK:A|PDBID|C  358 EDYDASLVYHKFWRVDD  374 (458)
+Q Consensus       358 ~~~~l~~~~~~~~~~~~  374 (458)
+                      +++++.+.|.+|..-+.
+T Consensus       422 ~~l~l~~g~s~f~pG~a  438 (458)
+T 4AFK:A|PDBID|C  422 PSALIRFRGGLFKPGDA  438 (458)
+Confidence            88999999999987554
+
+
+Done!
