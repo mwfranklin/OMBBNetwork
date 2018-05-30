@@ -24,12 +24,13 @@ for value in seq_IDs:
     
     prototypical = []
     counts = np.zeros(27)
-    with open("CompCodesE-2.txt", "r") as comp_data:
+    with open("CompCodesE-3.txt", "r") as comp_data:
         for line in comp_data:
             line = line.strip().split("\t")
             if line[1] == "1" and line[0][0:4] in allowed_barrels:
                 prototypical.append(line[0])
                 counts[barrels[ line[0] ]] += 1
+    print(len(prototypical))
     #print(counts)
     """with open("data/BtwnBarrels/ProtoLengths.txt", "a") as outData:
         outData.write(value + "%\t" + "\t".join(map(str, counts)) + "\n")"""
@@ -42,7 +43,7 @@ for value in seq_IDs:
         for line in inData:
             if "IntNum" not in line:
                 line = line.strip().split()
-                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-3: #add line[-1] == "1" for min e-value calcs; remove float(line[3]) if not looking at Fig 4 tiers.
+                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-5: #add line[-1] == "1" for min e-value calcs; remove float(line[3]) if not looking at Fig 4 tiers.
                     #print(line[1], line[2])
                     #print(barrels[line[1]], barrels[line[2]])
                     e_values[ barrels[line[1]]][ barrels[line[2]] ].append(float(line[3]))
