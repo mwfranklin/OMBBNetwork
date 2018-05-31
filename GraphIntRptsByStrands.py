@@ -16,7 +16,7 @@ with open("BarrelChars85.txt", "r") as inData:
 
 proto_barrels = []
 proto_sizes = np.zeros(27)
-with open("CompCodesE-2.txt", "r") as inData:
+with open("CompCodesE-3.txt", "r") as inData:
     for line in inData:
         if "PDB" not in line:
             line = line.strip().split("\t")
@@ -85,5 +85,5 @@ plt.tick_params(labelsize = 26)
 plt.tight_layout()
 #fig.subplots_adjust(wspace = 0.15)
 plt.savefig("NetworkGraphs/ConsProportion_1e3.png", dpi = 300, bbox_inches = "tight")
-plt.show()
+#plt.show()
 

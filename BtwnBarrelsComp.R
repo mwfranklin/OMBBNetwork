@@ -1,4 +1,4 @@
-setwd("/Volumes/G_Drive/StructureAlign/NirBenTal/Joanna_and_Meghan/v6_2018")
+setwd("/Users/meghan/Documents/PhD/GitHubProjects/v6_2018_Network")
 
 read_and_convert <- function(filename){
   new_matrix <- as.matrix(feather::read_feather(filename))
@@ -77,23 +77,48 @@ prep_for_kable <- function(prepped_matrix){
   return(test_interaction)
 }
 
+parse_matrix <- function(value){
+  #print(value)
+  avg_interaction <- as.matrix(feather::read_feather(paste0("data/BtwnBarrels/BtwnBarrelMetric_", value, ".feather")))
+  row.names(avg_interaction) <- seq(0,26)
+  avg_interaction[avg_interaction == "NaN"] <- NA
+  avg_interaction <- avg_interaction[c("8", "10", "12", "14", "16", "18", "22"), c("8", "10", "12", "14", "16", "18", "22")]
+  for (x in seq_len(nrow(avg_interaction))){
+    for (y in seq_len(nrow(avg_interaction))){
+      if (y < x){
+        avg_interaction[x, y] <- NA
+      }
+    }
+  }
+  #print(avg_interaction)
+  min_int <- as.matrix(apply(avg_interaction, MARGIN = 1, FUN = min, na.rm = T))
+  test_interaction <- ifelse(avg_interaction<0.001, formatC(avg_interaction, format = "e", digits = 2), round(avg_interaction, digits = 3))
+  for (x in seq_len(nrow(avg_interaction))){
+    #print(min_int[x])
+    test_interaction[x,which(avg_interaction[x,] == min_int[x])] <- cell_spec(test_interaction[x,which(avg_interaction[x,] == min_int[x])], bold = T, format='latex')
+  }
+  test_interaction[which(is.na(avg_interaction))] <- cell_spec(avg_interaction[which(is.na(avg_interaction))], color = "white", format='latex')
+  return(test_interaction)
+}
+
 read_and_make_graph <- function(value, probabilities, loc_to_save){
-  e_value_1 <- read_and_convert(paste0("data/BtwnBarrels/BtwnBarrelEVals2_", value,".feather"))
+  e_value_1 <- read_and_convert(paste0("data/BtwnBarrels/BtwnBarrelEVals3_", value,".feather"))
   e_value_1_BNB <- barrel_nonbarrel(e_value_1)/probabilities
-  e_value_3 <- read_and_convert(paste0("data/BtwnBarrels/BtwnBarrelEVals4_", value,".feather"))
+  e_value_3 <- read_and_convert(paste0("data/BtwnBarrels/BtwnBarrelEVals5_", value,".feather"))
   e_value_3_BNB <- barrel_nonbarrel(e_value_3)/probabilities
-  e_value_5 <- read_and_convert(paste0("data/BtwnBarrels/BtwnBarrelEVals6_", value,".feather"))
+  e_value_5 <- read_and_convert(paste0("data/BtwnBarrels/BtwnBarrelEVals7_", value,".feather"))
   e_value_5_BNB <- barrel_nonbarrel(e_value_5)/probabilities
   
-  tiff(paste0(loc_to_save, "/MinEValues_", value, ".tiff"), width = 10, height = 8, units = "in", res=300)
-  par(mfrow = c(1,3), oma = c(2, 0, 2, 0))
-  barplot(t(e_value_1_BNB), beside = T, main = expression("E-values <" ~ 10^{-2}), ylab = "Probability of alignment", xlab = "Strands per Barrel", ylim = c(0,1) )
-  barplot(t(e_value_3_BNB), beside = T, main = expression("E-values <" ~ 10^{-4}), ylab = "Probability of alignment", xlab = "Strands per Barrel", ylim = c(0,1) )
-  barplot(t(e_value_5_BNB), beside = T, main = expression("E-values <" ~ 10^{-6}), ylab = "Probability of alignment", xlab = "Strands per Barrel", ylim = c(0,1) )
-  plot(0, type = "n", axes=FALSE, ann = FALSE)
-  legend("topleft", legend = c("Same Size", "Different Size"), fill = gray.colors(2), cex = 1.5)
-  mtext(bquote(SeqID >= .(value)*'%'), outer = T, cex = 1.5)
-  box(which = "outer")
+  tiff(paste0(loc_to_save, "/MinEValues_", value, ".tiff"), width = 12, height = 4, units = "in", res=300)
+  new_plot <- layout(matrix(c(1,2,3,4,4,4), ncol=3, byrow=TRUE), heights=c(6, 1))
+  #layout.show(new_plot)
+  par(cex.axis = 1.7, cex.lab = 1.7, cex.main = 2.1, mar = c(5, 5, 3, 1)) #, mgp=c(1.7,0.7,0)
+  barplot(t(e_value_1_BNB), beside = T, main = expression("E-values <" ~ 10^{-3}), ylab = "Probability of alignment", xlab = "Strands per Barrel", ylim = c(0,1) )
+  barplot(t(e_value_3_BNB), beside = T, main = expression("E-values <" ~ 10^{-5}), ylab = "Probability of alignment", xlab = "Strands per Barrel", ylim = c(0,1) )
+  barplot(t(e_value_5_BNB), beside = T, main = expression("E-values <" ~ 10^{-7}), ylab = "Probability of alignment", xlab = "Strands per Barrel", ylim = c(0,1) )
+  par(mar=c(0,0,0,0))
+  plot.new()
+  legend("top", legend = c("Same Number of Strands", "Different Number of Strands"), fill = gray.colors(2), horiz = T, bty = F, cex = 1.5)
   dev.off()
 }
 
@@ -103,9 +128,71 @@ barrel_lengths <- t(barrel_lengths[,c("8", "10", "12", "14", "16", "18", "22")])
 barrel_prob <- barrel_diffbarrel_counts(barrel_lengths)
 barrel_prob <- lapply(barrel_prob, FUN = calc_probabilities)
 
-e_value_1 <- read_and_convert(paste0("BtwnBarrelEVals1_", 25,".feather"))
-e_value_1_BNB <- barrel_nonbarrel(e_value_1)#/probabilities
+read_and_make_graph(85, barrel_prob[["85%"]], "NetworkGraphs")
+read_and_make_graph("50", barrel_prob[["50%"]], "NetworkGraphs")
+read_and_make_graph("25", barrel_prob[["25%"]], "NetworkGraphs")
 
-read_and_make_graph("85", barrel_prob[["85%"]], "NetworkGraphs")
-read_and_make_graph("50", barrel_prob[["50%"]])
-read_and_make_graph("25", barrel_prob[["25%"]])
+test_interaction <- parse_matrix("25")
+test_interaction <- cbind("Strands per Chain"=rownames(test_interaction), test_interaction)
+kable(test_interaction, digits = 3, format = 'latex', booktabs = T, linesep = "", 
+      escape = F, row.names = F, align = "c") %>% 
+  kable_styling(latex_options = c("striped", "scale_down"), font_size = 8) %>%
+  add_header_above(c("Average E-value, SeqID <= 25%" = ncol(test_interaction) ) ) %>%
+  kable_as_image("NetworkGraphs/MinEValuesTable")
+
+cons_IDs <- as.matrix(feather::read_feather("data/ConsStrandIDs85.feather"))
+strand_sizes <- c("8", "10", "12", "14", "16", "18", "22")
+rownames(cons_IDs) <- strand_sizes
+colnames(cons_IDs) <- seq(1,22,1)
+cons_IDs["8", 1:8]
+max_values <- apply(cons_IDs, MAR = 1, FUN = max)
+#max_values <- c(140, 10, 70, 110, 140, 60, 250) #for 25%
+max_values <- c(360, 40, 150, 150, 550, 700, 500)
+
+tiff("NetworkGraphs/FigX_ConsID_85.tiff", width = 9, height = 5, units = "in", res = 300)
+par(mfrow = c(2,4), oma = c(1, 2, 3, 2), mgp=c(2.5,1,0), mar = c(4, 4, 2, 1), xpd = T, cex.axis = 1.7, cex.lab = 1.7)
+for (value in seq_len(nrow(cons_IDs))){
+  #print(value)
+  mp <- barplot(cons_IDs[value,1:strand_sizes[value]], ylim = c(0,max_values[value]), main = paste0(strand_sizes[value], "-Stranded Barrels"), xlab = "Strand ID", ylab = "Counts", cex.main = 1.6)
+  #axis(side=2, pos=-0.2)
+  axis(side=1, at =mp, labels = F)
+}
+mtext("Conserved Strand Identity", outer = T, cex = 1.8)
+dev.off()
+
+
+cons_IDs <- as.matrix(feather::read_feather("data/ConsStrandIDs50.feather"))
+strand_sizes <- c("8", "10", "12", "14", "16", "18", "22")
+rownames(cons_IDs) <- strand_sizes
+colnames(cons_IDs) <- seq(1,22,1)
+max_values <- apply(cons_IDs, MAR = 1, FUN = max)
+max_values <- c(275, 15, 100, 130, 300, 400, 500) #for 50%
+
+tiff("NetworkGraphs/FigX_ConsID_50.tiff", width = 9, height = 5, units = "in", res = 300)
+par(mfrow = c(2,4), mgp=c(2,0.5,0), oma = c(1, 2, 2, 2), mar = c(3, 3, 2, 1), xpd = T)
+for (value in seq_len(nrow(cons_IDs))){
+  #print(value)
+  mp <- barplot(cons_IDs[value,1:strand_sizes[value]], ylim = c(0,max_values[value]), main = paste0(strand_sizes[value], "-Stranded Barrels"), xlab = "Strand ID", ylab = "Counts")
+  #axis(side=2, pos=-0.2)
+  axis(side=1, at =mp, labels = F)
+}
+mtext("Conserved Strand Identity, 50%", outer = T, cex = 1.3)
+dev.off()
+
+cons_IDs <- as.matrix(feather::read_feather("data/ConsStrandIDs25.feather"))
+strand_sizes <- c("8", "10", "12", "14", "16", "18", "22")
+rownames(cons_IDs) <- strand_sizes
+colnames(cons_IDs) <- seq(1,22,1)
+max_values <- apply(cons_IDs, MAR = 1, FUN = max)
+max_values <- c(140, 10, 70, 110, 140, 60, 250) #for 25%
+
+tiff("NetworkGraphs/FigX_ConsID_25.tiff", width = 9, height = 5, units = "in", res = 300)
+par(mfrow = c(2,4), mgp=c(2,0.5,0), oma = c(1, 2, 2, 2), mar = c(3, 3, 2, 1), xpd = T)
+for (value in seq_len(nrow(cons_IDs))){
+  #print(value)
+  mp <- barplot(cons_IDs[value,1:strand_sizes[value]], ylim = c(0,max_values[value]), main = paste0(strand_sizes[value], "-Stranded Barrels"), xlab = "Strand ID", ylab = "Counts")
+  #axis(side=2, pos=-0.2)
+  axis(side=1, at =mp, labels = F)
+}
+mtext("Conserved Strand Identity, 25%", outer = T, cex = 1.3)
+dev.off()
