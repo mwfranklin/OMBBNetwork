@@ -66,7 +66,7 @@ def write_conslengths_feather(strand_lengths, strand_ids, seq_id):
     export_lengths = pandas.DataFrame(export_lengths)
     feather.write_dataframe(export_lengths.copy(), "data/ConsLengths%s.feather"%seq_id)
 
-seq_IDs = ["50", "25", "85"]
+seq_IDs = ["50", "85", "25"]
 barrels = {}
 with open("BarrelChars85.txt", "r") as barrel_data:
   for line in barrel_data:
@@ -75,14 +75,15 @@ with open("BarrelChars85.txt", "r") as barrel_data:
       barrels[line[0]] = int(line[1])
 #print(barrels)
 
-#seq_IDs = ["85"]
-
+#seq_IDs = ["25"]
 for value in seq_IDs:  
     #value = "85"
+    #print(value)
     allowed_barrels = []
     with open("/Users/meghan/Documents/PhD/SluskyLab/DBList_v5_%s.txt"%value, "r") as allowed_data:
         for line in allowed_data:
             allowed_barrels.append(line.strip().lower())
+    #print(len(allowed_barrels))
     
     prototypical = []
     counts = np.zeros(27)
@@ -93,7 +94,6 @@ for value in seq_IDs:
                 prototypical.append(line[0])
                 counts[barrels[ line[0] ]] += 1
     #print(len(prototypical))
-    #print(counts)
     """with open("data/BtwnBarrels/ProtoLengths.txt", "a") as outData:
         outData.write(value + "%\t" + "\t".join(map(str, counts)) + "\n")"""
     
@@ -117,23 +117,39 @@ for value in seq_IDs:
                     avg_interaction[barrels[line[2]], barrels[line[1]]] += float(line[3])
                     int_counts[barrels[line[1]], barrels[line[2]]] += 1
                     int_counts[barrels[line[2]], barrels[line[1]]] += 1
-
-    write_btwnbarrels_feather(e_values, value)
+    
+    avg_interaction /= int_counts
+    test_e_values = np.zeros([27,27])
+    for x in range(27):
+        for y in range(27):
+            test_e_values[x][y] = np.exp(np.mean(np.log(e_values[x][y])))
+            
+    #write_btwnbarrels_feather(e_values, value)
     avg_interaction = pandas.DataFrame(avg_interaction)
+    test_e_values = pandas.DataFrame(test_e_values)
     feather.write_dataframe(avg_interaction.copy(), "data/BtwnBarrels/BtwnBarrelMetric_%s.feather"%value)
+    feather.write_dataframe(test_e_values.copy(), "data/BtwnBarrels/BtwnBarrelMetricLog_%s.feather"%value)
     
     strand_lengths = [[] for x in range(0,23)]
     strand_IDs = [[] for x in range(0,23)]
-    for x in range(27):
-        for y in range(x+1, 27):
+    for x in range(8,23):
+        for y in range(x, 23):
             if len(e_values[x][y]) > 1:
                 #print(x, y)
-                #print(min(e_values[x][y]), max(e_values[x][y]))
+                #print(e_values[x][y])
+                #print(min(e_values[x][y]), max(e_values[x][y]), test_e_values[x][y], avg_interaction[x][y])
+                diff_barrel_lines[x][y] = [list(i) for i in set(tuple(i) for i in diff_barrel_lines[x][y])]
                 for entry in diff_barrel_lines[x][y]:
+                    #print(entry)
                     entry[4] = re.split(",", entry[4])
-                    entry[4] = sorted([int(x.split("strand")[-1]) for x in entry[4]])
                     entry[5] = re.split(",", entry[5])
-                    entry[5] = sorted([int(x.split("strand")[-1]) for x in entry[5]])
+                    if len(entry[4]) > 1:
+                        entry[4] = sorted([int(x.split("strand")[-1]) for x in entry[4]])
+                    else: entry[4] = []
+                    if len(entry[5]) > 1:
+                        entry[5] = sorted([int(x.split("strand")[-1]) for x in entry[5]])
+                    else: entry[5] = []
+                    
                     strand_lengths[barrels[entry[1]]].append(len(entry[4]))
                     strand_lengths[barrels[entry[2]]].append(len(entry[5]))
                     for strand in entry[4]:
@@ -157,7 +173,7 @@ for x in range(8,23):
             used_strands_x = np.zeros(x)
             used_strands_y = np.zeros(y)
             for entry in diff_barrel_lines[x][y]:                
-                #print(entry)
+                print(entry)
                 #identify conserved strands across all alignments
                 for pos in entry[4]:
                     #print(entry[1], barrels[entry[1]], pos)
@@ -182,7 +198,7 @@ for x in range(8,23):
                         used_strands_x[pos] += 1
                 #identify any alignments between c-terminal strands or falling into that pattern
                 if abs(entry[4][-1] - entry[5][-1]) == abs(barrels[entry[1]] - barrels[entry[2]]) and len(entry[4]) == len(entry[5]):
-                    print("Terminal Align", entry)
+                    #print("Terminal Align", entry)
                     terminal_align += 1
                     lengths[len(entry[4])]+=1
                     if barrels[entry[1]] == x:
@@ -192,11 +208,11 @@ for x in range(8,23):
                         if entry[5][-1] == x-1: terminal_strands += 1
                         #else: print(entry)
                 else:
-                    print("nonhairpin", entry)
+                    #print("nonhairpin", entry)
                     non_hairpins.append(entry[0])
                 
-            print(terminal_align, lengths, terminal_strands, non_hairpins)
-            print(used_strands_x, used_strands_y)
+            #print(terminal_align, lengths, terminal_strands, non_hairpins)
+            #print(used_strands_x, used_strands_y)
 
 for x in range(27):
     print(x, used_strands[x])
