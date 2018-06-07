@@ -1,0 +1,3 @@
+StrandID	Start	End
+0	34	66
+1	74	106

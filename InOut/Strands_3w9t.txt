@@ -1,0 +1,3 @@
+StrandID	Start	End
+0	302	334
+1	337	366

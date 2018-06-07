@@ -1,0 +1,3 @@
+StrandID	Start	End
+0	119	155
+1	158	196

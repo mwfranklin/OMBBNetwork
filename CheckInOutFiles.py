@@ -35,7 +35,7 @@ def fix_InOut_files(first_strand_seq, barrel_start, pdb_name, chain):
                         line = line.split("\t")
                         line[1] = str(int(line[1]) + diff)
                         outData.write("\t".join(line))
-            
+   
 
 chains = {}
 with open("BarrelChars85.txt", "r") as inData:
@@ -54,10 +54,28 @@ for filename in glob.glob("InOut/InOut_*.txt"):
         for line in inData:
             if "Res" not in line:
                 line = line.strip().split("\t")
+                #check for accuracy
                 line[0] = oneletAA[aa.index(line[0])]
                 if line[2] == "0" and line[3] == chains[pdb_id]:
                     first_strand += line[0]
                     if int(line[1]) < first_strand_res:
                         first_strand_res = int(line[1])
     
-    fix_InOut_files(first_strand, first_strand_res, pdb_id, chains[pdb_id])
+    #fix_InOut_files(first_strand, first_strand_res, pdb_id, chains[pdb_id])
+    strands = []
+    start_strand = "999"
+    start_res = "999"
+    with open(filename, "r") as inData, open("InOut/Strands_%s.txt"%pdb_id, "w+") as outData:
+        outData.write("StrandID\tStart\tEnd\n")
+        for line in inData:
+            if "Res" not in line:
+                line = line.strip().split("\t")
+                if line[3] == chains[pdb_id]:
+                    if line[2] != start_strand:
+                        #print(line, start_strand)
+                        if start_res != "999":
+                            outData.write(start_strand + "\t" + start_res + "\t" + end_res + "\n")
+                        start_strand = line[2]
+                        start_res = line[1]
+                    end_res = line[1]
+        outData.write(start_strand + "\t" + start_res + "\t" + end_res + "\n")
