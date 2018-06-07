@@ -4,7 +4,7 @@ import sys
 
 protos = []
 barrels = []
-with open("CompCodesE-2.txt", "r") as barrel_codes:
+with open("CompCodesE-3.txt", "r") as barrel_codes:
     for line in barrel_codes:
         line = line.strip().split("\t")
         barrels.append(line[0])
@@ -40,7 +40,7 @@ for x in range(27):
                         else:
                             continue
         if len(keep_lines) > 1:
-            with open("data/BySize/%s_%s_E-2.txt"%(x, y), "w+") as subnetwork:
+            with open("data/BySize/%s_%s_E-3.txt"%(x, y), "w+") as subnetwork:
                 for value in keep_lines:
                     subnetwork.write("\t".join(value) + "\n")
 
