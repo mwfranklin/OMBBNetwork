@@ -1,5 +1,6 @@
 setwd("/Users/meghan/Documents/PhD/GitHubProjects/v6_2018_Network/")
 
+#which strands conserved
 cons_values <- c("25", "50", "85")
 for (x in seq_along(cons_values)){
   print(cons_values[x])
@@ -18,7 +19,7 @@ for (x in seq_along(cons_values)){
     max_values <- c(450, 40, 175, 175, 600, 600, 600) #for 85%
   }
   
-  tiff(paste0("NetworkGraphs/ConsID_", cons_values[x], ".tiff"), width = 9, height = 5, units = "in", res = 300)
+  tiff(paste0("NetworkGraphs/ConsID_", cons_values[x], ".png"), width = 9, height = 5, units = "in", res = 300)
   par(mfrow = c(2,4), oma = c(1, 2, 3, 2), mgp=c(2.5,1,0), mar = c(4, 4, 2, 1), xpd = T, cex.axis = 1.4, cex.lab = 1.7)
   for (value in seq_len(nrow(cons_IDs))){
     #print(value)
@@ -48,7 +49,7 @@ for (x in seq_along(cons_values)){
     max_values <- c(150, 20, 40, 40, 250, 450, 500) #for 85%
   }
   
-  tiff(paste0("NetworkGraphs/ConsLength_", cons_values[x], ".tiff"), width = 9, height = 5, units = "in", res = 300)
+  tiff(paste0("NetworkGraphs/ConsLength_", cons_values[x], ".png"), width = 9, height = 5, units = "in", res = 300)
   par(mfrow = c(2,4), oma = c(1, 2, 3, 2), mgp=c(2.5,1,0), mar = c(4, 4, 2, 1), xpd = T, cex.axis = 1.4, cex.lab = 1.7)
   for (value in seq_len(nrow(cons_IDs))){
     #print(value)

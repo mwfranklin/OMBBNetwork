@@ -3,6 +3,8 @@ import feather
 import numpy as np
 import re
 import math
+import textwrap
+import matplotlib.pyplot as plt
 from collections import Counter
 
 def write_btwnbarrels_feather(e_values, seq_id):
@@ -66,6 +68,48 @@ def write_conslengths_feather(strand_lengths, strand_ids, seq_id):
     export_lengths = pandas.DataFrame(export_lengths)
     feather.write_dataframe(export_lengths.copy(), "data/ConsLengths%s.feather"%seq_id)
 
+def graph_hist_of_pairs_of_lengths(lengths_by_lengths, graph_hist, labels, seq_id):
+    total_lengths = [ [len(x) for x in y] for y in lengths_by_lengths]
+    lengths_by_lengths = [ [Counter(x) for x in y] for y in lengths_by_lengths]
+    for x in range(0,23):
+        for y in range(0,23):
+            if len(lengths_by_lengths[x][y]) == 0:
+                lengths_by_lengths[x][y] = 0
+            else:
+                temp_size = []
+                #print(lengths_by_lengths[x][y])
+                for z in range(1,y+1): 
+                    try:
+                        temp_size.append(lengths_by_lengths[x][y][z])
+                    except:
+                        temp_size.append(0)
+                lengths_by_lengths[x][y] = temp_size
+            
+    fig, axes = plt.subplots(nrows = 3, ncols = 3, figsize = (16, 16))
+    axes = axes.flatten()
+    for value in range(0, len(graph_hist)):
+        ind = np.arange(1,graph_hist[value][1]+1,1)
+        width = 0.5
+        ticks = np.arange(2,graph_hist[value][1]+1, 2)
+        axes[value].set_xticks(ticks)
+        tick_labels = [str(x) for x in ticks]
+        axes[value].tick_params(labelsize=18)
+        axes[value].set_xticklabels(tick_labels)
+        axes[value].annotate(labels[value], xy = (0.03,.91), xycoords = "axes fraction", size = 28)
+        axes[value].bar(ind, lengths_by_lengths[graph_hist[value][0]][graph_hist[value][1]], color = "black")
+        axes[value].set_xlim([0.75,graph_hist[value][1]+1])
+        #ax1.legend(loc = 2, scatterpoints = 1, fontsize = 12)
+        title = textwrap.wrap("%s- to %s-stranded Barrels (n = %s)"%(graph_hist[value][0], graph_hist[value][1], total_lengths[graph_hist[value][0]][graph_hist[value][1]]), 40)
+        axes[value].set_title("\n".join(title), size=18)
+        plt.savefig("NetworkGraphs/TieredHistConservedSizes_%sID_E-3.png"%seq_id)
+    plt.tight_layout(w_pad = 1, h_pad = 2)
+    plt.subplots_adjust(top=0.91, bottom = 0.08, left = 0.06)
+    fig.text(0.5, 0.02, "Number of Strands in Conserved Segment", ha = "center", size = 24)
+    fig.text(0.01, 0.5, "Occurence", va = "center", rotation = "vertical", size = 24)
+    fig.suptitle(r"Length of Conserved Segments (E-value $\leq 10^{-5})$", size = 32)
+    plt.savefig("NetworkGraphs/TieredHistConservedSizes_%sID_E-3.png"%seq_id)
+    #plt.show()
+
 seq_IDs = ["50", "85", "25"]
 barrels = {}
 with open("BarrelChars85.txt", "r") as barrel_data:
@@ -75,7 +119,7 @@ with open("BarrelChars85.txt", "r") as barrel_data:
       barrels[line[0]] = int(line[1])
 #print(barrels)
 
-#seq_IDs = ["25"]
+seq_IDs = ["85"]
 for value in seq_IDs:  
     #value = "85"
     #print(value)
@@ -105,7 +149,7 @@ for value in seq_IDs:
         for line in inData:
             if "IntNum" not in line:
                 line = line.strip().split()
-                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-3 and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
+                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-3:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
                     #print(line[1], line[2])
                     #print(barrels[line[1]], barrels[line[2]])
                     e_values[ barrels[line[1]]][ barrels[line[2]] ].append(float(line[3]))
@@ -125,13 +169,14 @@ for value in seq_IDs:
             test_e_values[x][y] = np.exp(np.mean(np.log(e_values[x][y])))
             
     #write_btwnbarrels_feather(e_values, value)
-    avg_interaction = pandas.DataFrame(avg_interaction)
-    test_e_values = pandas.DataFrame(test_e_values)
-    feather.write_dataframe(avg_interaction.copy(), "data/BtwnBarrels/BtwnBarrelMetric_%s.feather"%value)
-    feather.write_dataframe(test_e_values.copy(), "data/BtwnBarrels/BtwnBarrelMetricLog_%s.feather"%value)
+    #avg_interaction = pandas.DataFrame(avg_interaction)
+    #test_e_values = pandas.DataFrame(test_e_values)
+    #feather.write_dataframe(avg_interaction.copy(), "data/BtwnBarrels/BtwnBarrelMetric_%s.feather"%value)
+    #feather.write_dataframe(test_e_values.copy(), "data/BtwnBarrels/BtwnBarrelMetricLog_%s.feather"%value)
     
     strand_lengths = [[] for x in range(0,23)]
     strand_IDs = [[] for x in range(0,23)]
+    lengths_by_lengths = [ [ [] for i in range(23)] for j in range(23)]
     for x in range(8,23):
         for y in range(x, 23):
             if len(e_values[x][y]) > 1:
@@ -152,6 +197,9 @@ for value in seq_IDs:
                     
                     strand_lengths[barrels[entry[1]]].append(len(entry[4]))
                     strand_lengths[barrels[entry[2]]].append(len(entry[5]))
+                    lengths_by_lengths[barrels[entry[1]]][ barrels[entry[2]] ].append(len(entry[4]))
+                    lengths_by_lengths[barrels[entry[2]]][ barrels[entry[1]] ].append(len(entry[5]))
+                    
                     for strand in entry[4]:
                         strand_IDs[barrels[entry[1]]].append(strand)
                     for strand in entry[5]:
@@ -159,7 +207,9 @@ for value in seq_IDs:
                     #if len(entry[4]) != len(entry[5]):
                      #   print(entry)
     #print(strand_IDs)
-    write_conslengths_feather(strand_lengths, strand_IDs, value)
+    #write_conslengths_feather(strand_lengths, strand_IDs, value)
+    if value == "85":
+        graph_hist_of_pairs_of_lengths(lengths_by_lengths, [ [8, 10], [8, 12], [8,14], [8,16], [10, 12], [12,14], [12, 16], [14,22], [16,18]  ], ["A", "B", "C", "D", "E", "F", "G", "H", "J"] , value)
     
 used_strands = [np.zeros(x) for x in range(27) ]
 for x in range(8,23):
