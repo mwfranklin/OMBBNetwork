@@ -208,12 +208,12 @@ for value in seq_IDs:
                      #   print(entry)
     #print(strand_IDs)
     #write_conslengths_feather(strand_lengths, strand_IDs, value)
-    if value == "85":
-        graph_hist_of_pairs_of_lengths(lengths_by_lengths, [ [8, 10], [8, 12], [8,14], [8,16], [10, 12], [12,14], [12, 16], [14,22], [16,18]  ], ["A", "B", "C", "D", "E", "F", "G", "H", "J"] , value)
+    #if value == "85":
+        #graph_hist_of_pairs_of_lengths(lengths_by_lengths, [ [8, 10], [8, 12], [8,14], [8,16], [10, 12], [12,14], [12, 16], [14,22], [16,18]  ], ["A", "B", "C", "D", "E", "F", "G", "H", "J"] , value)
     
 used_strands = [np.zeros(x) for x in range(27) ]
-for x in range(8,23):
-    for y in range(x+1, 23):
+for x in range(16,19):
+    for y in range(x+1, 19):
         if len(e_values[x][y]) > 1:
             print(x, y, "total aligns:",int_counts[x][y])
             terminal_align = 0
@@ -223,7 +223,7 @@ for x in range(8,23):
             used_strands_x = np.zeros(x)
             used_strands_y = np.zeros(y)
             for entry in diff_barrel_lines[x][y]:                
-                print(entry)
+                #print(entry)
                 #identify conserved strands across all alignments
                 for pos in entry[4]:
                     #print(entry[1], barrels[entry[1]], pos)
@@ -258,11 +258,11 @@ for x in range(8,23):
                         if entry[5][-1] == x-1: terminal_strands += 1
                         #else: print(entry)
                 else:
-                    #print("nonhairpin", entry)
+                    print("nonhairpin", entry)
                     non_hairpins.append(entry[0])
                 
-            #print(terminal_align, lengths, terminal_strands, non_hairpins)
-            #print(used_strands_x, used_strands_y)
+            print(terminal_align, lengths, terminal_strands, non_hairpins)
+            print(used_strands_x, used_strands_y)
 
 for x in range(27):
     print(x, used_strands[x])
@@ -270,14 +270,19 @@ for x in range(27):
 c_term_align = 0
 n_term_align = 0
 double_hairpin = 0
+c_term_lengths = np.zeros(17)
+n_term_lengths = np.zeros(17)
+non_hairpins = []
 for entry in diff_barrel_lines[16][18]:                
     #identify any alignments between terminal strands or falling into that pattern
     if abs(entry[4][-1] - entry[5][-1]) == abs(barrels[entry[1]] - barrels[entry[2]]) and len(entry[4]) == len(entry[5]):
-        print("C-Terminal Align", entry)
+        #print("C-Terminal Align", entry)
         c_term_align += 1
+        c_term_lengths[len(entry[4])] += 1
     elif entry[4][0] == entry[5][0] and len(entry[4]) == len(entry[5]):
-        print("N-Terminal Align", entry)
+        #print("N-Terminal Align", entry)
         n_term_align += 1
+        n_term_lengths[len(entry[4])] += 1
         """terminal_align += 1
         lengths[len(entry[4])]+=1
         if barrels[entry[1]] == x:
@@ -287,11 +292,11 @@ for entry in diff_barrel_lines[16][18]:
             if entry[5][-1] == x-1: terminal_strands += 1
             #else: print(entry)"""
     elif abs(entry[4][-1] - entry[5][-1]) == 4 and len(entry[4]) == len(entry[5]):
-        print("Double-hairpin Align", entry)
+        #print("Double-hairpin Align", entry)
         double_hairpin += 1
     else:
         print("Oddball", entry)
-        #non_hairpins.append(entry[0])
-print(c_term_align, n_term_align, double_hairpin)
-            
+        non_hairpins.append(entry[0])
+print(c_term_align, c_term_lengths, n_term_align, n_term_lengths, double_hairpin)
+print(sorted(non_hairpins))          
 
