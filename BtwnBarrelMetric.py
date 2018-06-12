@@ -212,11 +212,13 @@ for value in seq_IDs:
         #graph_hist_of_pairs_of_lengths(lengths_by_lengths, [ [8, 10], [8, 12], [8,14], [8,16], [10, 12], [12,14], [12, 16], [14,22], [16,18]  ], ["A", "B", "C", "D", "E", "F", "G", "H", "J"] , value)
     
 used_strands = [np.zeros(x) for x in range(27) ]
-for x in range(16,19):
-    for y in range(x+1, 19):
+for x in range(8,23):
+    for y in range(x+1, 23):
         if len(e_values[x][y]) > 1:
             print(x, y, "total aligns:",int_counts[x][y])
-            terminal_align = 0
+            c_terminal_align = 0
+            n_terminal_align = 0
+            double_hairpin = 0
             non_hairpins = []
             terminal_strands = 0
             lengths = np.zeros(x+1)
@@ -247,9 +249,12 @@ for x in range(16,19):
                         #print(entry[2], barrels[entry[2]], pos)
                         used_strands_x[pos] += 1
                 #identify any alignments between c-terminal strands or falling into that pattern
-                if abs(entry[4][-1] - entry[5][-1]) == abs(barrels[entry[1]] - barrels[entry[2]]) and len(entry[4]) == len(entry[5]):
+                if len(entry[4]) != len(entry[5]):
+                    print("diff lengths", entry)
+                    non_hairpins.append(entry[0])
+                elif abs(entry[4][-1] - entry[5][-1]) == abs(barrels[entry[1]] - barrels[entry[2]]):
                     #print("Terminal Align", entry)
-                    terminal_align += 1
+                    c_terminal_align += 1
                     lengths[len(entry[4])]+=1
                     if barrels[entry[1]] == x:
                         if entry[4][-1] == x-1: terminal_strands += 1
@@ -257,12 +262,19 @@ for x in range(16,19):
                     else:
                         if entry[5][-1] == x-1: terminal_strands += 1
                         #else: print(entry)
+                elif entry[4][0] == entry[5][0]:
+                    #print("N-Terminal Align", entry)
+                    n_terminal_align += 1
+                elif abs(entry[4][-1] - entry[5][-1]) == 4:
+                    #print("Double-hairpin Align", entry)
+                    double_hairpin += 1
                 else:
                     print("nonhairpin", entry)
                     non_hairpins.append(entry[0])
                 
-            print(terminal_align, lengths, terminal_strands, non_hairpins)
-            print(used_strands_x, used_strands_y)
+            print(c_terminal_align, lengths, terminal_strands)
+            print(n_terminal_align, double_hairpin, len(non_hairpins))
+            #print(used_strands_x, used_strands_y)
 
 for x in range(27):
     print(x, used_strands[x])
