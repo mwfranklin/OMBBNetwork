@@ -74,7 +74,7 @@ with open("data/AllDataE1_v6_Numbered.txt", "r") as inData:
     for line in inData:
         if "IntNum" not in line:
             line = line.strip().split()
-            if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-3:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
+            if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-5:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
                 keep_piece = line[0:4] + line[6:8]
                 diff_barrel_lines[ all_barrels[line[1]]][ all_barrels[line[2]] ].append(keep_piece)
                 diff_barrel_lines[ all_barrels[line[2]]][ all_barrels[line[1]] ].append(keep_piece)
@@ -118,12 +118,14 @@ for x in range(8,23):
                     c_term_barrels[all_barrels[entry[2]] ].append(entry[2])
                 elif entry[4][0] == entry[5][0]:
                     #print("N-Terminal Align", entry)
+                    n_term_barrels[all_barrels[entry[1]] ].append(entry[1])
+                    n_term_barrels[all_barrels[entry[2]] ].append(entry[2])
                     n_terminal_align += 1
                     
                 elif abs(entry[4][-1] - entry[5][-1]) == 4:
                     print("Double-hairpin Align", entry)
-                    n_term_barrels[all_barrels[entry[1]] ].append(entry[1])
-                    n_term_barrels[all_barrels[entry[2]] ].append(entry[2])
+                    #n_term_barrels[all_barrels[entry[1]] ].append(entry[1])
+                    #n_term_barrels[all_barrels[entry[2]] ].append(entry[2])
                     double_hairpin += 1
                 else:
                     print("nonhairpin", entry)
@@ -145,30 +147,27 @@ for x in range(23):
         n_term_homo[x].extend(proto_hom[entry])
     n_term_homo[x] = sorted(set(n_term_homo[x]))
 
-eight_10 = get_combos(c_term_homo[8], c_term_homo[10])
-eight_12 = get_combos(c_term_homo[8], c_term_homo[12])
-eight_14 = get_combos(c_term_homo[8], c_term_homo[14])
-eight_16 = get_combos(c_term_homo[8], c_term_homo[16])
 eight_combos = c_term_homo[8] + c_term_homo[10] + c_term_homo[12] + c_term_homo[14] + c_term_homo[16]
-eight_10+eight_12+eight_14+eight_16
+eight_combos = set(eight_combos)
+print("8-10/12/14/16 seqs:", len(eight_combos))
 
-ten_12 = get_combos(c_term_homo[10], c_term_homo[12])
-twelve_14 = get_combos(c_term_homo[12], c_term_homo[14])
-twelve_16 = get_combos(c_term_homo[10], c_term_homo[16])
-ten_12+twelve_14+twelve_16
+mid_tier_combos = c_term_homo[10]+c_term_homo[12] + c_term_homo[14] + c_term_homo[16]
+mid_tier_combos = set(mid_tier_combos)
+print("mid-tier seqs:", len(mid_tier_combos))
 
-sixteen_18 = get_combos(c_term_homo[16], c_term_homo[18])
-sixteen_18_n = get_combos(n_term_homo[16], n_term_homo[18])
-
+#these should be run at 10-3 and not at 10-4=5
+sixteen_18 = set(c_term_homo[16] + c_term_homo[18])
+sixteen_18_n = set(n_term_homo[16] + n_term_homo[18])
+print("16-18 C-term: ", len(sixteen_18))
+print("16-18 N-term: ", len(sixteen_18_n))
 
 lg_rearr = ["1pho_A", "2por_A", "2zfg_A", "3nsg_A", "5fvn_A", "5nxr_A", "4d65_A"]
 lg_rearr_16 = []
 for x in lg_rearr:
     lg_rearr_16.extend(proto_hom[x])
 lg_rearr_16 = sorted(set(lg_rearr_16))
-len(lg_rearr_16)
-sixteen_18_lg = get_combos(lg_rearr_16, proto_hom["5ldv_A"])
-print(sixteen_18_lg)
+sixteen_18_lg = set(lg_rearr_16 + proto_hom["5ldv_A"])
+print("lg rearrangements: ", len(sixteen_18_lg))
 
 loop_hairpin_16 = ["4aui_A", "6ehd_A", "3wi5_A", "3prn_A"]
 hairpin_loop_16 = ["3prn_A", "2fgr_A", "6ehb_A"]
@@ -180,24 +179,29 @@ for x in loop_hairpin_16:
     lh_16.extend(proto_hom[x])
 lh_16 = sorted(set(lh_16))
 
-hl_16 = []
+hl_16_18 = []
 for x in hairpin_loop_16:
-    hl_16.extend(proto_hom[x])
-hl_16 = sorted(set(hl_16))
-hl_18 = []
+    hl_16_18.extend(proto_hom[x])
 for x in hairpin_loop_18:
-    hl_18.extend(proto_hom[x])
-hl_18 = sorted(set(hl_18))
+    hl_16_18.extend(proto_hom[x])
+hl_16_18 = sorted(set(hl_16_18))
 
-hl_16_alts = []
+hl_16_18_alts = []
 for x in hairpin_loop_16_walts:
-    hl_16_alts.extend(proto_hom[x])
-hl_16_alts = sorted(set(hl_16_alts))
-hl_18_alts = []
+    hl_16_18_alts.extend(proto_hom[x])
 for x in hairpin_loop_18_walts:
-    hl_18_alts.extend(proto_hom[x])
-hl_18_alts = sorted(set(hl_18_alts))
+    hl_16_18_alts.extend(proto_hom[x])
+hl_16_18_alts = sorted(set(hl_16_18_alts))
 
-print(get_combos(lh_16, proto_hom["5ldv_A"]))
-print(get_combos(hl_16, hl_18))
-print(get_combos(hl_16_alts, hl_18_alts))
+print("loop-hairpins", len(set(lh_16 + proto_hom["5ldv_A"])))
+print("hairpinloops", len(hl_16_18))
+print("hairpin loops with alts", len(hl_16_18_alts))
+
+fourteen_22 = ["3bs0_A", "3bry_A", "3dwo_X", "1t16_A"]
+lg_14_22 = []
+for x in fourteen_22:
+    lg_14_22.extend(proto_hom[x])
+lg_14_22 = sorted(set(lg_14_22 + proto_hom["4y25_A"]))
+print("14-4y25: ", len(lg_14_22))
+print(len(set(list(lg_14_22) + list(sixteen_18_lg))))
+
