@@ -96,7 +96,7 @@ for x in range(8,23):
 
 c_term_barrels = [[] for x in range(23)]
 n_term_barrels = [[] for x in range(23)]
-for x in range(16,17):
+for x in range(8,23):
     for y in range(x+1, 23):
         if len(diff_barrel_lines[x][y]) > 1:
             print(x, y, "total aligns:",len(diff_barrel_lines[x][y]))
@@ -149,6 +149,7 @@ eight_10 = get_combos(c_term_homo[8], c_term_homo[10])
 eight_12 = get_combos(c_term_homo[8], c_term_homo[12])
 eight_14 = get_combos(c_term_homo[8], c_term_homo[14])
 eight_16 = get_combos(c_term_homo[8], c_term_homo[16])
+eight_combos = c_term_homo[8] + c_term_homo[10] + c_term_homo[12] + c_term_homo[14] + c_term_homo[16]
 eight_10+eight_12+eight_14+eight_16
 
 ten_12 = get_combos(c_term_homo[10], c_term_homo[12])

@@ -19,7 +19,26 @@ with open("BarrelChars85.txt", "r") as barrel_data:
             if line[0] in protos:
                 barrel_sizes[ int(line[1]) ].append(line[0])
 
-cutoff = 1e-3
+count = 0
+with open("data/AllDataE1_v6_Numbered.txt", "r") as inData, open("data/ProtosOnlyE-3_v6_Numbered.txt", "w+") as outData:
+    for line in inData:
+        if "Dom1" in line:
+            outData.write(line)
+        else:
+            line = line.split(" ")
+            pdb1 = line[1]
+            pdb2 = line[2]
+            
+            if pdb1 in protos:
+                outData.write(" ".join(line))
+                count += 1
+            elif pdb2 in protos:
+                outData.write(" ".join(line))
+                count += 1
+            else:
+                continue
+print(count)
+"""cutoff = 1e-3
 for x in range(27):
     for y in range(x+1, 27):
         keep_lines = []
@@ -43,7 +62,7 @@ for x in range(27):
             with open("data/BySize/%s_%s_E-3.txt"%(x, y), "w+") as subnetwork:
                 for value in keep_lines:
                     subnetwork.write("\t".join(value) + "\n")
-
+"""
 """cutoff = 1e-3
 count = 0
 with open("data/AllDataE20_v6_Numbered.txt", "r") as inData:
