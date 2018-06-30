@@ -149,7 +149,7 @@ for value in seq_IDs:
         for line in inData:
             if "IntNum" not in line:
                 line = line.strip().split()
-                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-2:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
+                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-5:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
                     #print(line[1], line[2])
                     #print(barrels[line[1]], barrels[line[2]])
                     e_values[ barrels[line[1]]][ barrels[line[2]] ].append(float(line[3]))
@@ -304,7 +304,7 @@ for entry in diff_barrel_lines[16][18]:
             if entry[5][-1] == x-1: terminal_strands += 1
             #else: print(entry)"""
     elif abs(entry[4][-1] - entry[5][-1]) == 4 and len(entry[4]) == len(entry[5]):
-        #print("Double-hairpin Align", entry)
+        print("Double-hairpin Align", entry)
         double_hairpin += 1
     else:
         print("Oddball", entry)

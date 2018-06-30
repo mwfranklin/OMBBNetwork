@@ -74,7 +74,7 @@ with open("data/AllDataE1_v6_Numbered.txt", "r") as inData:
     for line in inData:
         if "IntNum" not in line:
             line = line.strip().split()
-            if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-5:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
+            if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-4:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
                 keep_piece = line[0:4] + line[6:8]
                 diff_barrel_lines[ all_barrels[line[1]]][ all_barrels[line[2]] ].append(keep_piece)
                 diff_barrel_lines[ all_barrels[line[2]]][ all_barrels[line[1]] ].append(keep_piece)
@@ -96,7 +96,11 @@ for x in range(8,23):
 
 c_term_barrels = [[] for x in range(23)]
 n_term_barrels = [[] for x in range(23)]
-for x in range(8,23):
+full_lengths = []
+full_counts = 0
+last_strand = []
+last_strand_counts = 0
+for x in range(8,9):
     for y in range(x+1, 23):
         if len(diff_barrel_lines[x][y]) > 1:
             print(x, y, "total aligns:",len(diff_barrel_lines[x][y]))
@@ -116,6 +120,23 @@ for x in range(8,23):
                     c_terminal_align += 1
                     c_term_barrels[all_barrels[entry[1]] ].append(entry[1])
                     c_term_barrels[all_barrels[entry[2]] ].append(entry[2])
+                    if len(entry[4]) == 8:
+                        full_counts += 1
+                        full_lengths.append(entry[1])
+                        full_lengths.append(entry[2])
+                    if barrels[entry[1]] == x:
+                        if entry[4][-1] == x-1: 
+                            last_strand_counts += 1
+                            last_strand.append(entry[1])
+                            last_strand.append(entry[2])
+                        #else: print(entry)
+                    else:
+                        if entry[5][-1] == x-1: 
+                            last_strand_counts += 1
+                            last_strand.append(entry[1])
+                            last_strand.append(entry[2])
+                        #else: print(entry)
+                    
                 elif entry[4][0] == entry[5][0]:
                     #print("N-Terminal Align", entry)
                     n_term_barrels[all_barrels[entry[1]] ].append(entry[1])
@@ -132,9 +153,20 @@ for x in range(8,23):
                     non_hairpins.append(entry[0])
                 
             print(c_terminal_align, n_terminal_align, double_hairpin, len(non_hairpins))
+print(full_counts, last_strand_counts)
+full_lengths = sorted(set(full_lengths))
+last_strand = sorted(set(last_strand))
+full_homo = []
+for value in full_lengths:
+    full_homo.extend(proto_hom[value])
+full_homo = sorted(set(full_homo))
+last_strand_homo = []
+for value in last_strand:
+    last_strand_homo.extend(proto_hom[value])
+last_strand_homo = sorted(set(last_strand_homo))
+
 c_term_barrels = [set(x) for x in c_term_barrels]
 n_term_barrels = [set(x) for x in n_term_barrels]
-
 c_term_homo = [[] for x in range(23)]
 for x in range(23):
     for entry in c_term_barrels[x]:
