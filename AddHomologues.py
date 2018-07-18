@@ -27,23 +27,35 @@ for filename in glob.glob("MSAs/*.a3m"):
     all_homologues[ pdb_id ] = a3m_list
 
 homo_sizes = []
-with open("data/AllDataE1_v6_Numbered.txt", "r") as inData:#, open("data/AllDataE1_v6_Numbered_Hom.txt", "w+") as outData, open("data/AllDataE1_v6_Numbered_Hom_Tabbed.txt", "w+") as outDataTab:
+with open("data/AllDataE1_v6_Numbered.txt", "r") as inData, open("data/AllDataE1_v6_Numbered_Hom.txt", "w+") as outData, open("data/AllDataE1_v6_Numbered_Hom_Tabbed.txt", "w+") as outDataTab:
     for line in inData:
         line = line.strip().split(" ")
         pdb1 = line[1]
         pdb2 = line[2]
         
-        if pdb1 in all_barrels.keys() and pdb2 in all_barrels.keys():
+        if "interaction" in line:
+            #continue
+            outData.write(" ".join(line) + " SharedHom TotalHom StrNumChange\n")
+            outDataTab.write("\t".join(line) + "\tSharedHom\tTotalHom\tStrNumChange\n")
+        
+        elif pdb1 in all_barrels.keys() and pdb2 in all_barrels.keys():
             all_homos = len(set(all_homologues[pdb1] + all_homologues[pdb2]))
             shared_homos = len(set(all_homologues[pdb1]).intersection(all_homologues[pdb2]))
-            homo_sizes.append(shared_homos/all_homos)
+            #homo_sizes.append(shared_homos/all_homos)
             #print(pdb1, pdb2, shared_homos/all_homos)
-            #outData.write(" ".join(line) + " " + str(shared_homos/all_homos) + " "+ str(all_homos) + "\n")
-            #outDataTab.write("\t".join(line) + "\t" + str(shared_homos/all_homos) + "\t" + str(all_homos) + "\n")
+            strands1 = line[6].split(",")
+            strands2 = line[7].split(",")
+            if len(strands1) == len(strands2):
+                outData.write(" ".join(line) + " " + str(shared_homos/all_homos) + " "+ str(all_homos) + " 0" + "\n")
+                outDataTab.write("\t".join(line) + "\t" + str(shared_homos/all_homos) + "\t" + str(all_homos) + "\t0\n")
+            else:
+                outData.write(" ".join(line) + " " + str(shared_homos/all_homos) + " "+ str(all_homos) + " 1" + "\n")
+                outDataTab.write("\t".join(line) + "\t" + str(shared_homos/all_homos) + "\t" + str(all_homos) + "\t1\n")
+                homo_sizes.append(shared_homos/all_homos)
         else:
-            continue
-            #outData.write(" ".join(line) + " 0 0\n")
-            #outDataTab.write("\t".join(line) + "\t0\t0\n")
+            #continue
+            outData.write(" ".join(line) + " 0 0 0\n")
+            outDataTab.write("\t".join(line) + "\t0\t0\t0\n")
 
 fig, ax3 = plt.subplots(nrows = 1, ncols = 1, figsize = (8,10))
 ax3.set_xlabel("Proportion of shared homologues", size = 22)
@@ -62,6 +74,6 @@ ax3.hist(homo_sizes, bins = np.arange(0,1.1,0.1), histtype = "step", normed = Tr
 ax3.set_xlim([0,1])
 plt.tick_params(labelsize = 14)
 plt.tight_layout()
-plt.savefig("NetworkGraphs/DistribSharedHomologues.png")
+plt.savefig("NetworkGraphs/DistribSharedHomologues_DiffStrNums.png")
 #plt.show()
             
