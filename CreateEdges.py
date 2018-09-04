@@ -85,7 +85,8 @@ with open("data/%s"%in_file, "r") as inData, open("data/%s"%out_file, "w+") as o
             tabbed_out.write("interaction\tDom1\tDom2\tE-value\tRes1\tRes2\tStrand1\tStrand2\tSeq1\tSeq2\tHHS_Prob\tHHS_Score\tLength\tPerc_ID\tPerc_Sim\tRMSD\tTMScore\tMaxSub\tGDT_TS\tGDT_HA\tInCyto?\n")
         else:    
             line = line.strip().split("\t")
-            if line[14] == "ERR":
+            if line[14] == "ERR" or line[14] == "@":
+                print(line)
                 continue
             #print(line)
             dom1 = line[0]

@@ -19,6 +19,7 @@ with open("BarrelChars85.txt", "r") as barrel_data:
             if line[0] in protos:
                 barrel_sizes[ int(line[1]) ].append(line[0])
 
+
 count = 0
 with open("data/AllDataE1_v6_Numbered.txt", "r") as inData, open("data/ProtosOnlyE-3_v6_Numbered.txt", "w+") as outData:
     for line in inData:
@@ -41,7 +42,7 @@ print(count)
 
 cutoff1 = 1e-2
 cutoff2 = 1e-3
-for x in range(16, 17):
+for x in range(16, 18):
     for y in range(x+1, 19):
         print(x, y)
         keep_lines = []
@@ -55,6 +56,7 @@ for x in range(16, 17):
                     pdb2 = line[2]
                     
                     if float(line[3]) <= cutoff1 and float(line[3]) >= cutoff2:
+                        if "3wi4_A" in line[2]: print(line)
                         if pdb1 in barrel_sizes[x] and pdb2 in barrel_sizes[y]:
                             keep_lines.append(line)
                         elif pdb1 in barrel_sizes[y] and pdb2 in barrel_sizes[x]:

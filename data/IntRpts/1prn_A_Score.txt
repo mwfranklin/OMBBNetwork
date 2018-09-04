@@ -1,0 +1,32 @@
+Query         1PRN:A|PDBID|CHAIN|SEQUENCE
+Match_columns 289
+No_of_seqs    154 out of 1156
+Neff          9.4 
+Searched_HMMs 1
+Date          Tue Sep  4 18:03:03 2018
+Command       hhalign -i MSAs/1PRN_A.a3m -o data/IntRpts/1prn_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1PRN:A|PDBID|CHAIN|SEQUENCE     98.3 1.3E-14 1.3E-14   97.2   0.0  124  131-261   164-289 (289)
+
+No 1  
+>1PRN:A|PDBID|CHAIN|SEQUENCE
+Probab=98.33  E-value=1.3e-14  Score=97.18  Aligned_cols=124  Identities=17%  Similarity=0.190  Sum_probs=103.3
+
+Q 1PRN:A|PDBID|C  131 NGIAVTYSISGVNLYLSYVDPDQTVDSSLVTEEFGIAADWSNDMI-SLAAAYTTDAGGIVDNDIAFVGAAYKFNDAGTVG  209 (289)
+Q Consensus       131 n~i~y~~~~~G~~~~~~y~~~~~~~~~~~~~~~~~~~~~Y~~g~~-~~~~~y~~~~~~~~~~~~~~lg~~y~~g~~~~~~  209 (289)
+                      -.+..++++++|.+++.|......   ....+.+.++++|+++++ .+++.|++.+... +.+.|.|+++|.++++ ++.
+T Consensus       164 ~~~~~~Y~~g~~~~~~~y~~~~~~---~~~~~~~~lg~~y~~g~~~~~~~~y~~~~~~~-~~~~~~lg~~y~~~~~-~~~  238 (289)
+T 1PRN:A|PDBID|C  164 FGIAADWSNDMISLAAAYTTDAGG---IVDNDIAFVGAAYKFNDAGTVGLNWYDNGLST-AGDQVTLYGNYAFGAT-TVR  238 (289)
+Confidence            334456678889999999877653   135799999999999997 9999999987532 6799999999999996 999
+
+
+Q 1PRN:A|PDBID|C  210 LNWYDNGLSTAGDQVTLYGNYAFGA-TTVRAYVSDIDRAGADTAYGIGADYQF  261 (289)
+Q Consensus       210 ~~y~~~~~~~~~~~~~lg~~y~~~~-~~~~~~y~~~~~~~~~~~~~lg~~Y~l  261 (289)
+                      +.|.+.+...+.+.|.|++.|.|++ +++.+.|...+  .+.+.+.+|++|.|
+T Consensus       239 ~~y~~~~~~~~~~~~~lg~~Y~l~~~~~~~~~~~~~~--~~~~~~~~G~~~~F  289 (289)
+T 1PRN:A|PDBID|C  239 AYVSDIDRAGADTAYGIGADYQFAEGVKVSGSVQSGF--ANETVADVGVRFDF  289 (289)
+Confidence            9998876433789999999999999 99999998763  56889999998875
+
+
+Done!

@@ -1,0 +1,32 @@
+Query         3WI4:A|PDBID|CHAIN|SEQUENCE
+Match_columns 313
+No_of_seqs    132 out of 1276
+Neff          9.8 
+Searched_HMMs 1
+Date          Tue Sep  4 18:03:16 2018
+Command       hhalign -i MSAs/3WI4_A.a3m -o data/IntRpts/3wi4_A_Score.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3WI4:A|PDBID|CHAIN|SEQUENCE     97.5   5E-12   5E-12   82.0   0.0  143  128-278   162-313 (313)
+
+No 1  
+>3WI4:A|PDBID|CHAIN|SEQUENCE
+Probab=97.54  E-value=5e-12  Score=82.00  Aligned_cols=143  Identities=14%  Similarity=0.094  Sum_probs=101.1
+
+Q 3WI4:A|PDBID|C  128 SVRYDSPEFAGLSGS--VQYALNDNAG----RHNSESYHAGFNYKNGGFFVQYGGAYKRHHQVQEG--LNIEKYQIHRLV  199 (313)
+Q Consensus       128 ~i~Y~sp~~~G~~~~--~~y~~~~~~~----~~~~~~~~~~~~Y~~~~~~~~~~~~y~~~~~~~~~--~~~~~~~~~~~g  199 (313)
+                      .+.|..   ++|.+.  +.|.......    ....+.|.+++.|+.++|.+.  +.|++.+.....  ....+...|.++
+T Consensus       162 ~~~Y~~---~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~g~~y~~~~~~~~--~~y~~~~~~~~~~~~~~~~~~~~~~~  236 (313)
+T 3WI4:A|PDBID|C  162 GFNYKN---GGFFVQYGGAYKRHHQVQEGLNIEKYQIHRLVSGYDNDALYAS--VAVQQQDAKLTDASNSHNSQTEVAAT  236 (313)
+Confidence            566764   577777  4466444321    235688999999999988888  456655543210  123467889999
+
+
+Q 3WI4:A|PDBID|C  200 SGYDNDALYASVAVQQQDAKLTDASNSHNSQTEVAATLAYRFGN-VTPRVSYAHGFKGLVDDADIGNEYDQVVVGAEYDF  278 (313)
+Q Consensus       200 ~~y~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~~~~y~~~~-~~~~~~y~~~~~~~~~~~~~~~~~~~~~~g~~Y~l  278 (313)
+                      ++|.++++.+.+.|...+...........+.+.+.+++.|.+.+ +.+++.|...+.+..   ....+.+.+.||+.|+|
+T Consensus       237 ~~y~~~~~~~~~~y~~~~~~~~~~~~~~~~~~~~~~g~~Y~l~~~~~~y~~~~~~~~~~~---~~~~~~~~~~~G~~~~F  313 (313)
+T 3WI4:A|PDBID|C  237 LAYRFGNVTPRVSYAHGFKGLVDDADIGNEYDQVVVGAEYDFSKRTSALVSAGWLQEGKG---ENKFVATAGGVGLRHKF  313 (313)
+Confidence            99999999999999887654311111245778999999999997 999999998766431   23457788999999875
+
+
+Done!

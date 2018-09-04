@@ -2,7 +2,6 @@ import re
 import glob
 import sys
 import numpy as np
-import PDBparser as pdbp
 import os
 import subprocess
 
@@ -40,7 +39,7 @@ with open("DupPDBs_v6.txt", "r") as inData:
 
 prob_cutoff = 75
 dom_list = []
-with open("data/rawData_E20_v6_2018.txt", "r") as edge_list, open("data/FiltData_E20_v6_2018_Renumb.txt", "w+") as new_edges:
+with open("data/rawData_E20_v6_2018_2.txt", "r") as edge_list, open("data/FiltData_E20_v6_2018_Renumb_2.txt", "w+") as new_edges:
     for line in edge_list:
         if "dom1" not in line:
             line = line.strip().split("\t")

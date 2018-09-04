@@ -2,6 +2,7 @@ import os
 import shutil
 import glob
 import PDBparser as pdbp
+import PDBmanip as pdbm
 import textwrap
 
 for filename in glob.glob("PDBFiles/*.pdb"):
@@ -24,22 +25,22 @@ for filename in glob.glob("PDBFiles/*.pdb"):
     
     with open(filename, "r") as pdb_file:
         pdb_lines = pdb_file.readlines()
-    sequence = pdbp.pdb_to_seq(pdb_lines, filename[-5])
-    pdb_seq = pdbp.seq_from_struct(pdb_lines, filename[-5])
+    sequence = pdbm.pdb_to_seq(pdb_lines, filename[-5])
+    pdb_seq = pdbm.seq_from_struct(pdb_lines, filename[-5])
     #print(sequence)
     if "PDB chain" in pdb_lines[0]:
         print("pdb has been adjusted")
     else:
         print("Checking file %s, chain is %s" %(pdb_id, filename[-5]))
         with open("PDBFiles/%s.pdb"%pdb_id, "w+") as pdb_file:
-            atom_records = pdbp.one_chain_pdb(pdb_lines, filename[-5])
+            atom_records = pdbm.one_chain_pdb(pdb_lines, filename[-5])
             if pdb_seq[0:20] == sequence[0:20]:
                 #print("Same seq")
-                atom_records = pdbp.renumber_pdb_inplace(atom_records, 1)
+                atom_records = pdbm.renumber_pdb_inplace(atom_records, 1)
             else:
                 interupt = sequence.split(pdb_seq[0:20])
                 #print(len(interupt[0]))
-                atom_records = pdbp.renumber_pdb_inplace(atom_records, len(interupt[0])+1)
+                atom_records = pdbm.renumber_pdb_inplace(atom_records, len(interupt[0])+1)
             pdb_file.write("HEADER    PDB chain %s \t May 9, 2018\n"%pdb_id)
             pdb_file.write("REMARK    Sequence of PDB:\n")
             sequence = textwrap.wrap(sequence, 50)

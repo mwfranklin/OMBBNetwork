@@ -59,7 +59,7 @@ PDB	Component Code
 3nsg_A	1
 3o44_A	2
 3ohn_A	5
-3prn_A	1
+1prn_A	1
 3qlb_A	1
 3qq2_A	1
 3qra_A	1
@@ -73,7 +73,7 @@ PDB	Component Code
 3t24_A	1
 3v8x_A	1
 3w9t_A	2
-3wi5_A	1
+3wi4_A	1
 3x2r_A	0
 4afk_A	1
 4aip_A	1

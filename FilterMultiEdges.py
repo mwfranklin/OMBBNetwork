@@ -14,7 +14,7 @@ with open("BarrelChars85.txt", "r") as barrel_list:
             all_barrels.append(line[0])
 
 graph = {} #relationship list for each node
-with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData:
+with open("data/FiltData_E20_v6_2018_Renumb_2.txt", "r") as inData:
     for line in inData:
         if "dom1" not in line:
             line = line.strip().split("\t")
@@ -58,7 +58,7 @@ for key in stubs:
 #graph now only consists of pdbs with multiple connections to the same pdb
 
 multi_edge_lines = []
-with open("data/FiltData_E20_v6_2018_Renumb.txt", "r") as inData, open("data/NoMultiEdgesE%s_v6.txt"%cutoff, "w+") as all_edges, open("data/MultiEdgesE%s_v6.txt"%cutoff, "w+") as multi_edges, open("data/MultiEdgesE%s_v6_DontCheck.txt"%cutoff, "w+") as dontcheck:
+with open("data/FiltData_E20_v6_2018_Renumb_2.txt", "r") as inData, open("data/NoMultiEdgesE%s_v6_2.txt"%cutoff, "w+") as all_edges, open("data/MultiEdgesE%s_v6_2.txt"%cutoff, "w+") as multi_edges, open("data/MultiEdgesE%s_v6_DontCheck_2.txt"%cutoff, "w+") as dontcheck:
     for line in inData:
         if "dom1" not in line:
             line = line.strip().split("\t")

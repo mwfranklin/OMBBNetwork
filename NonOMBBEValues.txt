@@ -139,7 +139,6 @@ PDB	Min_EValue
 4akd_A	0.1
 4ar0_A	0.24
 4av2_J	2e-45
-4b61_B	5.4e-53
 4c1b_A	1.4e-09
 4ddn_C	0.45
 4dev_E	1.6e-07
@@ -240,7 +239,6 @@ PDB	Min_EValue
 5w7c_C	3.1e-11
 5w7d_A	7e-10
 5xg5_A	2.8e-09
-6ehf_A	8e-31
 5wq7_A	0
 5wq8_A	0
 5tcq_A	0
@@ -304,7 +302,7 @@ PDB	Min_EValue
 3nsg_A	0
 3o44_A	0
 3ohn_A	0
-3prn_A	0
+1prn_A	0
 3qlb_A	0
 3qq2_A	0
 3qra_A	0
@@ -318,7 +316,7 @@ PDB	Min_EValue
 3t24_A	0
 3v8x_A	0
 3w9t_A	0
-3wi5_A	0
+3wi4_A	0
 3x2r_A	0
 4afk_A	0
 4aip_A	0
@@ -369,18 +367,18 @@ PDB	Min_EValue
 5fp2_A	0
 5fq8_B	0
 5fr8_A	0
+5fvn_A	0
 5gaq_A	0
+5iv9_A	0
 5iva_A	0
 5ixm_A	0
 5ldv_A	0
-5t3r_D	0
-7ahl_A	0
-5fvn_A	0
-5iv9_A	0
 5m9b_A	0
 5mdo_A	0
 5nec_A	0
 5nxr_A	0
 5o65_A	0
+5t3r_D	0
 6ehb_A	0
 6ehd_A	0
+7ahl_A	0
