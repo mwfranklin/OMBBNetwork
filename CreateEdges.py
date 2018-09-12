@@ -86,7 +86,7 @@ with open("data/%s"%in_file, "r") as inData, open("data/%s"%out_file, "w+") as o
         else:    
             line = line.strip().split("\t")
             if line[14] == "ERR" or line[14] == "@":
-                print(line)
+                #print(line)
                 continue
             #print(line)
             dom1 = line[0]
