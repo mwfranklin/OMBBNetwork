@@ -30,17 +30,18 @@ with open("data/AllDataE1_v6_Numbered.txt", "r") as inData, open("data/ProtosOnl
             pdb1 = line[1]
             pdb2 = line[2]
             
-            if pdb1 in protos:
-                outData.write(" ".join(line))
-                count += 1
-            elif pdb2 in protos:
-                outData.write(" ".join(line))
-                count += 1
-            else:
-                continue
+            if float(line[3]) < 1e-3:
+                if pdb1 in protos:
+                    outData.write(" ".join(line))
+                    count += 1
+                elif pdb2 in protos:
+                    outData.write(" ".join(line))
+                    count += 1
+                else:
+                    continue
 print(count)
 
-cutoff1 = 1e-3
+"""cutoff1 = 1e-3
 cutoff2 = 1e-3
 for x in range(8, 23):
     for y in range(x+1, 23):
@@ -68,7 +69,7 @@ for x in range(8, 23):
             with open("data/BySize/%s_%s_E-3.txt"%(x, y), "w+") as subnetwork:
                 for value in keep_lines:
                     subnetwork.write("\t".join(value) + "\n")
-
+"""
 """cutoff = 1e-3
 count = 0
 with open("data/AllDataE20_v6_Numbered.txt", "r") as inData:
