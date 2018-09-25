@@ -1,0 +1,32 @@
+Query         5LDV:A|PDBID|CHAIN|SEQUENCE
+Match_columns 408
+No_of_seqs    963 out of 1024
+Neff          9.6 
+Searched_HMMs 1
+Date          Thu Sep 13 08:25:45 2018
+Command       hhalign -i 5LDV_A.hhm -t 3PRN_A.hhm -o Test.txt 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 3PRN:A|PDBID|CHAIN|SEQUENCE     96.0 4.7E-09 4.7E-09   66.2   0.0   70  319-408   220-289 (289)
+
+No 1  
+>3PRN:A|PDBID|CHAIN|SEQUENCE
+Probab=95.97  E-value=4.7e-09  Score=66.21  Aligned_cols=70  Identities=16%  Similarity=0.158  Sum_probs=52.9
+
+Q 5LDV:A|PDBID|C  319 RNIFGYVTGGYTFNETVRVGADFVYGGTKTEATTHLGGGKKLEAVARVDYKYSPKLNFSAFYSYVNLDQGVNTNESADHS  398 (408)
+Q Consensus       319 ~~~~~~~~~~y~~~~~l~~~~~y~~~~~~~~~~~~~~~~~~~E~~~~~~Y~~~~~l~~~~~ya~~~~d~~~~~~~~~d~~  398 (408)
+                      +.+.|.+++.|++.+ +++.+.|.+.+.         ..+.+.|.+.+.|+++|++++.+-|....          .+.+
+T Consensus       220 ~~~~~~lg~~Y~~g~-~~l~a~y~~~~~---------~~~~~~~~lg~~Y~L~~~~~~~a~~~~~~----------~~~~  279 (289)
+T 3PRN:A|PDBID|C  220 AGDQVTLYGNYAFGA-TTVRAYVSDIDR---------AGADTAYGIGADYQFAEGVKVSGSVQSGF----------ANET  279 (289)
+Confidence            568889999999965 788887765443         14668899999999999999877777662          1356
+
+
+Q 5LDV:A|PDBID|C  399 TVRLQALYKF  408 (408)
+Q Consensus       399 ~~r~~~~Y~F  408 (408)
+                      .+.+-++|+|
+T Consensus       280 ~~~~G~~~~F  289 (289)
+T 3PRN:A|PDBID|C  280 VADVGVRFDF  289 (289)
+Confidence            6677777776
+
+
+Done!

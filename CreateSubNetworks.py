@@ -30,11 +30,8 @@ with open("data/AllDataE1_v6_Numbered.txt", "r") as inData, open("data/ProtosOnl
             pdb1 = line[1]
             pdb2 = line[2]
             
-            if float(line[3]) < 1e-3:
-                if pdb1 in protos:
-                    outData.write(" ".join(line))
-                    count += 1
-                elif pdb2 in protos:
+            if float(line[3]) <= 1e-3:
+                if pdb1 in protos and pdb2 in protos:
                     outData.write(" ".join(line))
                     count += 1
                 else:
