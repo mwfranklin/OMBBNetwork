@@ -1,4 +1,1 @@
-1kmo_A	P13036	1kmo_A,1kmp_A,1pnz_A,1po0_A,1po3_A,1zzv_A,2d1u_A
-1qj8_A	P0A917	1orm_A,1q9f_A,1q9g_A,1qj8_A,1qj9_A,2m06_A,2m07_A,2mnh_A
-6ehb_A	A5F934	6ehb_A,6ehc_A
-1prn_A	P39767	1bh3_A,1h6s_1,1prn_A,2prn_A,3prn_A,5prn_A,6prn_A,7prn_A,8prn_A
+1uyn_X	Q8GKS5	1uyn_X,1uyo_X
