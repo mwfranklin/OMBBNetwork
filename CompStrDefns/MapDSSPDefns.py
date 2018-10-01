@@ -27,19 +27,20 @@ def add_all_dssp(orig_dssp, pdb_list, pdb, barrel_chars):
             dssp_defns = dssp_defns.transpose()
             dssp_defns.columns = ["Res", entry]
             orig_dssp = pd.merge(orig_dssp, dssp_defns, on="Res", how = "left")
+    orig_dssp.replace({"G":"T", "S":"T", "I":"T"}, inplace = True)
     return(orig_dssp)
 
 
 barrel_chars = {}
-with open("../BarrelChars85.txt", "r") as inData:
+with open("BarrelDefns85.txt", "r") as inData:
     for line in inData:
         line = line.strip().split("\t")
         if "PDB" not in line:
-            barrel_chars[line[0]] = [int(line[4]), int(line[5])]
+            barrel_chars[line[0]] = [int(line[2]), int(line[3])]
 
 barrels = {}
 keep_data = []
-with open("UniProtMapping_v5_test.txt", "r") as inData:
+with open("UniProtMapping_v5.txt", "r") as inData:
     for line in inData:
         print(line)
         line = line.strip().split("\t")
@@ -70,7 +71,7 @@ with open("UniProtMapping_v5_test.txt", "r") as inData:
             print(entry)
             if entry == pdb_id: continue
             else:
-                perc_diff = 1 - np.size(np.where(dssp_defns[pdb_id] == dssp_defns[entry]))/len(dssp_defns)
+                perc_diff = 1 - np.size(np.where( (dssp_defns[pdb_id] == dssp_defns[entry]) & (dssp_defns[entry] != np.nan) ))/len(dssp_defns)
                 if perc_diff == 1:
                     continue
                 elif perc_diff >= 0.05:
@@ -83,4 +84,5 @@ print(len(keep_data))
 with open("DSSP_GT5.txt", "w+") as outData:
     for value in keep_data:
         outData.write("\t".join(value) + "\n")
+
 

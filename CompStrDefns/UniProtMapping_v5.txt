@@ -9,7 +9,6 @@
 2gsk_A	P06129	1nqe_A,1nqf_A,1nqg_A,1nqh_A,1ujw_A,2gsk_A,2guf_A,2ysu_A,3m8b_A,3m8d_A,3rgm_A,3rgn_A
 2hdi_A	P17315	2hdf_A,2hdi_A
 2iah_A	P48632	1xkh_A,2iah_A,2o5p_A,2w16_A,2w6t_A,2w6u_A,2w75_A,2w76_A,2w77_A,2w78_A,5odw_A
-2k0l_A	P24017	2k0l_A,5nhx_A
 2maf_A	Q04884	2maf_A,2mlh_A
 2por_A	P31243	2por_A,3por_A
 2qom_A	Q7BSW5	2qom_A,3slj_A,3slo_A,3slt_A,3sze_A
@@ -40,9 +39,7 @@
 4fqe_A	Q934G3	4fqe_A,4pr7_A
 4rdr_A	Q9JZN9	4rdr_A,4rdt_A,4rvw_A
 4rjw_A	P32977	4rjw_A,4rjx_A
-4rlc_A	P13794	4rlc_A,5u1h_A
 5fq8_B	Q8A5H5	5fq6_B,5fq7_B,5fq8_B
-5ldv_A	Q659I5	5ldt_A,5ldv_A
 5m9b_A	Q05098	5m9b_A,5mzs_A,5nc3_A,5nc4_A,5nr2_A,5out_A
 5mdo_A	L0RVU0	5mdo_A,5mdp_A,5mdq_A,5mdr_A,5mds_A
 5nxr_A	E3U904	4d64_A,5n9i_A,5nxn_A,5nxr_A,5nxu_A
