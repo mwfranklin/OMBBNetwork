@@ -1,7 +1,7 @@
 1kmo_A	P13036	1kmo_A,1kmp_A,1pnz_A,1po0_A,1po3_A,1zzv_A,2d1u_A
 1prn_A	P39767	1bh3_A,1h6s_1,1prn_A,2prn_A,3prn_A,5prn_A,6prn_A,7prn_A,8prn_A
 1qj8_A	P0A917	1orm_A,1q9f_A,1q9g_A,1qj8_A,1qj9_A,2m06_A,2m07_A,2mnh_A
-1qjp_A	P0A910	1bxw_A,1g90_A,1qjp_A,2ge4_A,2jmm_A,3nb3_A,5m2q_A
+1qjp_A	P0A910	1bxw_A,1g90_A,1qjp_A,2ge4_A,2jmm_A,3nb3_A
 1t16_A	P10384	1t16_A,1t1l_A,2r4l_A,2r4n_A,2r4o_A,2r4p_A,2r88_A,2r89_A,2r8a_A,3dwn_A,3pf1_A,3pgr_A,3pgs_A,3pgu_A
 1uyn_X	Q8GKS5	1uyn_X,1uyo_X
 2f1v_A	P0A915	2f1t_A,2f1v_A

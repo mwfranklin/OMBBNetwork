@@ -1,0 +1,1 @@
+PDB		Total Strands	Length	AvgLength	MinLength	MaxLength	Radius	MinRadius	MaxRadius	Barrel Tilt	Shear	Twist
