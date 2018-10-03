@@ -22,6 +22,7 @@ with open("BarrelChars85.txt", "r") as inData:
             if line[0] in protos:
                 barrels[line[0]] = [int(line[1])]
 
+all_avgs = [[] for x in range(0,23)]
 for key in barrels.keys():
     print(key)
     in_aa = np.zeros(20)
@@ -42,14 +43,44 @@ for key in barrels.keys():
     in_aa_avg_noGly = sum(in_aa[1:]*aa_sizes[1:])/sum(in_aa[1:])
     out_aa_avg_noGly = sum(out_aa[1:]*aa_sizes[1:])/sum(out_aa[1:])
     perc_gly = in_aa[0]+out_aa[0]/sum(in_aa + out_aa)
-    
+    all_avgs[barrels[key][0]].append([in_aa_avg, out_aa_avg, in_aa_avg_noGly, out_aa_avg_noGly, perc_gly])
     barrels[key].extend([in_aa_avg, out_aa_avg, in_aa_avg_noGly, out_aa_avg_noGly, perc_gly])
 
 sc_sizes = np.array(list(barrels.values()))
+new_avgs = []
+for x in range(0,23):
+    all_avgs[x] = np.asarray(all_avgs[x])
+    if len(all_avgs[x]) > 0:
+        new_avgs.append(np.mean(all_avgs[x], axis = 0))
+new_avgs = np.asarray(new_avgs)
+barrel_sizes = [8,10,12,14,16,18,22]
+
+
 #r2_labels = [98.5, 111] #for aa_avg
 #r2_labels = [101, 111] #for aa_avg_group
-r2_labels = [107, 115] #for noGly
+r2_labels = [99, 109] #for noGly
+fig, ax1 = plt.subplots(nrows = 1, ncols= 1, figsize = (10,10))
+ax1.scatter(barrel_sizes, new_avgs[:,0], c = "blue", marker = "o", label = "Inward", alpha=0.8)
+these_stats = scipy.stats.linregress(barrel_sizes, new_avgs[:,0])
+print(these_stats)
+ax1.plot(np.arange(6,25,0.5), these_stats.slope*np.arange(6,25,0.5) + these_stats.intercept, c = "blue")
+ax1.annotate("R2=%0.4f"%these_stats.rvalue**2, xy = (18.5, r2_labels[0]), xycoords = "data", size = 16)
+#print(these_stats.pvalue)
+ax1.scatter(barrel_sizes, new_avgs[:,1], c = "red", marker = "o", label = "Outward", alpha=0.8)
+these_stats = scipy.stats.linregress(barrel_sizes, new_avgs[:,1])
+print(these_stats)
+ax1.plot(np.arange(6,25,0.5), these_stats.slope*np.arange(6,25,0.5) + these_stats.intercept, c = "red")
+ax1.annotate("R2=%0.4f"%these_stats.rvalue**2, xy = (18.5, r2_labels[1]), xycoords = "data", size = 16)
+ax1.set_xlim([6,24])
+ax1.set_ylabel("Average Side-chain Volume, A", fontsize = 18)
+ax1.set_xlabel("Barrel Size", fontsize = 18)
+ax1.set_title("Average Side Chain Volumes", fontsize = 26)
+plt.legend(fontsize = 18, loc = 4)
+plt.savefig("NetworkGraphs/SCVolumesBarrelAvg.png")
 
+#r2_labels = [98.5, 111] #for aa_avg
+#r2_labels = [101, 111] #for aa_avg_group
+"""r2_labels = [107, 115] #for noGly
 fig, ax1 = plt.subplots(nrows = 1, ncols= 1, figsize = (10,10))
 ax1.scatter(sc_sizes[:,0], sc_sizes[:,3], c = "blue", marker = "o", label = "Inward", alpha=0.8)
 these_stats = scipy.stats.linregress(sc_sizes[:,0], sc_sizes[:,3])
@@ -78,4 +109,4 @@ ax1.set_xlim([6,24])
 
 plt.tick_params(labelsize = 16)
 #plt.tight_layout()
-plt.savefig("NetworkGraphs/SCVolumesNoGly.png")
+plt.savefig("NetworkGraphs/SCVolumesNoGly.png")"""
