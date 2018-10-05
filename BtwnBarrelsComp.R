@@ -1,4 +1,6 @@
-setwd("/Users/meghan/Documents/PhD/GitProjects/v6_2018_Network")
+setwd("/Users/meghan/Documents/PhD/GitHubProjects/v6_2018_Network")
+library(kableExtra)
+library(magick)
 
 read_and_convert <- function(filename){
   new_matrix <- as.matrix(feather::read_feather(filename))

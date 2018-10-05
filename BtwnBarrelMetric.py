@@ -107,7 +107,7 @@ def graph_hist_of_pairs_of_lengths(lengths_by_lengths, graph_hist, labels, seq_i
     fig.text(0.5, 0.02, "Number of Strands in Conserved Segment", ha = "center", size = 24)
     fig.text(0.01, 0.5, "Occurence", va = "center", rotation = "vertical", size = 24)
     fig.suptitle(r"Length of Conserved Segments (E-value $\leq 10^{-5})$", size = 32)
-    plt.savefig("NetworkGraphs/TieredHistConservedSizes_%sID_E-3.png"%seq_id)
+    plt.savefig("NetworkGraphs/TieredHistConservedSizes_%sID.png"%seq_id)
     #plt.show()
 
 seq_IDs = ["50", "85", "25"]
@@ -119,7 +119,7 @@ with open("BarrelChars85.txt", "r") as barrel_data:
       barrels[line[0]] = int(line[1])
 #print(barrels)
 
-seq_IDs = ["25"]
+seq_IDs = ["85"]
 for value in seq_IDs:  
     #value = "85"
     #print(value)
@@ -138,8 +138,8 @@ for value in seq_IDs:
                 prototypical.append(line[0])
                 counts[barrels[ line[0] ]] += 1
     #print(len(prototypical))
-    with open("data/BtwnBarrels/ProtoLengths.txt", "a") as outData:
-        outData.write(value + "%\t" + "\t".join(map(str, counts)) + "\n")
+    #with open("data/BtwnBarrels/ProtoLengths.txt", "a") as outData:
+     #   outData.write(value + "%\t" + "\t".join(map(str, counts)) + "\n")
     
     avg_interaction = np.zeros([27,27])
     int_counts = np.zeros([27,27])
@@ -168,11 +168,11 @@ for value in seq_IDs:
         for y in range(27):
             test_e_values[x][y] = np.exp(np.mean(np.log(e_values[x][y])))
             
-    write_btwnbarrels_feather(e_values, value)
+    """write_btwnbarrels_feather(e_values, value)
     avg_interaction = pandas.DataFrame(avg_interaction)
     test_e_values = pandas.DataFrame(test_e_values)
     feather.write_dataframe(avg_interaction.copy(), "data/BtwnBarrels/BtwnBarrelMetric_%s.feather"%value)
-    feather.write_dataframe(test_e_values.copy(), "data/BtwnBarrels/BtwnBarrelMetricLog_%s.feather"%value)
+    feather.write_dataframe(test_e_values.copy(), "data/BtwnBarrels/BtwnBarrelMetricLog_%s.feather"%value)"""
     
     strand_lengths = [[] for x in range(0,23)]
     strand_IDs = [[] for x in range(0,23)]
@@ -207,7 +207,8 @@ for value in seq_IDs:
                     #if len(entry[4]) != len(entry[5]):
                      #   print(entry)
     #print(strand_IDs)
-    write_conslengths_feather(strand_lengths, strand_IDs, value)
+    
+    #write_conslengths_feather(strand_lengths, strand_IDs, value)
     if value == "85":
         graph_hist_of_pairs_of_lengths(lengths_by_lengths, [ [8, 10], [8, 12], [8,14], [8,16], [10, 12], [12,14], [12, 16], [14,22], [16,18]  ], ["A", "B", "C", "D", "E", "F", "G", "H", "J"] , value)
     
