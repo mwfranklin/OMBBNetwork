@@ -49,17 +49,21 @@ for filename in glob.glob("MSAs/*.a3m"):
                     print(len(a3m_list))"""
 
 print(len(all_hits), len(set(all_hits)))
-#all_hits_by_size = [set(x) for x in all_hits_by_size]
+all_hits_by_size = [set(x) for x in all_hits_by_size]
 #print([len(x) for x in all_hits_by_size])
 
-"""set_diffs = np.zeros([23,23])
+set_sizes = [len(x) for x in all_hits_by_size]
+set_diffs = np.zeros([23,23])
 for x in range(8,23):
     for y in range(x+1, 23):
         set_diffs[x][y] = len(set(all_hits_by_size[x]).intersection(all_hits_by_size[y]))
 print(set_diffs)
 with open("HomoIntersections.txt", "w+") as outData:
     for x in range(8,23):
-        outData.write(str(x) + "\t" + "\t".join(map(str, set_diffs[x])) + "\n")"""
+        outData.write(str(x) + "\t" + "\t".join(map(str, set_diffs[x])) + "\n")
+    outData.write("\n\n")
+    for x in range(8,23):
+        outData.write(str(x) + "\t" + "\t".join(map(str, set_diffs[x]/set_sizes[x] )) + "\n")
 
 #this section is a slimmed down version of BtwnBarrelMetric.py to get at the combinations possible between 
 allowed_barrels = []
@@ -74,7 +78,7 @@ with open("data/AllDataE1_v6_Numbered.txt", "r") as inData:
     for line in inData:
         if "IntNum" not in line:
             line = line.strip().split()
-            if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-4:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
+            if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-3:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
                 keep_piece = line[0:4] + line[6:8]
                 diff_barrel_lines[ all_barrels[line[1]]][ all_barrels[line[2]] ].append(keep_piece)
                 diff_barrel_lines[ all_barrels[line[2]]][ all_barrels[line[1]] ].append(keep_piece)
@@ -100,8 +104,8 @@ full_lengths = []
 full_counts = 0
 last_strand = []
 last_strand_counts = 0
-for x in range(8,9):
-    for y in range(x+1, 23):
+for x in range(16,17):
+    for y in range(x+1, 19):
         if len(diff_barrel_lines[x][y]) > 1:
             print(x, y, "total aligns:",len(diff_barrel_lines[x][y]))
             c_terminal_align = 0
@@ -153,6 +157,7 @@ for x in range(8,9):
                     non_hairpins.append(entry[0])
                 
             print(c_terminal_align, n_terminal_align, double_hairpin, len(non_hairpins))
+
 print(full_counts, last_strand_counts)
 full_lengths = sorted(set(full_lengths))
 last_strand = sorted(set(last_strand))
@@ -164,6 +169,7 @@ last_strand_homo = []
 for value in last_strand:
     last_strand_homo.extend(proto_hom[value])
 last_strand_homo = sorted(set(last_strand_homo))
+print(len(full_homo), len(last_strand_homo))
 
 c_term_barrels = [set(x) for x in c_term_barrels]
 n_term_barrels = [set(x) for x in n_term_barrels]
@@ -201,10 +207,10 @@ lg_rearr_16 = sorted(set(lg_rearr_16))
 sixteen_18_lg = set(lg_rearr_16 + proto_hom["5ldv_A"])
 print("lg rearrangements: ", len(sixteen_18_lg))
 
-loop_hairpin_16 = ["4aui_A", "6ehd_A", "3wi5_A", "3prn_A"]
-hairpin_loop_16 = ["3prn_A", "2fgr_A", "6ehb_A"]
-hairpin_loop_18 = ["3sy7_A", "3szd_A", "4frx_A", "5dl5_A", "4fsp_A", "4fso_A"]
-hairpin_loop_16_walts = ["3prn_A", "6ehb_A"]
+loop_hairpin_16 = ["4aui_A", "6ehd_A"]
+hairpin_loop_16 = ["1prn_A", "2fgr_A", "6ehb_A"]
+hairpin_loop_18 = ["3sy7_A", "3szd_A", "4frx_A", "5dl5_A", "5dl6_A", "4fsp_A", "4fso_A", "3t0s_A"]
+hairpin_loop_16_walts = ["1prn_A", "6ehb_A"]
 hairpin_loop_18_walts = ["3sys_A", "2y0l_A", "4frx_A", "3szv_A", "5dl7_A"]
 lh_16 = []
 for x in loop_hairpin_16:

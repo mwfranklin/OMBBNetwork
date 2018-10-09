@@ -27,6 +27,7 @@ with open("CompCodesE-3.txt", "r") as inData:
 #print(len(proto_barrels))
 
 proto_cons_barrels = []
+shift_types = np.zeros(3) #single, double, other shifts
 cons_barrels = np.zeros(27)
 strand_cons_patt = np.zeros([27,5]) #columns are for no first strand, no last strand, neither first or last, total repeats, no repeats
 with open("data/CollatedIntRpts.txt", "r") as inData:
@@ -38,11 +39,21 @@ with open("data/CollatedIntRpts.txt", "r") as inData:
                     print(line, len(line))
                     proto_cons_barrels.append(line[1])
                     strand_cons_patt[ barrels[line[1]] ][3] += 1
-                    if len(line) == 11:
+                    if len(line) >= 11:
+                        strands1 = [int(x) for x in line[10].split(",")]
+                        strands2 = [int(x) for x in line[11].split(",")]
                         strands = sorted(set([int(x) for x in line[10].split(",")] + [int(x) for x in line[11].split(",")]))
-                        #print(strands)
+                        print(strands)
+                        
+                        if strands2[0] - strands1[0] == 2:
+                            shift_types[0] += 1
+                        elif strands2[0] - strands1[0] == 4:
+                            shift_types[1] += 1
+                        else:
+                            shift_types[2] += 1
+                        
                         if strands[0] != 0:
-                            if strands[-1] != barrels[line[0]] - 1:
+                            if strands[-1] != barrels[line[1]] - 1:
                                 strand_cons_patt[ barrels[line[1]] ] [2] += 1
                             else:
                                 strand_cons_patt[ barrels[line[1]] ][0] += 1
@@ -54,6 +65,8 @@ with open("data/CollatedIntRpts.txt", "r") as inData:
                     
                 cons_barrels[barrels[line[1]]] += 1
                 #if barrels[line[0]] == 18: print(line)
+#print(len(proto_cons_barrels))
+shift_types /= len(proto_cons_barrels)
 
 for pdb in set(proto_barrels).difference(proto_cons_barrels):
     strand_cons_patt[ barrels[pdb] ][4] += 1
@@ -66,7 +79,7 @@ with open("data/CollatedIntRptsPatterns.txt", "w+") as outData:
         
 #print(proto_sizes)
 #print(cons_barrels, sum(cons_barrels))
-print(sorted(proto_cons_barrels))
+#print(sorted(proto_cons_barrels))
 
 ind = np.arange(0,27)
 fig, ax1 = plt.subplots(nrows = 1, ncols = 1, figsize = (9,6))
@@ -87,3 +100,21 @@ plt.tight_layout()
 plt.savefig("NetworkGraphs/ConsProportion_1e3.png", dpi = 300, bbox_inches = "tight")
 #plt.show()
 
+ind = np.arange(0,3)
+fig, ax1 = plt.subplots(nrows = 1, ncols = 1, figsize = (9,6))
+#plt.title("Internal Repeats of the Prototypical Barrels", size = 22)
+ax1.set_xlabel("Internal Repeat Type", size = 46)
+ax1.set_ylabel(r"Proportion", size = 46)
+width = 0.5
+ax1.bar(ind, shift_types, label = "Total Number of Barrels")
+#ax1.bar(ind, cons_barrels, color = "red", label = "Barrels with Internal Repeat")
+#ax1.set_xlim([7,23])
+ax1.set_xticks(np.arange(0,3))
+ax1.set_xticklabels(["Single", "Double", "Other"])
+#ax1.legend(loc = 0, scatterpoints = 1, fontsize = 18)
+#ax1.set_ylim([0,20])
+plt.tick_params(labelsize = 26)
+plt.tight_layout()
+#fig.subplots_adjust(wspace = 0.15)
+plt.savefig("NetworkGraphs/IntRptTypes_1e3.png", dpi = 300, bbox_inches = "tight")
+#plt.show()

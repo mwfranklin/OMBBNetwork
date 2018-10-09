@@ -149,7 +149,7 @@ for value in seq_IDs:
         for line in inData:
             if "IntNum" not in line:
                 line = line.strip().split()
-                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-5:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
+                if line[1] in prototypical and line[2] in prototypical and float(line[3]) <= 1e-3:# and line[-1] == "1": #add line[-1] == "1" for min e-value calcs; change float(line[3]) to 1e-5 for tree diagram
                     #print(line[1], line[2])
                     #print(barrels[line[1]], barrels[line[2]])
                     e_values[ barrels[line[1]]][ barrels[line[2]] ].append(float(line[3]))
@@ -209,10 +209,10 @@ for value in seq_IDs:
     #print(strand_IDs)
     
     #write_conslengths_feather(strand_lengths, strand_IDs, value)
-    if value == "85":
-        graph_hist_of_pairs_of_lengths(lengths_by_lengths, [ [8, 10], [8, 12], [8,14], [8,16], [10, 12], [12,14], [12, 16], [14,22], [16,18]  ], ["A", "B", "C", "D", "E", "F", "G", "H", "J"] , value)
+    #if value == "85":
+     #   graph_hist_of_pairs_of_lengths(lengths_by_lengths, [ [8, 10], [8, 12], [8,14], [8,16], [10, 12], [12,14], [12, 16], [14,22], [16,18]  ], ["A", "B", "C", "D", "E", "F", "G", "H", "J"] , value)
     
-"""used_strands = [np.zeros(x) for x in range(27) ]
+used_strands = [np.zeros(x) for x in range(27) ]
 for x in range(8,23):
     for y in range(x+1, 23):
         if len(e_values[x][y]) > 1:
@@ -312,4 +312,3 @@ for entry in diff_barrel_lines[16][18]:
         non_hairpins.append(entry[0])
 print(c_term_align, c_term_lengths, n_term_align, n_term_lengths, double_hairpin)
 print(sorted(non_hairpins))          
-"""
