@@ -1,5 +1,6 @@
 import os
 import glob
+import math
 from collections import Counter
 import PDBmanip as pdbm
 
@@ -84,23 +85,44 @@ for x in barrels.keys():
     longest = x
     orig_strands = define_strands("../InOut/InOut_%s.txt"%x[0:4].upper(), chainID = x[-1])
     #print(orig_strands)
+    avg_long = []
+    avg_short = []
+    orig_length = sum([len(x) for x in orig_strands])
+    longest_length = sum([len(x) for x in orig_strands])
+    shortest_length = sum([len(x) for x in orig_strands])
+    biggest_diff = []
     for entry in barrels[x]:
+        for a, b in zip(orig_strands, alt_strands[entry[0:4]] ):
+            #print(a, b)
+            biggest_diff.append( (len(a) - len(b)) )
+            if abs(len(a) - len(b)) > 8:
+                print(x, entry, a, b)
         if len(set(orig_strands) & set(alt_strands[entry[0:4]])) == len(orig_strands):
             continue
-        elif sum([len(x) for x in orig_strands]) < sum([len(x) for x in alt_strands[entry[0:4]]]):
+        elif longest_length < sum([len(x) for x in alt_strands[entry[0:4]]]):
             longest = entry
-        elif sum([len(x) for x in orig_strands]) > sum([len(x) for x in alt_strands[entry[0:4]]]):
+            longest_length = sum([len(x) for x in alt_strands[entry[0:4]]])
+            avg_long.append(sum([len(x) for x in alt_strands[entry[0:4]]]))
+            
+        elif shortest_length > sum([len(x) for x in alt_strands[entry[0:4]]]):
             shortest = entry
-        best_structures[x] = [longest, shortest]
-    if len(orig_strands) == 16 or len(orig_strands) == 18:
+            shortest_length = sum([len(x) for x in alt_strands[entry[0:4]]])
+            avg_short.append(sum([len(x) for x in alt_strands[entry[0:4]]]))
+    best_structures[x] = [longest, shortest, longest_length/orig_length, shortest_length/orig_length, np.min(biggest_diff), np.max(biggest_diff)]
+    try:
+        print(x, barrels[x], avg_long, avg_short)
+        best_structures[x].extend( [np.mean(avg_long)/sum([len(x) for x in orig_strands]), np.mean(avg_short)/sum([len(x) for x in orig_strands]) ])
+    except KeyError:
+        print(x, barrels[x], "No other structures")
+    """if len(orig_strands) == 16 or len(orig_strands) == 18:
         try:
             print(x, len(orig_strands), best_structures[x])
         except:
-            continue
+            continue"""
 with open("BestAltStructures.txt", "w+") as outData:
-    outData.write("Orig\tLong\tShort\n")
+    outData.write("Orig\tLong\tShort\tLong%\tShort%\tSmallest\tLargest\tAvgLong\tAvgShort\n")
     for x in best_structures.keys():
-        outData.write(x + "\t" + "\t".join(best_structures[x]) + "\n")
+        outData.write(x + "\t" + "\t".join(map(str, best_structures[x])) + "\n")
 
 
 aligned_res_ids = {}
