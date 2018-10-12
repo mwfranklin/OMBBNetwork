@@ -97,6 +97,11 @@ for x in barrels.keys():
             print(x, len(orig_strands), best_structures[x])
         except:
             continue
+with open("BestAltStructures.txt", "w+") as outData:
+    outData.write("Orig\tLong\tShort\n")
+    for x in best_structures.keys():
+        outData.write(x + "\t" + "\t".join(best_structures[x]) + "\n")
+
 
 aligned_res_ids = {}
 for x in best_structures.keys():

@@ -1,5 +1,5 @@
 from pymol import cmd, stored
-cmd.load("/Users/meghan/Documents/PhD/GitProjects/v6_2018_Network/CompStrDefns/CompPDBs/3POR.pdb")
+cmd.load("/Users/meghan/Documents/PhD/GitHubProjects/v6_2018_Network/CompStrDefns/CompPDBs/3POR.pdb")
 cmd.hide("everything", "all")
 cmd.color("wheat","all")
 cmd.select("Astrand0", "resi 3-14 & chain A ")
