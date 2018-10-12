@@ -21,18 +21,19 @@ with open("BarrelChars85.txt", "r") as barrel_data:
 
 
 count = 0
-with open("data/AllDataE1_v6_Numbered.txt", "r") as inData, open("data/ProtosOnlyE-3_v6_Numbered.txt", "w+") as outData:
+with open("data/AllDataE1_v6_Numbered.txt", "r") as inData:#, open("data/ProtosOnlyE-3_v6_Numbered.txt", "w+") as outData:
     for line in inData:
         if "Dom1" in line:
-            outData.write(line)
+            #outData.write(line)
+            continue
         else:
             line = line.split(" ")
             pdb1 = line[1]
             pdb2 = line[2]
-            
+
             if float(line[3]) <= 1e-3:
                 if pdb1 in protos and pdb2 in protos:
-                    outData.write(" ".join(line))
+                    #utData.write(" ".join(line))
                     count += 1
                 else:
                     continue
