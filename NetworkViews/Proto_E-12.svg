@@ -8,7 +8,7 @@
 	.st1{fill:none;stroke:#848484;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st2{fill:#2B3D93;}
 	.st3{font-family:'Helvetica';}
-	.st4{font-size:12.9937px;}
+	.st4{font-size:12.9933px;}
 	.st5{fill:#531972;}
 	.st6{fill:#BEC422;}
 	.st7{fill:#BE0A1E;}
@@ -37,6 +37,7 @@
 	.st30{fill:#662B83;stroke:#FFFFFF;stroke-miterlimit:10;}
 	.st31{font-size:48px;}
 	.st32{font-size:27.984px;}
+	.st33{font-size:60px;}
 </style>
 <title></title>
 <desc>
@@ -3879,7 +3880,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1354.3959605119921, 224.7395100511727)">
-		<text transform="matrix(1.3852 0 0 1.3852 6.765209e-04 -3.590392e-04)" class="st3 st4">2wjr_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 6.765209e-04 3.173518e-04)" class="st3 st4">2wjr_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3888,7 +3889,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1027.6054028401718, 263.73930641366695)">
-		<text transform="matrix(1.3852 0 0 1.3852 1.686540e-04 -8.475991e-05)" class="st3 st4">4rlc_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 1.686540e-04 5.916311e-04)" class="st3 st4">4rlc_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3897,7 +3898,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 948.537203036177, 209.42077444420707)">
-		<text transform="matrix(1.3852 0 0 1.3852 -1.684809e-04 1.696064e-04)" class="st3 st4">1qjp_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 -1.684809e-04 8.459974e-04)" class="st3 st4">1qjp_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3906,7 +3907,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 857.3475190326524, 244.7422853917183)">
-		<text transform="matrix(1.3852 0 0 1.3852 1.693467e-04 -1.267503e-04)" class="st3 st4">2maf_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 1.693467e-04 5.496407e-04)" class="st3 st4">2maf_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3915,7 +3916,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 651.7859248490943, 217.92678192834262)">
-		<text transform="matrix(1.3852 0 0 1.3852 2.532408e-04 -4.181720e-05)" class="st3 st4">2x9k_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 2.532408e-04 6.345738e-04)" class="st3 st4">2x9k_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3924,7 +3925,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1465.2335980687687, 193.0221081273731)">
-		<text transform="matrix(1.3852 0 0 1.3852 1.014002e-03 4.861357e-04)" class="st3 st4">4fqe_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 1.014002e-03 1.162527e-03)" class="st3 st4">4fqe_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3960,7 +3961,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 574.2827213275891, 265.65110541412355)">
-		<text transform="matrix(1.3852 0 0 1.3852 6.761745e-04 3.798179e-04)" class="st3 st4">3bs0_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 6.761745e-04 1.056209e-03)" class="st3 st4">3bs0_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3987,7 +3988,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 783.2026973390639, 302.07291418576824)">
-		<text transform="matrix(1.3852 0 0 1.3852 5.915012e-04 4.657033e-04)" class="st3 st4">2f1v_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 5.915012e-04 1.142094e-03)" class="st3 st4">2f1v_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -3996,7 +3997,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 441.73468727189646, 281.75684438122755)">
-		<text transform="matrix(1.3852 0 0 1.3852 -4.225009e-04 0)" class="st3 st4">4y25_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 -4.225009e-04 6.763044e-04)" class="st3 st4">4y25_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4005,7 +4006,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1092.1509579415622, 176.5755036378611)">
-		<text transform="matrix(1.3852 0 0 1.3852 5.072608e-04 -4.220680e-04)" class="st3 st4">1p4t_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 5.072608e-04 2.543230e-04)" class="st3 st4">1p4t_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4014,7 +4015,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 777.6204998104894, 107.34544616427544)">
-		<text transform="matrix(1.3852 0 0 1.3852 8.460407e-04 3.589526e-04)" class="st3 st4">2qom_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 8.460407e-04 1.035344e-03)" class="st3 st4">2qom_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4023,7 +4024,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 690.4081420105189, 70.16029469308799)">
-		<text transform="matrix(1.3852 0 0 1.3852 8.467333e-05 -1.908180e-04)" class="st3 st4">4mee_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 8.467333e-05 4.855730e-04)" class="st3 st4">4mee_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4032,7 +4033,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 922.4633533334647, 112.87201690699882)">
-		<text transform="matrix(1.3852 0 0 1.3852 6.762611e-04 7.385107e-05)" class="st3 st4">3qq2_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 6.762611e-04 7.502421e-04)" class="st3 st4">3qq2_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4041,7 +4042,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 708.9936129388109, 155.64734091526688)">
-		<text transform="matrix(1.3852 0 0 1.3852 7.613673e-04 1.689138e-04)" class="st3 st4">1uyn_X</text>
+		<text transform="matrix(1.3852 0 0 1.3852 7.613673e-04 8.453047e-04)" class="st3 st4">1uyn_X</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4050,7 +4051,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1047.2275367526245, 65.03373010905662)">
-		<text transform="matrix(1.3852 0 0 1.3852 0 -5.346194e-05)" class="st3 st4">1i78_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 0 6.229291e-04)" class="st3 st4">1i78_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4059,7 +4060,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 807.2356718677347, 176.2654917049915)">
-		<text transform="matrix(1.3852 0 0 1.3852 9.296751e-04 1.897791e-04)" class="st3 st4">3kvn_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 9.296751e-04 8.661701e-04)" class="st3 st4">3kvn_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4068,7 +4069,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 787.1951584344514, 32.41242045319049)">
-		<text transform="matrix(1.3852 0 0 1.3852 2.541931e-04 -4.330634e-04)" class="st3 st4">3aeh_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 2.541931e-04 2.433276e-04)" class="st3 st4">3aeh_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4077,7 +4078,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1172.1583747176323, 81.68801527588252)">
-		<text transform="matrix(1.3852 0 0 1.3852 -1.688272e-04 -4.255311e-05)" class="st3 st4">2vdf_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 -1.688272e-04 6.338379e-04)" class="st3 st4">2vdf_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4086,7 +4087,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1125.209695161711, 27.283961253878573)">
-		<text transform="matrix(1.3852 0 0 1.3852 3.379141e-04 3.043218e-04)" class="st3 st4">2x55_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 3.379141e-04 9.807128e-04)" class="st3 st4">2x55_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4095,7 +4096,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1265.685777150348, 166.54281075464004)">
-		<text transform="matrix(1.3852 0 0 1.3852 -3.381738e-04 2.115968e-04)" class="st3 st4">4d5b_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 -3.381738e-04 8.879877e-04)" class="st3 st4">4d5b_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4149,7 +4150,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1613.723255550497, 297.352204834347)">
-		<text transform="matrix(1.3852 0 0 1.3852 5.067413e-04 4.655302e-04)" class="st3 st4">1prn_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 5.067413e-04 1.141921e-03)" class="st3 st4">1prn_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4167,7 +4168,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1408.449312433417, 296.63577589340616)">
-		<text transform="matrix(1.3852 0 0 1.3852 -1.693467e-04 -4.268298e-05)" class="st3 st4">2por_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 -1.693467e-04 6.337080e-04)" class="st3 st4">2por_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4176,7 +4177,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1545.112979608138, 287.91953220436903)">
-		<text transform="matrix(1.3852 0 0 1.3852 3.383470e-04 5.497706e-04)" class="st3 st4">2fgr_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 3.383470e-04 1.226162e-03)" class="st3 st4">2fgr_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4194,7 +4195,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1150.1117445900609, 296.6690418128656)">
-		<text transform="matrix(1.3852 0 0 1.3852 -5.068279e-04 -1.270100e-04)" class="st3 st4">3qra_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 -5.068279e-04 5.493810e-04)" class="st3 st4">3qra_A</text>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1149.6792325610627, 439.9124875525597)">
 		<g>
@@ -4212,7 +4213,7 @@
 		</g>
 	</g>
 	<g transform="matrix(0.7218924826798906, 0, 0, 0.7218924826798906, 1473.4966982496198, 285.51160836535195)">
-		<text transform="matrix(1.3852 0 0 1.3852 5.074340e-04 1.686540e-04)" class="st3 st4">5mdo_A</text>
+		<text transform="matrix(1.3852 0 0 1.3852 5.074340e-04 8.450450e-04)" class="st3 st4">5mdo_A</text>
 	</g>
 </g>
 <rect x="1364.2" y="63.4" class="st11" width="467" height="48"/>
@@ -4222,98 +4223,98 @@
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_1_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_1_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_2_">
 						<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 					</clipPath>
 					<g class="st12">
-						<text transform="matrix(1 0 0 1 362.073 184.7725)" class="st13 st14">8</text>
+						<text transform="matrix(1 0 0 1 362.0698 168.7915)" class="st13 st14">8</text>
 					</g>
 				</g>
 			</g>
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_3_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_3_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_4_">
 						<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
 					</clipPath>
 					<g class="st15">
-						<text transform="matrix(1 0 0 1 355.4011 213.5723)" class="st13 st14">10</text>
+						<text transform="matrix(1 0 0 1 355.3979 197.5912)" class="st13 st14">10</text>
 					</g>
 				</g>
 			</g>
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_5_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_5_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_6_">
 						<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
 					</clipPath>
 					<g class="st16">
-						<text transform="matrix(1 0 0 1 355.4011 242.3721)" class="st13 st14">12</text>
+						<text transform="matrix(1 0 0 1 355.3979 226.391)" class="st13 st14">12</text>
 					</g>
 				</g>
 			</g>
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_7_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_7_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_8_">
 						<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
 					</clipPath>
 					<g class="st17">
-						<text transform="matrix(1 0 0 1 355.4011 271.1729)" class="st13 st14">14</text>
+						<text transform="matrix(1 0 0 1 355.3979 255.1919)" class="st13 st14">14</text>
 					</g>
 				</g>
 			</g>
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_9_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_9_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_10_">
 						<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
 					</clipPath>
 					<g class="st18">
-						<text transform="matrix(1 0 0 1 355.4011 299.9727)" class="st13 st14">16</text>
+						<text transform="matrix(1 0 0 1 355.3979 283.9916)" class="st13 st14">16</text>
 					</g>
 				</g>
 			</g>
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_11_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_11_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_12_">
 						<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
 					</clipPath>
 					<g class="st19">
-						<text transform="matrix(1 0 0 1 355.4011 328.7725)" class="st13 st14">18</text>
+						<text transform="matrix(1 0 0 1 355.3979 312.7914)" class="st13 st14">18</text>
 					</g>
 				</g>
 			</g>
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_13_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_13_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_14_">
 						<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
 					</clipPath>
 					<g class="st20">
-						<text transform="matrix(1 0 0 1 355.4011 357.5723)" class="st13 st14">22</text>
+						<text transform="matrix(1 0 0 1 355.3979 341.5912)" class="st13 st14">22</text>
 					</g>
 				</g>
 			</g>
 			<g>
 				<g>
 					<defs>
-						<rect id="SVGID_15_" x="240.8" y="136.2" width="215" height="236.4"/>
+						<rect id="SVGID_15_" x="240.8" y="120.2" width="215" height="236.4"/>
 					</defs>
 					<clipPath id="SVGID_16_">
 						<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
@@ -4322,91 +4323,91 @@
 						<g>
 							<g>
 								<defs>
-									<rect id="SVGID_17_" x="240.8" y="136.2" width="215" height="236.4"/>
+									<rect id="SVGID_17_" x="240.8" y="120.2" width="215" height="236.4"/>
 								</defs>
 								<clipPath id="SVGID_18_">
 									<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
 								</clipPath>
 								<g class="st22">
-									<text transform="matrix(1 0 0 1 240.7468 156.7725)" class="st13 st14">Strands Per Barrel</text>
+									<text transform="matrix(1 0 0 1 240.7436 140.7915)" class="st13 st14">Strands Per Barrel</text>
 								</g>
 							</g>
 							<g>
 								<g>
 									<defs>
-										<rect id="SVGID_19_" x="240.8" y="136.2" width="215" height="236.4"/>
+										<rect id="SVGID_19_" x="240.8" y="120.2" width="215" height="236.4"/>
 									</defs>
 									<clipPath id="SVGID_20_">
 										<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
 									</clipPath>
-									<rect x="299.8" y="163.6" class="st23" width="51" height="24"/>
+									<rect x="299.8" y="147.6" class="st23" width="51" height="24"/>
 								</g>
 								<g>
 									<g>
 										<defs>
-											<rect id="SVGID_21_" x="240.8" y="136.2" width="215" height="236.4"/>
+											<rect id="SVGID_21_" x="240.8" y="120.2" width="215" height="236.4"/>
 										</defs>
 										<clipPath id="SVGID_22_">
 											<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
 										</clipPath>
-										<rect x="299.8" y="192.6" class="st24" width="51" height="24"/>
+										<rect x="299.8" y="176.6" class="st24" width="51" height="24"/>
 									</g>
 									<g>
 										<g>
 											<defs>
-												<rect id="SVGID_23_" x="240.8" y="136.2" width="215" height="236.4"/>
+												<rect id="SVGID_23_" x="240.8" y="120.2" width="215" height="236.4"/>
 											</defs>
 											<clipPath id="SVGID_24_">
 												<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
 											</clipPath>
-											<rect x="299.8" y="221.6" class="st25" width="51" height="24"/>
+											<rect x="299.8" y="205.6" class="st25" width="51" height="24"/>
 										</g>
 										<g>
 											<g>
 												<defs>
-													<rect id="SVGID_25_" x="240.8" y="136.2" width="215" height="236.4"/>
+													<rect id="SVGID_25_" x="240.8" y="120.2" width="215" height="236.4"/>
 												</defs>
 												<clipPath id="SVGID_26_">
 													<use xlink:href="#SVGID_25_"  style="overflow:visible;"/>
 												</clipPath>
-												<rect x="299.8" y="250.3" class="st26" width="51" height="24"/>
+												<rect x="299.8" y="234.3" class="st26" width="51" height="24"/>
 											</g>
 											<g>
 												<g>
 													<defs>
-														<rect id="SVGID_27_" x="240.8" y="136.2" width="215" height="236.4"/>
+														<rect id="SVGID_27_" x="240.8" y="120.2" width="215" height="236.4"/>
 													</defs>
 													<clipPath id="SVGID_28_">
 														<use xlink:href="#SVGID_27_"  style="overflow:visible;"/>
 													</clipPath>
-													<rect x="300.1" y="278.9" class="st27" width="51" height="24"/>
+													<rect x="300.1" y="262.9" class="st27" width="51" height="24"/>
 												</g>
 												<g id="Artwork_2">
 													<g>
 														<defs>
-															<rect id="SVGID_29_" x="240.8" y="136.2" width="215" height="236.4"/>
+															<rect id="SVGID_29_" x="240.8" y="120.2" width="215" height="236.4"/>
 														</defs>
 														<clipPath id="SVGID_30_">
 															<use xlink:href="#SVGID_29_"  style="overflow:visible;"/>
 														</clipPath>
-														<rect x="300.1" y="308.3" class="st28" width="51" height="24"/>
+														<rect x="300.1" y="292.3" class="st28" width="51" height="24"/>
 													</g>
 													<g>
 														<g>
 															<defs>
-																<rect id="SVGID_31_" x="240.8" y="136.2" width="215" height="236.4"/>
+																<rect id="SVGID_31_" x="240.8" y="120.2" width="215" height="236.4"/>
 															</defs>
 															<clipPath id="SVGID_32_">
 																<use xlink:href="#SVGID_31_"  style="overflow:visible;"/>
 															</clipPath>
-															<rect x="300.1" y="335.9" class="st29" width="51" height="24"/>
+															<rect x="300.1" y="319.9" class="st29" width="51" height="24"/>
 														</g>
 													</g>
 												</g>
-												<rect x="299.2" y="335.4" class="st30" width="52" height="24"/>
+												<rect x="299.2" y="319.4" class="st30" width="52" height="24"/>
 											</g>
-											<text transform="matrix(1 0 0 1 1299.2468 118.7501)" class="st13 st31">E-value ≤ 10</text>
-											<text transform="matrix(1 0 0 1 1568.4023 102.7656)" class="st13 st32">-12</text>
+											<text transform="matrix(1 0 0 1 1299.2437 102.769)" class="st13 st31">E-value ≤ 10</text>
+											<text transform="matrix(1 0 0 1 1568.3992 86.7845)" class="st13 st32">-3</text>
 										</g>
 									</g>
 								</g>
@@ -4417,7 +4418,8 @@
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 1299.5 118.2642)" class="st13 st31">E-value ≤ 10</text>
-	<text transform="matrix(0.583 0 0 0.583 1568.6562 102.2798)" class="st13 st31">-12</text>
+	<rect x="1291" y="58" class="st11" width="426" height="61"/>
+	<text transform="matrix(1 0 0 1 1290.9968 100.9627)" class="st13 st33">E-value ≤ 10</text>
+	<text transform="matrix(0.583 0 0 0.583 1627.4421 80.9827)" class="st13 st33">-12</text>
 </g>
 </svg>

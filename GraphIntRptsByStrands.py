@@ -28,6 +28,7 @@ with open("CompCodesE-3.txt", "r") as inData:
 
 proto_cons_barrels = []
 shift_types = np.zeros(3) #single, double, other shifts
+shifts_by_size = np.zeros([27,3])
 cons_barrels = np.zeros(27)
 strand_cons_patt = np.zeros([27,5]) #columns are for no first strand, no last strand, neither first or last, total repeats, no repeats
 with open("data/CollatedIntRpts.txt", "r") as inData:
@@ -47,10 +48,13 @@ with open("data/CollatedIntRpts.txt", "r") as inData:
                         
                         if strands2[0] - strands1[0] == 2:
                             shift_types[0] += 1
+                            shifts_by_size[ barrels[line[1]] ][0] += 1
                         elif strands2[0] - strands1[0] == 4:
                             shift_types[1] += 1
+                            shifts_by_size[ barrels[line[1]] ][1] += 1
                         else:
                             shift_types[2] += 1
+                            shifts_by_size[ barrels[line[1]] ][2] += 1
                         
                         if strands[0] != 0:
                             if strands[-1] != barrels[line[1]] - 1:
@@ -88,16 +92,20 @@ ax1.set_xlabel("Total Strands per Barrel", size = 46)
 ax1.set_ylabel(r"Count", size = 46)
 width = 0.5
 ax1.bar(ind, proto_sizes, label = "Total Number of Barrels")
-ax1.bar(ind, cons_barrels, color = "red", label = "Barrels with Internal Repeat")
+#ax1.bar(ind, cons_barrels, color = "red", label = "Barrels with Internal Repeat")
+ax1.bar(ind, shifts_by_size[:,0], color = "darkolivegreen", label = "Single Hairpin Shifts")
+ax1.bar(ind, shifts_by_size[:,1], bottom = shifts_by_size[:,0], color = "darkgoldenrod", label = "Double Hairpin Shifts")
+ax1.bar(ind, shifts_by_size[:,2], bottom = shifts_by_size[:,0], color = "indigo", label = "Other Internal Repeat")
 ax1.set_xlim([7,23])
 ax1.set_xticks(np.arange(8,23,2))
 ax1.set_xticklabels(np.arange(8,23,2))
 ax1.legend(loc = 0, scatterpoints = 1, fontsize = 18)
-#ax1.set_ylim([0,20])
+ax1.set_ylim([0,30])
 plt.tick_params(labelsize = 26)
 plt.tight_layout()
 #fig.subplots_adjust(wspace = 0.15)
-plt.savefig("NetworkGraphs/ConsProportion_1e3.png", dpi = 300, bbox_inches = "tight")
+#plt.savefig("NetworkGraphs/ConsProportion_1e3.png", dpi = 300, bbox_inches = "tight")
+plt.savefig("NetworkGraphs/ConsProportionByType_1e3.png", dpi = 300, bbox_inches = "tight")
 #plt.show()
 
 ind = np.arange(0,3)
@@ -106,7 +114,8 @@ fig, ax1 = plt.subplots(nrows = 1, ncols = 1, figsize = (9,6))
 ax1.set_xlabel("Internal Repeat Type", size = 46)
 ax1.set_ylabel(r"Proportion", size = 46)
 width = 0.5
-ax1.bar(ind, shift_types, label = "Total Number of Barrels")
+bar_list = ax1.bar(ind, shift_types, label = "Total Number of Barrels", color = ["darkolivegreen", "darkgoldenrod", "indigo"])
+#bar_list[0].set_color("red")
 #ax1.bar(ind, cons_barrels, color = "red", label = "Barrels with Internal Repeat")
 #ax1.set_xlim([7,23])
 ax1.set_xticks(np.arange(0,3))
