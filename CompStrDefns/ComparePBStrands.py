@@ -1,6 +1,7 @@
 import os
 import glob
 import math
+import numpy as np
 from collections import Counter
 import PDBmanip as pdbm
 
@@ -29,11 +30,11 @@ def get_strands(pdb_id, aligned_res, res_pair_dict):
     elif os.path.isfile("../InOut/InOut_%s.txt"%pdb_id[0:4].upper()):
         filename = "../InOut/InOut_%s.txt"%pdb_id[0:4].upper()
     else:
-        print("No InOut file", pdb_id)
+        #print("No InOut file", pdb_id)
         return aligned_res
     
     if pdb_id in res_pair_dict.keys():
-        print("checking aligned res", pdb_id)
+        #print("checking aligned res", pdb_id)
         #print(aligned_res)
         new_res = [i for i, x in enumerate(res_pair_dict[pdb_id][0]) if x in aligned_res]
         aligned_res = [res_pair_dict[pdb_id][1][x] for x in new_res]
@@ -95,8 +96,8 @@ for x in barrels.keys():
         for a, b in zip(orig_strands, alt_strands[entry[0:4]] ):
             #print(a, b)
             biggest_diff.append( (len(a) - len(b)) )
-            if abs(len(a) - len(b)) > 8:
-                print(x, entry, a, b)
+            #if abs(len(a) - len(b)) > 8:
+                #print(x, entry, a, b)
         if len(set(orig_strands) & set(alt_strands[entry[0:4]])) == len(orig_strands):
             continue
         elif longest_length < sum([len(x) for x in alt_strands[entry[0:4]]]):
@@ -110,20 +111,20 @@ for x in barrels.keys():
             avg_short.append(sum([len(x) for x in alt_strands[entry[0:4]]]))
     best_structures[x] = [longest, shortest, longest_length/orig_length, shortest_length/orig_length, np.min(biggest_diff), np.max(biggest_diff)]
     try:
-        print(x, barrels[x], avg_long, avg_short)
+        #print(x, barrels[x], avg_long, avg_short)
         best_structures[x].extend( [np.mean(avg_long)/sum([len(x) for x in orig_strands]), np.mean(avg_short)/sum([len(x) for x in orig_strands]) ])
     except KeyError:
-        print(x, barrels[x], "No other structures")
+        #print(x, barrels[x], "No other structures")
+        continue
     """if len(orig_strands) == 16 or len(orig_strands) == 18:
         try:
             print(x, len(orig_strands), best_structures[x])
         except:
             continue"""
-with open("BestAltStructures.txt", "w+") as outData:
+"""with open("BestAltStructures.txt", "w+") as outData:
     outData.write("Orig\tLong\tShort\tLong%\tShort%\tSmallest\tLargest\tAvgLong\tAvgShort\n")
     for x in best_structures.keys():
-        outData.write(x + "\t" + "\t".join(map(str, best_structures[x])) + "\n")
-
+        outData.write(x + "\t" + "\t".join(map(str, best_structures[x])) + "\n")"""
 
 aligned_res_ids = {}
 for x in best_structures.keys():
@@ -138,7 +139,7 @@ for x in best_structures.keys():
             x_res.append(line[22:26].strip())
         elif "ENDMDL" in line: break
         
-    for entry in best_structures[x]:
+    for entry in best_structures[x][0:2]:
         if entry != x:
             #print(x, entry)
             new_x_res = x_res[:]
@@ -154,7 +155,7 @@ for x in best_structures.keys():
                     entry_res.append(line[22:26].strip())
                 elif "ENDMDL" in line: break
                 elif "TER" in line[0:3]: break
-            seq_x_new, seq_entry = pdbm.align_seq(seq_x, seq_entry)
+            seq_x_new, seq_entry = pdbm.align_seq(seq_x, seq_entry, clustalWpath = "/Users/meghan/ClustalW2/clustalw2")
             #print("".join(seq_x_new))
             #print("".join(seq_entry))
             
@@ -170,9 +171,8 @@ for x in best_structures.keys():
             else:
                 #print(x, entry, len(new_x_res), len(entry_res))
                 if len(new_x_res) != len(entry_res):
-                    print(x, entry, len(new_x_res), len(entry_res))
-                    #print(new_x_res)
-                    #print(entry_res)
+                    #print(x, entry, len(new_x_res), len(entry_res))
+                    continue
                 k = len(seq_x_new) - 1
                 while k > 0:
                     if new_x_res[k] == "-" and entry_res[k] == "-":
@@ -183,12 +183,15 @@ for x in best_structures.keys():
                 #print(entry_res)
                 aligned_res_ids[entry] = [new_x_res, entry_res]
 
-with open("../data/AllDataE1_v6_Numbered.txt", "r") as inData, open("../data/AllDataE1_v6_Numbered_Longest.txt", "w+") as longest_out, open("../data/AllDataE1_v6_Numbered_Shortest.txt", "w+") as shortest_out:
+count = 0
+num_edges = 0
+with open("../data/ProtosOnlyE-3_v6_Numbered.txt", "r") as inData, open("../data/ProtosOnlyE-3_v6_NumberedLongest.txt", "w+") as longest_out, open("../data/ProtosOnlyE-3_v6_Numbered_Shortest.txt", "w+") as shortest_out:
     for line in inData:
         if "Dom1" in line:
             longest_out.write(line)
             shortest_out.write(line)
         else:
+            num_edges += 1
             line = line.split(" ")
             pdb1 = line[1]
             pdb2 = line[2]
@@ -201,7 +204,7 @@ with open("../data/AllDataE1_v6_Numbered.txt", "r") as inData, open("../data/All
             count2 = 0
             res1 = []
             res2 = []
-            print(pdb1, pdb2)#, len(seq1), len(seq2))
+            #print(pdb1, pdb2)#, len(seq1), len(seq2))
             for x in range(0, len(seq1)):
                 if seq1[x] == "-": 
                     #print("GAP", seq1[x], seq2[x], count2 + start2)
@@ -224,8 +227,10 @@ with open("../data/AllDataE1_v6_Numbered.txt", "r") as inData, open("../data/All
                 strands1_long = get_strands(best_structures[pdb1][0], res1, aligned_res_ids)
                 if len(set(strands1) & set(strands1_short)) != len(strands1):
                     print("short", best_structures[pdb1][1], line[0:3], strands1, strands1_short)
+                    count += 1
                 if len(set(strands1) & set(strands1_long)) != len(strands1):
                     print("long", best_structures[pdb1][0], line[0:3], strands1, strands1_long)
+                    count += 1
             else:
                 strands1_short = strands1
                 strands1_long = strands1
@@ -235,13 +240,14 @@ with open("../data/AllDataE1_v6_Numbered.txt", "r") as inData, open("../data/All
                 strands2_long = get_strands(best_structures[pdb2][0], res2, aligned_res_ids)
                 if len(set(strands2) & set(strands2_short)) != len(strands2):
                     print("short", best_structures[pdb2][1], line[0:3], strands2, strands2_short)
+                    count += 1
                 if len(set(strands2) & set(strands2_long)) != len(strands2):
                     print("long", best_structures[pdb2][0], line[0:3], strands2, strands2_long)
+                    count += 1
             else:
                 strands2_short = strands2
                 strands2_long = strands2
             
-            
             longest_out.write("%s %s %s %s"%(" ".join(line[0:6]), ",".join(map(str, strands1_long)), ",".join(map(str, strands2_long)), " ".join(line[8:])) )
             shortest_out.write("%s %s %s %s"%(" ".join(line[0:6]), ",".join(map(str, strands1_short)), ",".join(map(str, strands2_short)), " ".join(line[8:])) )
-
+print(count, num_edges)

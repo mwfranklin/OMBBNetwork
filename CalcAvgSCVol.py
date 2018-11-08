@@ -59,7 +59,7 @@ barrel_sizes = [8,10,12,14,16,18,22]
 #r2_labels = [98.5, 111] #for aa_avg
 #r2_labels = [101, 111] #for aa_avg_group
 r2_labels = [99.5, 109] #for noGly
-fig, ax1 = plt.subplots(nrows = 1, ncols= 1, figsize = (7,7))
+fig, ax1 = plt.subplots(nrows = 1, ncols= 1, figsize = (7,7), dpi = 1200)
 ax1.scatter(barrel_sizes, new_avgs[:,0], c = "blue", marker = "o", label = "Inward", alpha=0.8)
 these_stats = scipy.stats.linregress(barrel_sizes, new_avgs[:,0])
 #print(these_stats)
@@ -77,7 +77,7 @@ ax1.set_xlabel("Barrel Size, Strands", fontsize = 18)
 ax1.set_title("Average Side Chain Volumes", fontsize = 24)
 plt.legend(fontsize = 18, loc = 4)
 plt.tick_params(labelsize = 14)
-plt.savefig("NetworkGraphs/SCVolumesBarrelAvg.png")
+plt.savefig("NetworkGraphs/SCVolumesBarrelAvg.png", dpi=1200)
 
 #r2_labels = [98.5, 111] #for aa_avg
 #r2_labels = [101, 111] #for aa_avg_group

@@ -1,5 +1,5 @@
 from pymol import cmd, stored
-cmd.load("/Users/meghan/Documents/PhD/GitProjects/v6_2018_Network/CompStrDefns/CompPDBs/1UYO.pdb")
+cmd.load("/Users/meghan/Documents/PhD/GitHubProjects/v6_2018_Network/CompStrDefns/CompPDBs/1UYO.pdb")
 cmd.hide("everything", "all")
 cmd.color("wheat","all")
 cmd.select("Xstrand0", "resi 821-829 & chain X ")
