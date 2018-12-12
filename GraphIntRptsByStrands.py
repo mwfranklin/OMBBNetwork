@@ -72,14 +72,14 @@ with open("data/CollatedIntRpts.txt", "r") as inData:
 #print(len(proto_cons_barrels))
 shift_types /= len(proto_cons_barrels)
 
-for pdb in set(proto_barrels).difference(proto_cons_barrels):
+"""for pdb in set(proto_barrels).difference(proto_cons_barrels):
     strand_cons_patt[ barrels[pdb] ][4] += 1
 
 print(strand_cons_patt)
 with open("data/CollatedIntRptsPatterns.txt", "w+") as outData:
     outData.write("NoFirst\tNoLast\tNeitherFL\tTotalRpts\tNoRpts\n")
     for line in strand_cons_patt:
-        outData.write("\t".join(map(str, line)) + "\n")
+        outData.write("\t".join(map(str, line)) + "\n")"""
         
 #print(proto_sizes)
 #print(cons_barrels, sum(cons_barrels))
@@ -92,23 +92,27 @@ ax1.set_xlabel("Total Strands per Barrel", size = 46)
 ax1.set_ylabel(r"Count", size = 46)
 width = 0.5
 ax1.bar(ind, proto_sizes, label = "Total Number of Barrels")
-#ax1.bar(ind, cons_barrels, color = "red", label = "Barrels with Internal Repeat")
-ax1.bar(ind, shifts_by_size[:,0], color = "darkolivegreen", label = "Single Hairpin Shifts")
-ax1.bar(ind, shifts_by_size[:,1], bottom = shifts_by_size[:,0], color = "darkgoldenrod", label = "Double Hairpin Shifts")
-ax1.bar(ind, shifts_by_size[:,2], bottom = shifts_by_size[:,0], color = "indigo", label = "Other Internal Repeat")
+ax1.bar(ind, cons_barrels, color = "red", label = "Barrels with Internal Repeat")
+#ax1.bar(ind, shifts_by_size[:,0], color = "darkolivegreen", label = "Single Hairpin Shifts")
+#ax1.bar(ind, shifts_by_size[:,1], bottom = shifts_by_size[:,0], color = "darkgoldenrod", label = "Double Hairpin Shifts")
+#ax1.bar(ind, shifts_by_size[:,2], bottom = shifts_by_size[:,0], color = "indigo", label = "Other Internal Repeat")
 ax1.set_xlim([7,23])
 ax1.set_xticks(np.arange(8,23,2))
 ax1.set_xticklabels(np.arange(8,23,2))
-ax1.legend(loc = 0, scatterpoints = 1, fontsize = 18)
+#handles,labels = ax1.get_legend_handles_labels()
+#handles = [handles[1], handles[0]]
+#labels = [labels[1], labels[0]]
+#ax1.legend(handles,labels, loc = 0, scatterpoints = 1, fontsize = 24)
+ax1.legend(loc = 0, scatterpoints = 1, fontsize = 24)
 ax1.set_ylim([0,30])
 plt.tick_params(labelsize = 26)
 plt.tight_layout()
 #fig.subplots_adjust(wspace = 0.15)
-#plt.savefig("NetworkGraphs/ConsProportion_1e3.png", dpi = 300, bbox_inches = "tight")
-plt.savefig("NetworkGraphs/ConsProportionByType_1e3.png", dpi = 300, bbox_inches = "tight")
+plt.savefig("NetworkGraphs/ConsProportion_1e3.png", dpi = 300, bbox_inches = "tight")
+#plt.savefig("NetworkGraphs/ConsProportionByType_1e3.png", dpi = 300, bbox_inches = "tight")
 #plt.show()
 
-ind = np.arange(0,3)
+"""ind = np.arange(0,3)
 fig, ax1 = plt.subplots(nrows = 1, ncols = 1, figsize = (9,6))
 #plt.title("Internal Repeats of the Prototypical Barrels", size = 22)
 ax1.set_xlabel("Internal Repeat Type", size = 46)
@@ -126,4 +130,4 @@ plt.tick_params(labelsize = 26)
 plt.tight_layout()
 #fig.subplots_adjust(wspace = 0.15)
 plt.savefig("NetworkGraphs/IntRptTypes_1e3.png", dpi = 300, bbox_inches = "tight")
-#plt.show()
+#plt.show()"""
